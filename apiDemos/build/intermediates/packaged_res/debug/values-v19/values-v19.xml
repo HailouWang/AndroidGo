@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="atLeastKitKat">true</bool>
+    <style name="ThemeCurrent" parent="android:Theme.Material">
+    </style>
+    <style name="ThemeCurrentDialog" parent="android:Theme.Material.Dialog">
+    </style>
+    <style name="ThemeCurrentDialogWhenLarge" parent="android:style/Theme.Material.DialogWhenLarge">
+    </style>
+</resources>

@@ -1,0 +1,17 @@
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@+id/swipeRefreshlayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="8dip"
+    android:layout_marginTop="?attr/actionBarSize">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"/>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

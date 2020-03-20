@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <CheckBox
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:id="@+id/enable_smooth_scroll"
+            android:text="smooth scroll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/scroll_offset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberSigned"
+            android:hint="offset"/>
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="20dip"
+            android:id="@+id/spinner"/>
+        <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="scroll"
+            android:onClick="onScrollClicked"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:scrollbars="horizontal"
+        android:id="@+id/config_recycler_view"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:background="#ff0099cc"
+        android:scrollbarStyle="insideOverlay"
+        android:scrollbars="horizontal|vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/recycler_view"/>
+
+</LinearLayout>

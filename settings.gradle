@@ -1,0 +1,3 @@
+include ':app', ':javabase', ':messageview', ':dotspageindicator'
+include ':volley'
+include ':apiDemos'

@@ -1,0 +1,65 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion build_versions.compileSdkVersion
+    buildToolsVersion build_versions.build_tools
+
+//    useLibrary 'org.apache.http.legacy'
+//    //compileSdkVersion >= 23 android内置的httpclient被移除，需要手动导入
+//    useLibrary 'org.apache.http.legacy'  不使用系统包，项目直接导入的包，一加5，6手机报 ：
+//    Class 'org.apache.http.message.BasicHttpResponse' does not implement interface 'org.apache.http.HttpMessage'
+//    in call to 'void org.apache.http.HttpMessage.setHeaders(org.apache.http.Header[])'
+//    (declaration of 'org.apache.http.impl.io.AbstractMessageParser' appears in
+//    /system/framework/org.apache.http.legacy.boot.jar)
+
+
+    defaultConfig {
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+
+        versionCode 100
+        versionName "1.0.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    testImplementation "junit:junit:4.10"
+    testImplementation "org.mockito:mockito-core:1.9.5"
+    testImplementation "org.robolectric:robolectric:3.0"
+
+    implementation deps.kotlin.stdlib
+
+    implementation deps.androidx.annotations
+    implementation deps.androidx.legacy_support_v4
+    implementation deps.androidx.design
+    implementation deps.androidx.recyclerview
+    implementation deps.androidx.gridlayout
+    implementation deps.androidx.cardview
+    implementation deps.androidx.core_ktx
+    implementation deps.androidx.app_compat
+    implementation deps.androidx.core_utils
+    implementation deps.androidx.constraintlayout
+
+//    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    implementation deps.lifecycle.runtime
+    implementation deps.lifecycle.extensions
+    implementation deps.lifecycle.java8
+    annotationProcessor deps.lifecycle.compiler
+
+    testImplementation deps.junit
+    implementation deps.androidx.test_runner
+    implementation deps.androidx.espresso_core
+
+    implementation deps.androidx.legacy_support_v4
+}

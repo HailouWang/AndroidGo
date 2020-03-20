@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="test_action_bar_desc">测试ActionBar的DisplayOptions：点击按钮一次，应用该DisplayOptions，再次点击，还原。</string>
+    <string name="toggle_home_as_up">测试：ActionBar.DISPLAY_HOME_AS_UP</string>
+    <string name="toggle_show_home">测试：ActionBar.DISPLAY_SHOW_HOM</string>
+    <string name="toggle_use_logo">测试：ActionBar.DISPLAY_USE_LOGO</string>
+    <string name="toggle_show_title">测试：ActionBar.DISPLAY_SHOW_TITLE</string>
+    <string name="toggle_show_custom">测试：ActionBar.DISPLAY_SHOW_CUSTOM</string>
+    <string name="toggle_navigation_mode">测试：ActionBar.NAVIGATION_MODE</string>
+    <string name="toggle_navigation_mode_tabs">测试：ActionBar.NAVIGATION_MODE_TABS</string>
+    <string name="navigation_mode_list">测试：ActionBar.NAVIGATION_MODE_LIST</string>
+    <string name="navigation_mode_standard">测试：ActionBar.NAVIGATION_MODE_STANDARD</string>
+    <string name="cycle_custom_gravity">测试自定义ActionBar布局的LayoutParams</string>
+    <string name="cycle_custom_gravity_desc">本例通过设定自定义布局的gravity。共计三种模式：左、中、右，可依次点击查看效果～</string>
+    <string name="toggle_visibility">测试ActionBar的显示与隐藏</string>
+    <string name="toggle_system_ui">ActionBar控制状态栏的显示与隐藏</string>
+
+    <string name="display_options_custom_button">自定义Button</string>
+    <string-array name="navigation_modes">
+        <item>@string/navigation_mode_standard</item>
+        <item>@string/toggle_navigation_mode_tabs</item>
+        <item>@string/navigation_mode_list</item>
+    </string-array>
+
+    <string name="display_options_menu_item">ActionBar展示</string>
+</resources>

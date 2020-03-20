@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/msg_bubble_outgoing"
+    android:insetLeft="50dp"
+    android:insetRight="150dp"
+    android:insetTop="40dp"
+    android:insetBottom="40dp">
+
+</inset>

@@ -1,0 +1,115 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion build_versions.compileSdkVersion
+    buildToolsVersion build_versions.build_tools
+
+    defaultConfig {
+        applicationId "com.github.hailouwang.demosforapi"
+
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        externalNativeBuild {
+            cmake {
+                cppFlags "-std=c++14"
+            }
+        }
+    }
+
+    buildTypes {
+        debug {
+            zipAlignEnabled false
+            minifyEnabled false
+            shrinkResources false
+
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            zipAlignEnabled false
+            minifyEnabled false
+            shrinkResources false
+
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path "src/main/cpp/hellojni/CMakeLists.txt"
+            version "3.10.2"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation deps.kotlin.stdlib
+
+    implementation deps.androidx.annotations
+    implementation deps.androidx.legacy_support_v4
+    implementation deps.androidx.design
+    implementation deps.androidx.recyclerview
+    implementation deps.androidx.gridlayout
+    implementation deps.androidx.cardview
+    implementation deps.androidx.core_ktx
+    implementation deps.androidx.app_compat
+    implementation deps.androidx.core_utils
+    implementation deps.androidx.constraintlayout
+    implementation deps.androidx.preference
+
+//    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    implementation deps.lifecycle.runtime
+    implementation deps.lifecycle.extensions
+    implementation deps.lifecycle.java8
+    annotationProcessor deps.lifecycle.compiler
+
+    testImplementation deps.junit
+    implementation deps.androidx.test_runner
+    implementation deps.androidx.espresso_core
+
+    implementation deps.androidx.legacy_support_v4
+
+    implementation deps.alibaba_vlayout
+
+    implementation deps.gson
+
+    implementation deps.retrofit
+
+    implementation deps.okhttp
+
+    implementation deps.picasso
+
+    implementation deps.rxjava2
+    implementation deps.rx_android
+
+    implementation deps.fresco
+
+    implementation deps.firebase_ads
+    implementation project(path: ':messageview')
+    implementation project(path: ':apiDemos')
+    implementation project(path: ':volley')
+    implementation project(path: ':dotspageindicator')
+
+    implementation deps.leancloud_storage
+    implementation deps.fastjson
+    implementation deps.glide
+
+    implementation deps.shimmer_recycler_view
+    implementation deps.shimmer_layout
+}

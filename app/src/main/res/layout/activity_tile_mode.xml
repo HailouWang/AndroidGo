@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.github.hailouwang.demosforapi.drawable.TileMode">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="disable"/>
+
+    <ImageView
+        android:id="@+id/iv_disable"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/tile_mode_test_disable"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="clamp"/>
+
+    <ImageView
+        android:id="@+id/iv_clamp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/tile_mode_test_clamp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="repeat"/>
+
+    <ImageView
+        android:id="@+id/iv_repeat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/tile_mode_test_repeat"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="mirror"/>
+
+    <ImageView
+        android:id="@+id/iv_mirror"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/tile_mode_test_mirror"
+        android:layout_weight="1"/>
+
+</LinearLayout>

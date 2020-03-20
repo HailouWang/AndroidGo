@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.github.hailouwang.demosforapi.drawable.TileMode">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50dip"/>
+
+    <TextView
+        android:id="@+id/nine_patch_incoming_tv"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:gravity="right|center_vertical"
+        android:textSize="20sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50dip"/>
+
+    <TextView
+        android:id="@+id/nine_patch_sending_tv"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:gravity="left|center_vertical"
+        android:textSize="20sp"/>
+
+</LinearLayout>

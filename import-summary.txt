@@ -1,0 +1,59 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* .DS_Store
+* Android.mk
+* README.txt
+* _index.html
+* tests/
+* tests/Android.mk
+* tests/build.properties
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => apiDemos/src/main/AndroidManifest.xml
+* assets/ => apiDemos/src/main/assets/
+* res/ => apiDemos/src/main/res/
+* src/ => apiDemos/src/main/java/
+* src/.DS_Store => apiDemos/src/main/resources/.DS_Store
+* src/com/.DS_Store => apiDemos/src/main/resources/com/.DS_Store
+* src/com/example/.DS_Store => apiDemos/src/main/resources/com/example/.DS_Store
+* src/com/example/android/.DS_Store => apiDemos/src/main/resources/com/example/android/.DS_Store
+* src/com/example/android/apis/_package.html => apiDemos/src/main/resources/com/example/android/apis/_package.html
+* src/com/example/android/apis/accessibility/_index.html => apiDemos/src/main/resources/com/example/android/apis/accessibility/_index.html
+* src/com/example/android/apis/animation/_index.html => apiDemos/src/main/resources/com/example/android/apis/animation/_index.html
+* src/com/example/android/apis/app/IRemoteService.aidl => apiDemos/src/main/aidl/com/example/android/apis/app/IRemoteService.aidl
+* src/com/example/android/apis/app/IRemoteServiceCallback.aidl => apiDemos/src/main/aidl/com/example/android/apis/app/IRemoteServiceCallback.aidl
+* src/com/example/android/apis/app/ISecondary.aidl => apiDemos/src/main/aidl/com/example/android/apis/app/ISecondary.aidl
+* src/com/example/android/apis/app/_index.html => apiDemos/src/main/resources/com/example/android/apis/app/_index.html
+* src/com/example/android/apis/app/_package.html => apiDemos/src/main/resources/com/example/android/apis/app/_package.html
+* src/com/example/android/apis/content/_index.html => apiDemos/src/main/resources/com/example/android/apis/content/_index.html
+* src/com/example/android/apis/graphics/_index.html => apiDemos/src/main/resources/com/example/android/apis/graphics/_index.html
+* src/com/example/android/apis/text/_index.html => apiDemos/src/main/resources/com/example/android/apis/text/_index.html
+* src/com/example/android/apis/view/_index.html => apiDemos/src/main/resources/com/example/android/apis/view/_index.html
+* src/com/example/android/apis/view/_package.html => apiDemos/src/main/resources/com/example/android/apis/view/_package.html
+* tests/src/ => apiDemos/src/androidTest/java/
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

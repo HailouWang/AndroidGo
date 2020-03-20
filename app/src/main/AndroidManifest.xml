@@ -1,0 +1,1098 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.github.hailouwang.demosforapi">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:name=".DemosApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name="com.github.hailouwang.demosforapi.main.ui.DemosForApiActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.github.hailouwang.demosforapi.volley.SampleRequest"
+            android:label="@string/volley_sample_request">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.widget.listview.ListViewTest"
+            android:label="@string/widget_listview_test"
+            android:logo="@drawable/ic_settings">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.github.hailouwang.demosforapi.widget.expand.ExpandActivity1"
+            android:label="@string/widget_expand_test1"
+            android:logo="@drawable/ic_settings">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.github.hailouwang.demosforapi.widget.recyclerview.test1.RecyclerViewActivity1"
+            android:label="@string/widget_recyclerview_test1"
+            android:logo="@drawable/ic_settings">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.github.hailouwang.demosforapi.widget.recyclerview.test2.RecyclerViewActivity2"
+            android:label="@string/widget_recyclerview_test2"
+            android:logo="@drawable/ic_settings">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.github.hailouwang.demosforapi.widget.recyclerview.test3.RecyclerViewActivity3"
+            android:label="@string/widget_recyclerview_test3"
+            android:logo="@drawable/ic_settings">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.github.hailouwang.demosforapi.widget.recyclerview.test4.RecyclerViewTest4Activity"
+            android:label="@string/widget_recyclerview_test4"
+            android:logo="@drawable/ic_settings">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.github.hailouwang.demosforapi.widget.recyclerview.test5.RecyclerViewActivity5"
+            android:label="@string/widget_recyclerview_test5_1"
+            android:logo="@drawable/ic_settings">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.github.hailouwang.demosforapi.widget.recyclerview.test6.RecyclerViewActivity5"
+            android:label="@string/widget_recyclerview_test5_2"
+            android:logo="@drawable/ic_settings">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.github.hailouwang.demosforapi.widget.recyclerview.test7.RecyclerViewActivity2"
+            android:label="@string/widget_recyclerview_test7"
+            android:logo="@drawable/ic_settings">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.github.hailouwang.demosforapi.widget.recyclerview.test8.ui.RecyclerViewTest8Activity"
+            android:label="@string/widget_recyclerview_test8"
+            android:logo="@drawable/ic_settings">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.github.hailouwang.demosforapi.widget.viewtree.ViewTreeObserverActivity"
+            android:label="@string/widget_viewtree_test"
+            android:logo="@drawable/ic_settings">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.github.hailouwang.demosforapi.widget.skeleton.shimerrecyclerview.MainActivity"
+            android:label="@string/widget_skeleton_shimmerrecyclerview_test"
+            android:logo="@drawable/ic_settings">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.github.hailouwang.demosforapi.summary.BatteryInfo"
+            android:label="@string/summary_battery_info"
+            android:logo="@drawable/ic_settings">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.summary.DeviceInfo"
+            android:label="@string/summary_device_info"
+            android:logo="@drawable/ic_settings">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.volley.CreateRequestQueue"
+            android:label="@string/volley_create_request_queue">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.volley.MySingletonTest"
+            android:label="@string/volley_singleton_test">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.volley.JsonRequest"
+            android:label="@string/volley_json_request">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.volley.CustomVolleyRequest"
+            android:label="@string/volley_custom_request">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.volley.ImageReqestTest"
+            android:label="@string/volley_image_request">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.volley.ImageLoaderTest"
+            android:label="@string/volley_image_loader">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.volley.NetworkImageViewTest"
+            android:label="@string/volley_network_image_view">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.xposed.WelcomeActivity"
+            android:label="@string/xposed_welcome_activity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.app.lifecycle.ActivityA"
+            android:label="@string/activity_life_style_a">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.app.lifecycle.ActivityB"
+            android:label="@string/activity_life_style_b">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.app.lifecycle.ActivityC"
+            android:label="@string/activity_life_style_c">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.app.lifecycle.DialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.github.hailouwang.demosforapi.app.fragments.MainActivity"
+            android:label="@string/app_fragment">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.animationsdemo.MainActivity"
+            android:label="@string/animations_title"
+            android:theme="@android:style/Theme.Holo.Light">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.animationsdemo.CardFlipActivity"
+            android:theme="@android:style/Theme.Holo.Light" />
+        <activity
+            android:name="com.github.hailouwang.demosforapi.animationsdemo.CrossfadeActivity"
+            android:theme="@android:style/Theme.Holo.Light" />
+        <activity
+            android:name="com.github.hailouwang.demosforapi.animationsdemo.LayoutChangesActivity"
+            android:theme="@android:style/Theme.Holo.Light" />
+        <activity
+            android:name="com.github.hailouwang.demosforapi.animationsdemo.ScreenSlideActivity"
+            android:theme="@android:style/Theme.Holo.Light" />
+        <activity
+            android:name="com.github.hailouwang.demosforapi.animationsdemo.ZoomActivity"
+            android:theme="@android:style/Theme.Holo.Light" />
+        <!-- <activity -->
+        <!-- android:name=".google_ads.ads.AdsCatalogActivity" -->
+        <!-- android:label="@string/google_ads_title"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+        <!-- <category android:name="android.intent.category.SAMPLE_CODE" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <activity
+            android:name="com.github.hailouwang.demosforapi.google_ads.ads.SimpleGoogleAdsActivity"
+            android:label="@string/simple_google_ads_title"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.widget.SnackbarDemo"
+            android:label="@string/title_activity_snackbar_demo"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.widget.LabeledSeekBarActivity"
+            android:label="@string/widget_labeled_seek_bar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.mobike.MobikeActivity"
+            android:label="@string/title_activity_mobike_drawer_demo"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.mobike.DrawerDemoActivity"
+            android:label="@string/title_activity_drawer_demo"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.github.hailouwang.demosforapi.canvas.BaseCanvasActivity" />
+        <activity
+            android:name="com.github.hailouwang.demosforapi.canvas.basic.CanvasDrawCircleActivity"
+            android:label="@string/title_activity_canvas_circle_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.canvas.basic.CanvasDrawColorActivity"
+            android:label="@string/title_activity_canvas_color_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.canvas.basic.CanvasDrawPointActivity"
+            android:label="@string/title_activity_canvas_point_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.canvas.basic.CanvasDrawLineActivity"
+            android:label="@string/title_activity_canvas_line_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.canvas.basic.CanvasDrawRectActivity"
+            android:label="@string/title_activity_canvas_rect_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.canvas.basic.CanvasDrawRoundRectActivity"
+            android:label="@string/title_activity_canvas_round_rect_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.canvas.basic.CanvasDrawOvalActivity"
+            android:label="@string/title_activity_canvas_oval_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.canvas.basic.CanvasDrawArcActivity"
+            android:label="@string/title_activity_canvas_arc_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.canvas.paint.CanvasPaintStyleActivity"
+            android:hardwareAccelerated="false"
+            android:label="@string/title_activity_paint_style_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.canvas.paint.CanvasPaintCapActivity"
+            android:hardwareAccelerated="false"
+            android:label="@string/title_activity_paint_cap_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.canvas.paint.CanvasPaintJoinActivity"
+            android:hardwareAccelerated="false"
+            android:label="@string/title_activity_paint_join_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.canvas.basic.CanvasPieActivity"
+            android:label="@string/title_activity_pie_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.canvas.canvas_draw.CanvasTranslateActivity"
+            android:label="@string/title_activity_canvas_translate_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.canvas.canvas_draw.CanvasScaleActivity"
+            android:label="@string/title_activity_canvas_scale_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.canvas.canvas_draw.CanvasRotateActivity"
+            android:label="@string/title_activity_canvas_rotate_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.canvas.canvas_draw.CanvasSkewActivity"
+            android:label="@string/title_activity_canvas_skew_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.canvas.canvas_draw.CanvasSaveRestoreActivity"
+            android:label="@string/title_activity_canvas_save_restore_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.canvas.canvas_draw.CanvasPictureActivity"
+            android:hardwareAccelerated="false"
+            android:label="@string/title_activity_canvas_picture_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.canvas.canvas_draw.CanvasBitmapActivity"
+            android:label="@string/title_activity_canvas_bitmap_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.canvas.canvas_draw.CanvasTextActivity"
+            android:label="@string/title_activity_canvas_text_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.canvas.path.CanvasPathActivity"
+            android:hardwareAccelerated="false"
+            android:label="@string/title_activity_canvas_path1_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.canvas.path.CanvasPath2Activity"
+            android:hardwareAccelerated="false"
+            android:label="@string/title_activity_canvas_path2_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.canvas.path.CanvasPathBezierActivity"
+            android:hardwareAccelerated="false"
+            android:label="@string/title_activity_canvas_path3_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.canvas.path.CanvasPathBezier2Activity"
+            android:hardwareAccelerated="false"
+            android:label="@string/title_activity_canvas_path4_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.canvas.path.CanvasPathBezier3Activity"
+            android:hardwareAccelerated="false"
+            android:label="@string/title_activity_canvas_path5_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.canvas.path.CanvasPath3Activity"
+            android:hardwareAccelerated="false"
+            android:label="@string/title_activity_canvas_path6_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.canvas.path.CanvasPathMeasureActivity"
+            android:hardwareAccelerated="false"
+            android:label="@string/title_activity_canvas_path7_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.canvas.matrix.CanvasMatrixTranslateActivity"
+            android:hardwareAccelerated="false"
+            android:label="@string/title_activity_canvas_matrix1_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.canvas.matrix.CanvasMatrixRotateActivity"
+            android:hardwareAccelerated="false"
+            android:label="@string/title_activity_canvas_matrix2_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.canvas.matrix.CanvasMatrixScaleActivity"
+            android:hardwareAccelerated="false"
+            android:label="@string/title_activity_canvas_matrix3_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.canvas.matrix.CanvasMatrixSkewActivity"
+            android:hardwareAccelerated="false"
+            android:label="@string/title_activity_canvas_matrix4_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.canvas.matrix.CanvasMatrixSymmetricalActivity"
+            android:hardwareAccelerated="false"
+            android:label="@string/title_activity_canvas_matrix5_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.canvas.matrix.CanvasMatrixSetPostPreActivity"
+            android:hardwareAccelerated="false"
+            android:label="@string/title_activity_canvas_matrix6_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.canvas.matrix.CanvasMatrixsetRectToRectActivity"
+            android:hardwareAccelerated="false"
+            android:label="@string/title_activity_canvas_matrix7_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.canvas.matrix.CanvasMatrixsetPolyToPolyActivity"
+            android:hardwareAccelerated="false"
+            android:label="@string/title_activity_canvas_matrix8_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.canvas.matrix.CanvasMatrixInvertActivity"
+            android:hardwareAccelerated="false"
+            android:label="@string/title_activity_canvas_matrix9_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.canvas.camera.CanvasMatrixCameraTranslateActivity"
+            android:hardwareAccelerated="false"
+            android:label="@string/title_activity_canvas_matrix_camera1_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.canvas.camera.CanvasMatrixCameraRotateActivity"
+            android:hardwareAccelerated="false"
+            android:label="@string/title_activity_canvas_matrix_camera2_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.app.resources.DimenTest"
+            android:label="@string/app_dimen_window_test">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.drawable.TileMode"
+            android:label="@string/app_drawable_tilemode">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.drawable.BitmapDrawableTest"
+            android:label="@string/app_drawable_bitmap_drawable">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.drawable.NinePatchDrawableTest"
+            android:label="@string/app_drawable_nine_patch_drawable">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.drawable.LayerDrawableTest"
+            android:label="@string/app_drawable_layer_drawable">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.drawable.StateListDrawableTest"
+            android:label="@string/app_drawable_statelist_drawable">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.drawable.LevelListDrawableTest"
+            android:label="@string/app_drawable_levelstate_drawable">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.drawable.InsetDrawableTest"
+            android:label="@string/app_drawable_inset_drawable">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.drawable.ClipDrawableTest"
+            android:label="@string/app_drawable_clip_drawable">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.drawable.ScaleDrawableTest"
+            android:label="@string/app_drawable_scale_drawable">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.drawable.RotateDrawableTest"
+            android:label="@string/app_drawable_rotate_drawable">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.drawable.GradientBasicDrawableTest"
+            android:label="@string/app_drawable_gradientbasic_drawable">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.drawable.VectorDrawableTest"
+            android:label="@string/app_drawable_vector_drawable">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.drawable.RippleDrawableTest"
+            android:label="@string/app_drawable_ripple_drawable">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <!-- Jni -->
+        <activity
+            android:name="com.github.hailouwang.demosforapi.jni.hellojni.HelloJni"
+            android:label="@string/app_jni_hellojni">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <!-- H5 DEMOS -->
+        <activity
+            android:name="com.github.hailouwang.demosforapi.h5.WebH5DemoActivity"
+            android:label="@string/app_web_h5_demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <!-- layout -->
+        <activity
+            android:name="com.github.hailouwang.demosforapi.layout.supportv7.GridLayoutManagerActivity"
+            android:label="@string/layout_grid_layout_manager">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <!-- layout -->
+        <activity
+            android:name="com.github.hailouwang.demosforapi.layout.supportv7.LinearLayoutManagerActivity"
+            android:label="@string/layout_linearlayout_layout_manager">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.layout.supportv7.recyclerView.RecyclerViewActivity"
+            android:label="@string/v7_simple_recycler_activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.layout.supportv7.recyclerView.AsyncListUtilActivity"
+            android:label="@string/v7_asynclistutils_recycler_activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <!-- RxJava -->
+        <activity
+            android:name="com.github.hailouwang.demosforapi.rxjava.Demos_Flowable_backpress"
+            android:label="@string/rxjava_backpress_activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.rxjava.Demos_NewThread"
+            android:label="@string/rxjava_new_thread_activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <!-- picasso -->
+        <activity
+            android:name="com.github.hailouwang.demosforapi.picasso.SampleGridViewActivity"
+            android:label="@string/picasso_sample_grid_view_activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.picasso.SampleContactsActivity"
+            android:label="@string/picasso_sample_contacts_activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.picasso.SampleGalleryActivity"
+            android:label="@string/picasso_sample_gallery_activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.picasso.SampleListDetailActivity"
+            android:label="@string/picasso_sample_list_details_activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="com.github.hailouwang.demosforapi.picasso.SampleWidgetProvider"
+            android:label="@string/picasso_sample_list_details_activity">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/sample_widget_info" />
+        </receiver>
+
+        <activity
+            android:name="com.github.hailouwang.demosforapi.rxjava.Demos_Flowable_concat_filter"
+            android:label="@string/rxjava_flowable_concat_activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.rxjava.Demos_Flowable_toFlowable_firstElement"
+            android:label="@string/rxjava_flowable_toFlowable_activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.rxjava.Demos_Flowable_flatMap"
+            android:label="@string/rxjava_flowable_flatMap_activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.rxjava.Demos_Flowable_distinct"
+            android:label="@string/rxjava_flowable_distinct_activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.github.hailouwang.demosforapi.rxjava.Demos_Flowable_toList"
+            android:label="@string/rxjava_flowable_toList_activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <!--UMeng-->
+        <activity
+            android:name="com.github.hailouwang.demosforapi.umeng.UMengDeviceDataActivity"
+            android:label="@string/app_umeng_device_info">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.github.hailouwang.demosforapi.leancode.test1.LeanStorageTest1Activity"
+            android:label="@string/lean_storage_test1"
+            android:logo="@drawable/ic_settings">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.github.hailouwang.demosforapi.compatible.lineheight.MultiRomTextViewLineHeightTextActivity"
+            android:label="@string/compatible_multi_rom_text_view_line_height_test"
+            android:logo="@drawable/ic_settings">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.github.hailouwang.demosforapi.widget.skeleton.shimerrecyclerview.DemoActivity"/>
+
+    </application>
+
+</manifest>

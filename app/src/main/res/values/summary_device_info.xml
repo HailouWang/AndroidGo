@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="device_model_status">"型号："</string>
+    <string name="device_android_version">"Android版本："</string>
+    <string name="device_android_patch_version">"Android安全补丁程序级别："</string>
+    <string name="device_baseba">"型号："</string>
+</resources>

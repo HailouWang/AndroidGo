@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="battery_info_status_label" msgid="8109155295509700309">"电池状态："</string>
+    <string name="battery_info_power_label" msgid="7465140230991349382">"是否已插电："</string>
+    <string name="battery_info_scale_label" msgid="3649763192389778437">"电池电量："</string>
+    <string name="battery_info_level_label" msgid="8706526709307788737">"电池电量："</string>
+    <string name="battery_info_health_label" msgid="6416051542741886958">"电池运行状况："</string>
+    <string name="battery_info_technology_label" msgid="788304533220748681">"电池技术："</string>
+    <string name="battery_info_voltage_label" msgid="8971764146757637863">"电池电压："</string>
+    <string name="battery_info_voltage_units" msgid="8658490792208288107">"mV"</string>
+    <string name="battery_info_temperature_label" msgid="1968383098818648037">"电池温度："</string>
+    <string name="battery_info_temperature_units" msgid="9098950587249987550">"\u2103"</string>
+    <string name="battery_info_uptime" msgid="5548545143573527992">"启动后的时间："</string>
+
+    <string name="battery_info_power_unplugged" msgid="5987246575519551081">"未插电"</string>
+    <string name="battery_info_power_ac" msgid="6808516193001604634">"交流电"</string>
+    <string name="battery_info_power_usb" msgid="8012931702516331797">"USB"</string>
+    <string name="battery_info_power_wireless" msgid="6819163295739305097">"无线"</string>
+    <string name="battery_info_power_ac_usb" msgid="6777734146838328688">"交流电 + USB"</string>
+    <string name="battery_info_power_unknown" msgid="7344115502868899881">"未知"</string>
+    <string name="battery_info_health_unknown" msgid="5664295556921944255">"未知"</string>
+    <string name="battery_info_health_good" msgid="8070356565806711806">"正常"</string>
+    <string name="battery_info_health_overheat" msgid="8442959549291368806">"过热"</string>
+    <string name="battery_info_health_dead" msgid="1725917445762829059">"没电"</string>
+    <string name="battery_info_health_over_voltage" msgid="2420269351664490121">"过电压"</string>
+    <string name="battery_info_health_unspecified_failure" msgid="6347021103185471590">"未知错误"</string>
+    <string name="battery_info_health_cold" msgid="3835692786176707318">"电量低"</string>
+    
+    <string name="battery_info_status_unknown" msgid="196130600938058547">"未知"</string>
+    <string name="battery_info_status_charging" msgid="1705179948350365604">"正在充电"</string>
+    <string name="battery_info_status_charging_ac" msgid="2909861890674399949">"正在通过交流电源充电"</string>
+    <string name="battery_info_status_charging_usb" msgid="2207489369680923929">"正在通过USB充电"</string>
+    <string name="battery_info_status_charging_wireless" msgid="3574032603735446573">"正在进行无线充电"</string>
+    <string name="battery_info_status_discharging" msgid="310932812698268588">"未在充电"</string>
+    <string name="battery_info_status_not_charging" msgid="2820070506621483576">"未在充电"</string>
+    <string name="battery_info_status_full" msgid="2824614753861462808">"电量充足"</string>
+    <string name="battery_info_status_ac_usb" msgid="6777734146838328688">"正在通过 交流电 + USB 充电"</string>
+    
+    <string name="battery_icon_smaller" msgid="196130600938058547">"电源状态图标"</string>
+    <string name="battery_invalid_charger" msgid="196130600938058547">"不支持的usb充电设备:"</string>
+    <string name="battery_present" msgid="196130600938058547">"是否存在电池:"</string>
+    <string name="battery_present_2nd" msgid="196130600938058547">"是否存在第二块电池:"</string>
+</resources>
