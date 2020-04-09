@@ -112,4 +112,6 @@ dependencies {
 
     implementation deps.shimmer_recycler_view
     implementation deps.shimmer_layout
+
+    implementation deps.hailouwang.fragmentrouter
 }

@@ -2,6 +2,9 @@
 
 buildscript {
     apply from: "./config/versions.gradle"
+    ext {
+        kotlin_version = '1.3.61'
+    }
     addRepos(repositories)
 
     dependencies {

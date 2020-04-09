@@ -131,6 +131,8 @@ versions.shimmer_recycler_view = "v1.3"
 
 versions.shimmer_layout = "2.1.0"
 
+versions.fragment_router = "1.0.0"
+
 def deps = [:]
 
 // https://www.jianshu.com/p/029c1f527135
@@ -302,6 +304,10 @@ deps.leancloud_storage = "cn.leancloud:storage-android:$versions.leancloud_stora
 deps.shimmer_recycler_view = "com.github.sharish:ShimmerRecyclerView:$versions.shimmer_recycler_view"
 
 deps.shimmer_layout = "io.supercharge:shimmerlayout:$versions.shimmer_layout"
+
+def hailouwang = [:]
+hailouwang.fragmentrouter = "com.github.hailouwang:fragmentrouter:$versions.fragment_router"
+deps.hailouwang = hailouwang
 
 ext.deps = deps
 

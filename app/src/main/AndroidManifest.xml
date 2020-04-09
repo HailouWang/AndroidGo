@@ -31,6 +31,8 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".main.router.RouterActivity"/>
+
         <activity
             android:name="com.github.hailouwang.demosforapi.volley.SampleRequest"
             android:label="@string/volley_sample_request">
@@ -1092,6 +1094,36 @@
 
         <activity
             android:name="com.github.hailouwang.demosforapi.widget.skeleton.shimerrecyclerview.DemoActivity"/>
+
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.widget.lifecycle.VisibleToUserFragmentActivity"
+            android:label="@string/widget_visible_to_user_fragment"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.widget.lifecycle.VisibleToUserChangeFragment" />
+        </activity-alias>
+
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.widget.lifecycle.DataAnalysisRecyclerViewActivity"
+            android:label="@string/widget_da_collection_viewtree_test1"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.widget.da.ui.DataAnalysisRecyclerViewFragment" />
+        </activity-alias>
 
     </application>
 
