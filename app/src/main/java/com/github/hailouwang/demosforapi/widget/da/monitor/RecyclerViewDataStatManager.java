@@ -17,6 +17,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * 曝光数据采集：页面 + 元素。
  * - 页面的曝光数据采集，也就是常说的 PV 事件
+ *  - 数据采集时机：Activity#onStart、Frafgment#visibleToUser
  * - 元素曝光：
  * - 非列表元素曝光：标题栏等独立于页面列表元素之外的页面组成元素
  * - 列表元素的曝光：本次的重点，自动化采集
@@ -36,10 +37,14 @@ import java.util.concurrent.TimeUnit;
  * - 1、列表数据首次加载完成，显示在屏幕内，展示给用户的元素，发生曝光。
  * - 实现1：在界面展示给用户的时候，去做埋点数据采集。弊端：数据一般由异步来完成采集，此时可能还没有返回，RecyclerView 没有还没有完成渲染
  * - 实现2：为了兼容上述场景的埋点数据采集，需要监听视图树变化，当视图树首次加载完成时，触发埋点数据采集。目前采用：addOnGlobalLayoutListener，但此方法会回调多次，也是一个 todo
+ *      - 一开始就设置给Adapter 数据，即：Adapter 自带数据，即：后面没有再次调用 notifyDataSetChange
+ *      - 观察者回调顺序：先给 RecyclerView 设定观察者，再给RecyclerView.Adapter 设定监听。
+ *
  * - 2、列表数据，下拉刷新完成，显示在屏幕内，展示给用户的元素，发生曝光。
  * - 此时，不论条目的内容是否发生了变化、不论之前是否曝光过
+ * - 下拉刷新，数据源发生改变，是否需要曝光？待优化的项  todo    notifyDataSetChange
  * - 3、用户上滑，触发加载更多，此时，展示给用户的数据部分，发生曝光
- * - 已曝光的部分不再发生曝光
+ * - 已曝光的部分不再发生曝光   todo notifyDataItemChange
  * <p>
  * 二、数据未发生变更
  * 1、页面从不可见到可见
@@ -204,7 +209,7 @@ public class RecyclerViewDataStatManager implements RecyclerView.OnChildAttachSt
     // 是否展现给用户
     private boolean isVisibleShowToUser;
 
-    private boolean globalLayoutListenerWorked = false;
+    private volatile boolean globalLayoutListenerWorked = false;
 
     private RecyclerViewDataStatManager(RecyclerView recyclerView, RecyclerView.Adapter recyclerViewAdapter) {
         this.recyclerView = recyclerView;

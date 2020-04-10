@@ -1125,6 +1125,21 @@
                 android:value="com.github.hailouwang.demosforapi.widget.da.ui.DataAnalysisRecyclerViewFragment" />
         </activity-alias>
 
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.widget.lifecycle.lifecycler.demo.LifeCyclerDemoActivity"
+            android:label="@string/jetpack_lifecycler_demo"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.widget.lifecycle.lifecycler.demo.LifeCyclerDemoFragment" />
+        </activity-alias>
+
     </application>
 
 </manifest>

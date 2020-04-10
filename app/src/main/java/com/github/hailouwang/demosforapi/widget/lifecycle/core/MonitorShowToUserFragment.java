@@ -135,6 +135,10 @@ import androidx.fragment.app.Fragment;
  * ————————————————
  * 版权声明：本文为CSDN博主「BunnyCoffer」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
  * 原文链接：https://blog.csdn.net/bunnycoffer/article/details/82735560
+ *
+ *
+ *
+ * 注意：Fragment 嵌套 Fragment 时，当外部Fragment 从可见变得不可见时，子Fragment是收不到回调的。
  */
 public class MonitorShowToUserFragment extends Fragment {
     private boolean LOG = true;

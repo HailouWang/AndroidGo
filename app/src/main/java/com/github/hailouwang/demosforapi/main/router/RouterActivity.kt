@@ -2,6 +2,7 @@ package com.github.hailouwang.demosforapi.main.router
 
 import com.github.hailouwang.demosforapi.widget.da.ui.DataAnalysisRecyclerViewFragment
 import com.github.hailouwang.demosforapi.widget.lifecycle.VisibleToUserChangeFragment
+import com.github.hailouwang.demosforapi.widget.lifecycle.lifecycler.demo.LifeCyclerDemoFragment
 import com.hailouwang.fragmentrouter.BMRouterFragmentActivity
 
 class RouterActivity : BMRouterFragmentActivity() {
@@ -12,6 +13,7 @@ class RouterActivity : BMRouterFragmentActivity() {
         init {
             ENTRY_FRAGMENTS.add(VisibleToUserChangeFragment::class.java.name)
             ENTRY_FRAGMENTS.add(DataAnalysisRecyclerViewFragment::class.java.name)
+            ENTRY_FRAGMENTS.add(LifeCyclerDemoFragment::class.java.name)
         }
     }
 

@@ -28,6 +28,8 @@
 
     <string name="widget_da_collection_viewtree_test1">合集Demo/埋点、数据采集/RecyclerView 埋点数据采集</string>
 
+    <string name="jetpack_lifecycler_demo">Jetpack/Demo/LifeCycler</string>
+
     <string name="widget_visible_to_user_fragment">合集Demo/页面是否展示给用户</string>
 
     <string name="summary_battery_info">合集Demo/知识点/电池/电池基本信息</string>
