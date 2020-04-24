@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/addFlutter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text = "启动默认路由Flutter界面"/>
+
+    <Button
+        android:id="@+id/addFlutterChangeRouter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text = "更换路由"/>
+
+    <Button
+        android:id="@+id/cacheFlutterEngine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text = "使用缓存Engine"/>
+
+    <Button
+        android:id="@+id/stopCacheFlutterEngine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text = "停止/销毁缓存Engine"/>
+
+</LinearLayout>

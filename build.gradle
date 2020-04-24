@@ -11,6 +11,9 @@ buildscript {
         classpath deps.android_gradle_plugin
 
         classpath deps.kotlin.plugin
+
+        // 了解 GradlePlugin 开发过程，这里要打开
+//        classpath 'com.github.hailouwang.demosforapi:gradleplugindemo:1.0.0'
     }
 }
 

@@ -36,4 +36,7 @@
     <dimen name="img_width">24dp</dimen>
     <dimen name="img_height">24dp</dimen>
 
+    <dimen name="between_cell">3dp</dimen>
+    <dimen name="test_area_padding">10dp</dimen>
+
 </resources>

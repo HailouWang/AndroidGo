@@ -1,0 +1,1 @@
+[{"outputType":{"type":"AAPT_FRIENDLY_MERGED_MANIFESTS"},"apkData":{"type":"MAIN","splits":[],"versionCode":-1,"enabled":true,"outputFile":"module-kotlin-debug.aar","fullName":"debug","baseName":"debug"},"path":"AndroidManifest.xml","properties":{"packageId":"com.alibaba.android.arouter.demo.kotlin","split":""}}]

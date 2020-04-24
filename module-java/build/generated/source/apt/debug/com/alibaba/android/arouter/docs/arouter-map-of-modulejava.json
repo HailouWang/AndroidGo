@@ -1,0 +1,20 @@
+{
+	"m2":[
+		{
+			"group":"m2",
+			"path":"/module/2",
+			"className":"com.alibaba.android.arouter.demo.module1.TestModule2Activity",
+			"type":"activity",
+			"mark":-2147483648
+		}
+	],
+	"module":[
+		{
+			"group":"module",
+			"path":"/module/1",
+			"className":"com.alibaba.android.arouter.demo.module1.TestModuleActivity",
+			"type":"activity",
+			"mark":-2147483648
+		}
+	]
+}

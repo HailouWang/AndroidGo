@@ -35,17 +35,121 @@ public class LifeCyclerDemoFragment extends Fragment {
                 Toast.makeText(getContext(), "看 Logcat 日志", Toast.LENGTH_SHORT).show();
 
                 if (event == Lifecycle.Event.ON_CREATE) {
-                    Log.d("hlwang", "生命周期 onCreate....");
+                    Log.d("hlwang", "onCreate ---> 生命周期 onCreate....");
                 } else if (event == Lifecycle.Event.ON_RESUME) {
-                    Log.d("hlwang", "生命周期 onResume....");
+                    Log.d("hlwang", "onCreate ---> 生命周期 onResume....");
                 } else if (event == Lifecycle.Event.ON_START) {
-                    Log.d("hlwang", "生命周期 onStart....");
+                    Log.d("hlwang", "onCreate ---> 生命周期 onStart....");
                 } else if (event == Lifecycle.Event.ON_PAUSE) {
-                    Log.d("hlwang", "生命周期 onPause....");
+                    Log.d("hlwang", "onCreate ---> 生命周期 onPause....");
                 } else if (event == Lifecycle.Event.ON_STOP) {
-                    Log.d("hlwang", "生命周期 onStop....");
+                    Log.d("hlwang", "onCreate ---> 生命周期 onStop....");
                 } else if (event == Lifecycle.Event.ON_DESTROY) {
-                    Log.d("hlwang", "生命周期 onDestory....");
+                    Log.d("hlwang", "onCreate ---> 生命周期 onDestory....");
+                }
+            }
+        });
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        getLifecycle().addObserver(new LifecycleEventObserver() {
+            @Override
+            public void onStateChanged(@NonNull LifecycleOwner source, @NonNull Lifecycle.Event event) {
+                Toast.makeText(getContext(), "看 Logcat 日志", Toast.LENGTH_SHORT).show();
+
+                if (event == Lifecycle.Event.ON_CREATE) {
+                    Log.d("hlwang", "onStart ---> 生命周期 onCreate....");
+                } else if (event == Lifecycle.Event.ON_RESUME) {
+                    Log.d("hlwang", "onStart ---> 生命周期 onResume....");
+                } else if (event == Lifecycle.Event.ON_START) {
+                    Log.d("hlwang", "onStart ---> 生命周期 onStart....");
+                } else if (event == Lifecycle.Event.ON_PAUSE) {
+                    Log.d("hlwang", "onStart ---> 生命周期 onPause....");
+                } else if (event == Lifecycle.Event.ON_STOP) {
+                    Log.d("hlwang", "onStart ---> 生命周期 onStop....");
+                } else if (event == Lifecycle.Event.ON_DESTROY) {
+                    Log.d("hlwang", "onStart ---> 生命周期 onDestory....");
+                }
+            }
+        });
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+
+        getLifecycle().addObserver(new LifecycleEventObserver() {
+            @Override
+            public void onStateChanged(@NonNull LifecycleOwner source, @NonNull Lifecycle.Event event) {
+                Toast.makeText(getContext(), "看 Logcat 日志", Toast.LENGTH_SHORT).show();
+
+                if (event == Lifecycle.Event.ON_CREATE) {
+                    Log.d("hlwang", "onPause ---> 生命周期 onCreate....");
+                } else if (event == Lifecycle.Event.ON_RESUME) {
+                    Log.d("hlwang", "onPause ---> 生命周期 onResume....");
+                } else if (event == Lifecycle.Event.ON_START) {
+                    Log.d("hlwang", "onPause ---> 生命周期 onStart....");
+                } else if (event == Lifecycle.Event.ON_PAUSE) {
+                    Log.d("hlwang", "onPause ---> 生命周期 onPause....");
+                } else if (event == Lifecycle.Event.ON_STOP) {
+                    Log.d("hlwang", "onPause ---> 生命周期 onStop....");
+                } else if (event == Lifecycle.Event.ON_DESTROY) {
+                    Log.d("hlwang", "onPause ---> 生命周期 onDestory....");
+                }
+            }
+        });
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+
+        getLifecycle().addObserver(new LifecycleEventObserver() {
+            @Override
+            public void onStateChanged(@NonNull LifecycleOwner source, @NonNull Lifecycle.Event event) {
+                Toast.makeText(getContext(), "看 Logcat 日志", Toast.LENGTH_SHORT).show();
+
+                if (event == Lifecycle.Event.ON_CREATE) {
+                    Log.d("hlwang", "onStop ---> 生命周期 onCreate....");
+                } else if (event == Lifecycle.Event.ON_RESUME) {
+                    Log.d("hlwang", "onStop ---> 生命周期 onResume....");
+                } else if (event == Lifecycle.Event.ON_START) {
+                    Log.d("hlwang", "onStop ---> 生命周期 onStart....");
+                } else if (event == Lifecycle.Event.ON_PAUSE) {
+                    Log.d("hlwang", "onStop ---> 生命周期 onPause....");
+                } else if (event == Lifecycle.Event.ON_STOP) {
+                    Log.d("hlwang", "onStop ---> 生命周期 onStop....");
+                } else if (event == Lifecycle.Event.ON_DESTROY) {
+                    Log.d("hlwang", "onStop ---> 生命周期 onDestory....");
+                }
+            }
+        });
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+
+        getLifecycle().addObserver(new LifecycleEventObserver() {
+            @Override
+            public void onStateChanged(@NonNull LifecycleOwner source, @NonNull Lifecycle.Event event) {
+                Toast.makeText(getContext(), "看 Logcat 日志", Toast.LENGTH_SHORT).show();
+
+                if (event == Lifecycle.Event.ON_CREATE) {
+                    Log.d("hlwang", "onDestroy ---> 生命周期 onCreate....");
+                } else if (event == Lifecycle.Event.ON_RESUME) {
+                    Log.d("hlwang", "onDestroy ---> 生命周期 onResume....");
+                } else if (event == Lifecycle.Event.ON_START) {
+                    Log.d("hlwang", "onDestroy ---> 生命周期 onStart....");
+                } else if (event == Lifecycle.Event.ON_PAUSE) {
+                    Log.d("hlwang", "onDestroy ---> 生命周期 onPause....");
+                } else if (event == Lifecycle.Event.ON_STOP) {
+                    Log.d("hlwang", "onDestroy ---> 生命周期 onStop....");
+                } else if (event == Lifecycle.Event.ON_DESTROY) {
+                    Log.d("hlwang", "onDestroy ---> 生命周期 onDestory....");
                 }
             }
         });

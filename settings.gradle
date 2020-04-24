@@ -1,3 +1,18 @@
-include ':app', ':javabase', ':messageview', ':dotspageindicator'
+include ':app', ':messageview', ':dotspageindicator'
+setBinding(new Binding([gradle: this]))
+evaluate(new File(
+  settingsDir,
+  'flutter_demo/.android/include_flutter.groovy'
+))
 include ':volley'
 include ':apiDemos'
+
+// Gradle 插件
+include ':gradleplugindemo'
+
+include ':flutter_demo'
+
+include ':arouter-compiler'
+include ':module-kotlin'
+include ':module-java'
+include ':routemoduletest'

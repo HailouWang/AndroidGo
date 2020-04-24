@@ -2,6 +2,10 @@ apply plugin: 'com.android.application'
 
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android-extensions'
+
+// 了解 GradlePlugin 开发过程，这里要打开
+//apply plugin: 'gradleplugindemo'
 
 android {
     compileSdkVersion build_versions.compileSdkVersion
@@ -20,6 +24,12 @@ android {
         externalNativeBuild {
             cmake {
                 cppFlags "-std=c++14"
+            }
+        }
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName(), AROUTER_GENERATE_DOC: "enable"]
             }
         }
     }
@@ -114,4 +124,12 @@ dependencies {
     implementation deps.shimmer_layout
 
     implementation deps.hailouwang.fragmentrouter
+    implementation project(path: ':flutter')
+    implementation project(path: ':routemoduletest')
+    implementation project(path: ':module-java')
+    implementation project(path: ':module-kotlin')
+
+    implementation deps.alibabaarouter
+//    annotationProcessor deps.alibabaarouter_compiler
+    annotationProcessor project(path: ':arouter-compiler')
 }

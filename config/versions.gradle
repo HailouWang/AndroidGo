@@ -47,8 +47,8 @@ versions.okhttp_logging = "3.+"
 /*Retrofit*/
 versions.retrofit = "2.5.0"
 
-versions.alibabaarouter = "1.2.1.1"
-versions.alibabaarouter_compiler = "1.1.2.1"
+versions.alibabaarouter = "1.5.0"
+versions.alibabaarouter_compiler = "1.2.2"
 versions.alibaba_vlayout = "1.2.8"
 versions.dagger = "2.11"
 versions.mvp = "3.0.4"
@@ -319,6 +319,10 @@ build_versions.build_tools = "29.0.1"
 ext.build_versions = build_versions
 
 def addRepos(RepositoryHandler handler) {
+    handler.maven {//本地Maven仓库地址
+        url uri('./repo')
+    }
+
     handler.maven {
         url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'
     }

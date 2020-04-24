@@ -1,5 +1,6 @@
 package com.github.hailouwang.demosforapi.main.ui;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -27,10 +28,18 @@ public class DemosForApiActivity extends AppCompatActivity implements DemosForAp
 
     private View noDataView;
 
+    private static Activity activity;
+
+    public static Activity getThis(){
+        return activity;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_demos_lib);
+
+        activity = this;
 
         actionBar = getSupportActionBar();
 

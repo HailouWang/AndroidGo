@@ -35,6 +35,18 @@
     <string name="summary_battery_info">合集Demo/知识点/电池/电池基本信息</string>
     <string name="summary_device_info">合集Demo/知识点/设备/设备基本信息</string>
 
+    <!-- Flutter -->
+    <string name="flutter_demo_1">Flutter/Demo1/官方Demo</string>
+
+    <!-- ARoute -->
+    <string name="aroute_demo_1">ARoute/Demo/Demo1</string>
+
+    <string name="view_local_visible_test">View/LocalVisibleRect/Demo1</string>
+    <string name="view_global_visible_test">View/GlobalVisibleRect/Demo1</string>
+
+    <string name="view_local_visible_test2">View/LocalVisibleForView/Demo2</string>
+    <string name="view_global_visible_test2">View/GlobalVisibleForView/Demo2</string>
+
     <!--ImageLoader-->
     <string name="volley_sample_request">volley/SampleRequest</string>
     <string name="volley_create_request_queue">volley/CreateRequestQueue</string>

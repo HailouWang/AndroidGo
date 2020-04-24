@@ -1,0 +1,50 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+kapt {
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.getName())
+    }
+}
+
+dependencies {
+    implementation deps.alibabaarouter
+    kapt deps.alibabaarouter_compiler
+    implementation deps.kotlin.stdlib
+    implementation deps.androidx.annotations
+    implementation deps.androidx.legacy_support_v4
+    implementation deps.androidx.design
+    implementation deps.androidx.recyclerview
+    implementation deps.androidx.gridlayout
+    implementation deps.androidx.cardview
+    implementation deps.androidx.core_ktx
+    implementation deps.androidx.app_compat
+    implementation deps.androidx.core_utils
+    implementation deps.androidx.constraintlayout
+}
+android {
+    compileSdkVersion build_versions.compileSdkVersion
+    buildToolsVersion build_versions.build_tools
+
+    defaultConfig {
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        lintOptions { abortOnError false }
+    }
+}

@@ -1140,6 +1140,141 @@
                 android:value="com.github.hailouwang.demosforapi.widget.lifecycle.lifecycler.demo.LifeCyclerDemoFragment" />
         </activity-alias>
 
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.flutter.demo1.FlutterDemoActivity"
+            android:label="@string/flutter_demo_1"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.flutter.demo1.FlutterDemoFragment1" />
+        </activity-alias>
+
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.router.demo.ARouteDemo1Activity"
+            android:label="@string/aroute_demo_1"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.router.demo.ARouteDemo1Fragment" />
+        </activity-alias>
+
+        <activity
+            android:name="io.flutter.embedding.android.FlutterActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity android:name="com.github.hailouwang.demosforapi.router.page.FirstARouterTestActivity"/>
+        <activity android:name="com.github.hailouwang.demosforapi.router.page.SecondARouterTestActivity"/>
+        <activity android:name="com.github.hailouwang.demosforapi.router.page.ThirdARouterTestActivity"/>
+
+        <activity android:name=".router.page.SchemeFilterActivity">
+
+            <!-- Scheme -->
+            <intent-filter>
+                <data
+                    android:host="m.aliyun.com"
+                    android:scheme="arouter" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+
+            <!-- App Links -->
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="m.aliyun.com"
+                    android:scheme="http" />
+                <data
+                    android:host="m.aliyun.com"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".router.page.TestWebview" />
+        <activity android:name=".router.page.testactivity.Test1Activity" />
+        <activity android:name=".router.page.testactivity.Test2Activity" />
+        <activity android:name=".router.page.testactivity.Test3Activity" />
+        <activity android:name=".router.page.testactivity.Test4Activity" />
+
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.view.demo1.LocalVisibleForViewActivity"
+            android:label="@string/view_local_visible_test"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.view.demo1.LocalVisibleForViewFragment" />
+        </activity-alias>
+
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.view.demo1.GlobalVisibleForViewActivity"
+            android:label="@string/view_global_visible_test"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.view.demo1.GlobalVisibleForViewFragment" />
+        </activity-alias>
+
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.view.demo2.GlobalVisibleForViewFragment2Activity2"
+            android:label="@string/view_global_visible_test2"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.view.demo2.GlobalVisibleForViewFragment2" />
+        </activity-alias>
+
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.view.LocalVisibleForViewActivity2"
+            android:label="@string/view_local_visible_test2"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.view.demo2.LocalVisibleForViewFragment2" />
+        </activity-alias>
+
     </application>
 
 </manifest>
