@@ -56,6 +56,12 @@ limitations under the License.
         android:layout_alignLeft="@id/local"
         android:layout_below="@id/global"/>
 
+    <TextView
+        android:id="@+id/widthHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/local"
+        android:layout_below="@id/offset"/>
 
 </RelativeLayout>
 

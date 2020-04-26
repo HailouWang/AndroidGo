@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentRecyclerView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="50dp"
+    android:orientation="vertical"
+    android:overScrollMode="never">
+
+    <TextView
+        android:id="@+id/demo1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="获取 Inherited 中的取值测试" />
+
+    <TextView
+        android:id="@+id/demo2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="获取Demo中的取值" />
+
+    <TextView
+        android:id="@+id/demo3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="使用注解属性" />
+
+    <TextView
+        android:id="@+id/demo4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="执行注解方法" />
+
+</LinearLayout>

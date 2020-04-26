@@ -47,6 +47,12 @@
     <string name="view_local_visible_test2">View/LocalVisibleForView/Demo2</string>
     <string name="view_global_visible_test2">View/GlobalVisibleForView/Demo2</string>
 
+    <string name="java_test_fragment1">Java/Finalize/Demo1</string>
+
+    <string name="classloader_fragment1">ClassLoader/ActivityClassLoader/Demo1</string>
+
+    <string name="annotation_fragment1">Annotation/Demo</string>
+
     <!--ImageLoader-->
     <string name="volley_sample_request">volley/SampleRequest</string>
     <string name="volley_create_request_queue">volley/CreateRequestQueue</string>

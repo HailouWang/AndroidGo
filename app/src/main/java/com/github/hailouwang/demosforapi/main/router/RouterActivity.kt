@@ -1,6 +1,9 @@
 package com.github.hailouwang.demosforapi.main.router
 
+import com.github.hailouwang.demosforapi.annotation.AnnotationDemoFragment
+import com.github.hailouwang.demosforapi.classloader.ClassLoaderDemo1
 import com.github.hailouwang.demosforapi.flutter.demo1.FlutterDemoFragment1
+import com.github.hailouwang.demosforapi.java.TestJavaFragment
 import com.github.hailouwang.demosforapi.router.demo.ARouteDemo1Fragment
 import com.github.hailouwang.demosforapi.view.demo1.GlobalVisibleForViewFragment
 import com.github.hailouwang.demosforapi.view.demo1.LocalVisibleForViewFragment
@@ -27,6 +30,12 @@ class RouterActivity : BMRouterFragmentActivity() {
             ENTRY_FRAGMENTS.add(GlobalVisibleForViewFragment::class.java.name)
             ENTRY_FRAGMENTS.add(GlobalVisibleForViewFragment2::class.java.name)
             ENTRY_FRAGMENTS.add(LocalVisibleForViewFragment2::class.java.name)
+            ENTRY_FRAGMENTS.add(LocalVisibleForViewFragment2222::class.java.name)
+            ENTRY_FRAGMENTS.add(TestJavaFragment::class.java.name)
+            ENTRY_FRAGMENTS.add(ClassLoaderDemo1::class.java.name)
+            ENTRY_FRAGMENTS.add(AnnotationDemoFragment::class.java.name)
+//            ENTRY_FRAGMENTS.add(AnnotationDemoFragment::class.java.name)
+//            ENTRY_FRAGMENTS.add(AnnotationDemoFragment::class.java.name)
         }
     }
 

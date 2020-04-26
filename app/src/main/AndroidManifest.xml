@@ -1272,7 +1272,52 @@
 
             <meta-data
                 android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
-                android:value="com.github.hailouwang.demosforapi.view.demo2.LocalVisibleForViewFragment2" />
+                android:value="com.github.hailouwang.demosforapi.view.demo2.LocalVisibleForViewFragment2222" />
+        </activity-alias>
+
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.java.TestJavaActivity"
+            android:label="@string/java_test_fragment1"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.java.TestJavaFragment" />
+        </activity-alias>
+
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.classloader.ClassLoaderDemo1Activity"
+            android:label="@string/classloader_fragment1"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.classloader.ClassLoaderDemo1" />
+        </activity-alias>
+
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.annotation.AnnotationDemoActivity"
+            android:label="@string/annotation_fragment1"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.annotation.AnnotationDemoFragment" />
         </activity-alias>
 
     </application>

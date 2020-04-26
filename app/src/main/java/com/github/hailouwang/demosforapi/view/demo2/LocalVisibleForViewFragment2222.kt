@@ -51,8 +51,8 @@ class LocalVisibleForViewFragment2222 : Fragment() {
                     }
 
                     MotionEvent.ACTION_MOVE -> {
-                        var dx = (event?.getRawX() - lastX).toInt()
-                        var dy = (event?.getRawY() - lastY).toInt()
+                        var dx = (event?.getRawX().toInt()?:0) - lastX
+                        var dy = (event?.getRawY().toInt()?:0) - lastY
 
                         var left = (v?.left ?:0) + dx
                         var top = (v?.top ?:0) + dy
@@ -72,6 +72,7 @@ class LocalVisibleForViewFragment2222 : Fragment() {
                         v?.getGlobalVisibleRect(globalRect, globalOffset);
                         global.setText("global" + globalRect.toString());
                         offset.setText("globalOffset:" + globalOffset.x + "," + globalOffset.y);
+                        widthHeight.setText("widthHeight : " + img.width + "," + img.height);
                     }
                     MotionEvent.ACTION_UP -> {
                     }
