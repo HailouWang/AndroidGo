@@ -53,6 +53,8 @@
 
     <string name="annotation_fragment1">Annotation/Demo</string>
 
+    <string name="proxy_fragment1">Proxy/Demo</string>
+
     <!--ImageLoader-->
     <string name="volley_sample_request">volley/SampleRequest</string>
     <string name="volley_create_request_queue">volley/CreateRequestQueue</string>
