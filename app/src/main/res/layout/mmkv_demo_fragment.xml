@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_marginTop="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/crud"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MMKV CRUD 写入 \ 读取"/>
+
+    <Button
+        android:id="@+id/del"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MMKV CRUD 删除 查询"/>
+
+    <Button
+        android:id="@+id/multi_file"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MMKV CRUD 多业务线/文件"/>
+
+    <Button
+        android:id="@+id/multi_process"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MMKV CRUD 多进程访问"/>
+
+    <Button
+        android:id="@+id/multi_shared_preference"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MMKV 数据迁移"/>
+
+</LinearLayout>

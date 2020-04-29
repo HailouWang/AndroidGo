@@ -1,8 +1,10 @@
 package com.github.hailouwang.demosforapi;
 
 import android.app.Application;
+import android.util.Log;
 
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.tencent.mmkv.MMKV;
 
 import cn.leancloud.AVLogger;
 import cn.leancloud.AVOSCloud;
@@ -48,6 +50,10 @@ public class DemosApp extends Application {
         FlutterEngineCache
                 .getInstance()
                 .put(CACHE_ENGINE, flutterEngine);
+
+        // MMKV
+        String rootDir = MMKV.initialize(this);
+        Log.d("hlwang", "DemosApp onCreate MMKV rootDir : " + rootDir);
     }
 
     public static String getCacheEngine() {

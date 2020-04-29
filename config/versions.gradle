@@ -133,6 +133,8 @@ versions.shimmer_layout = "2.1.0"
 
 versions.fragment_router = "1.0.0"
 
+versions.mmkv = "1.1.1"
+
 def deps = [:]
 
 // https://www.jianshu.com/p/029c1f527135
@@ -308,6 +310,9 @@ deps.shimmer_layout = "io.supercharge:shimmerlayout:$versions.shimmer_layout"
 def hailouwang = [:]
 hailouwang.fragmentrouter = "com.github.hailouwang:fragmentrouter:$versions.fragment_router"
 deps.hailouwang = hailouwang
+
+deps.mmkv_static = "com.tencent:mmkv-static:$versions.mmkv"
+deps.mmkv = "com.tencent:mmkv:$versions.mmkv"
 
 ext.deps = deps
 

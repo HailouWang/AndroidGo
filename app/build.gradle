@@ -138,4 +138,7 @@ dependencies {
     annotationProcessor project(path: ':arouter-compiler')
 
     implementation 'com.meituan.robust:robust:0.4.99'
+
+//    implementation deps.mmkv_static
+    implementation deps.mmkv
 }

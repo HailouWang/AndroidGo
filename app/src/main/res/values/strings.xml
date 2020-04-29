@@ -60,6 +60,8 @@
     <string name="performance_rl_weight">布局性能分析/RelativeLayout/Measure 次数</string>
     <string name="performance_analysis">布局性能分析/时间统计</string>
 
+    <string name="mmkv_demo1">MMKV/使用Demo</string>
+
     <!--ImageLoader-->
     <string name="volley_sample_request">volley/SampleRequest</string>
     <string name="volley_create_request_queue">volley/CreateRequestQueue</string>

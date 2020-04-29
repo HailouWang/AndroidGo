@@ -1380,6 +1380,21 @@
                 android:value="com.github.hailouwang.demosforapi.view.performance.AnalysisPerformanceFragment" />
         </activity-alias>
 
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.mmkv.MMKVDemoActivity"
+            android:label="@string/mmkv_demo1"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.mmkv.MMKVDemoFragment" />
+        </activity-alias>
+
     </application>
 
 </manifest>
