@@ -11,6 +11,7 @@ import com.github.hailouwang.demosforapi.view.demo1.LocalVisibleForViewFragment
 import com.github.hailouwang.demosforapi.view.demo2.GlobalVisibleForViewFragment2
 import com.github.hailouwang.demosforapi.view.demo2.LocalVisibleForViewFragment2
 import com.github.hailouwang.demosforapi.view.demo2.LocalVisibleForViewFragment2222
+import com.github.hailouwang.demosforapi.view.performance.AnalysisPerformanceFragment
 import com.github.hailouwang.demosforapi.view.performance.PerformanceLinearLayoutNoWeightFragment
 import com.github.hailouwang.demosforapi.view.performance.PerformanceLinearLayoutWeightFragment
 import com.github.hailouwang.demosforapi.view.performance.PerformanceRelativeLayoutFragment
@@ -42,7 +43,7 @@ class RouterActivity : BMRouterFragmentActivity() {
             ENTRY_FRAGMENTS.add(PerformanceLinearLayoutNoWeightFragment::class.java.name)
             ENTRY_FRAGMENTS.add(PerformanceLinearLayoutWeightFragment::class.java.name)
             ENTRY_FRAGMENTS.add(PerformanceRelativeLayoutFragment::class.java.name)
-//            ENTRY_FRAGMENTS.add(PerformanceRelativeLayoutFragment::class.java.name)
+            ENTRY_FRAGMENTS.add(AnalysisPerformanceFragment::class.java.name)
 //            ENTRY_FRAGMENTS.add(PerformanceRelativeLayoutFragment::class.java.name)
         }
     }

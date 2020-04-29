@@ -58,6 +58,7 @@
     <string name="performance_ll_no_weight">布局性能分析/LinearLayout/不使用layout_weight Measure 次数</string>
     <string name="performance_ll_weight">布局性能分析/LinearLayout/使用layout_weight Measure 次数</string>
     <string name="performance_rl_weight">布局性能分析/RelativeLayout/Measure 次数</string>
+    <string name="performance_analysis">布局性能分析/时间统计</string>
 
     <!--ImageLoader-->
     <string name="volley_sample_request">volley/SampleRequest</string>

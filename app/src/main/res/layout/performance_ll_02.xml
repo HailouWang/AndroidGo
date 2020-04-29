@@ -21,10 +21,12 @@ limitations under the License.
     android:padding="8dip">
 
     <com.github.hailouwang.demosforapi.view.performance.view.SubView
+        android:id="@+id/tv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center"
         android:layout_weight="1"
-        android:text="111111" />
+        android:text="点击试试" />
 
 </LinearLayout>
 
