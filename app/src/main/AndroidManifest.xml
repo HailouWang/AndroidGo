@@ -1335,6 +1335,36 @@
                 android:value="com.github.hailouwang.demosforapi.proxy.JavaProxyDemoFragment" />
         </activity-alias>
 
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.view.performance.PerformanceLinearLayoutNoWeightFragmentActivity"
+            android:label="@string/performance_ll_no_weight"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.view.performance.PerformanceLinearLayoutNoWeightFragment" />
+        </activity-alias>
+
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.view.performance.PerformanceLinearLayoutWeightFragmentActivity"
+            android:label="@string/performance_rl_weight"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.view.performance.PerformanceLinearLayoutWeightFragment" />
+        </activity-alias>
+
     </application>
 
 </manifest>

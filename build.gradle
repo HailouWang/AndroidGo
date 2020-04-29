@@ -12,6 +12,9 @@ buildscript {
 
         classpath deps.kotlin.plugin
 
+        classpath 'com.meituan.robust:gradle-plugin:0.4.99'
+        classpath 'com.meituan.robust:auto-patch-plugin:0.4.99'
+
         // 了解 GradlePlugin 开发过程，这里要打开
 //        classpath 'com.github.hailouwang.demosforapi:gradleplugindemo:1.0.0'
     }

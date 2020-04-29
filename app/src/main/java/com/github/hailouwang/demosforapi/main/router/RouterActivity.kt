@@ -11,6 +11,9 @@ import com.github.hailouwang.demosforapi.view.demo1.LocalVisibleForViewFragment
 import com.github.hailouwang.demosforapi.view.demo2.GlobalVisibleForViewFragment2
 import com.github.hailouwang.demosforapi.view.demo2.LocalVisibleForViewFragment2
 import com.github.hailouwang.demosforapi.view.demo2.LocalVisibleForViewFragment2222
+import com.github.hailouwang.demosforapi.view.performance.PerformanceLinearLayoutNoWeightFragment
+import com.github.hailouwang.demosforapi.view.performance.PerformanceLinearLayoutWeightFragment
+import com.github.hailouwang.demosforapi.view.performance.PerformanceRelativeLayoutFragment
 import com.github.hailouwang.demosforapi.widget.da.ui.DataAnalysisRecyclerViewFragment
 import com.github.hailouwang.demosforapi.widget.lifecycle.VisibleToUserChangeFragment
 import com.github.hailouwang.demosforapi.widget.lifecycle.lifecycler.demo.LifeCyclerDemoFragment
@@ -36,7 +39,11 @@ class RouterActivity : BMRouterFragmentActivity() {
             ENTRY_FRAGMENTS.add(ClassLoaderDemo1::class.java.name)
             ENTRY_FRAGMENTS.add(AnnotationDemoFragment::class.java.name)
             ENTRY_FRAGMENTS.add(JavaProxyDemoFragment::class.java.name)
-//            ENTRY_FRAGMENTS.add(AnnotationDemoFragment::class.java.name)
+            ENTRY_FRAGMENTS.add(PerformanceLinearLayoutNoWeightFragment::class.java.name)
+            ENTRY_FRAGMENTS.add(PerformanceLinearLayoutWeightFragment::class.java.name)
+            ENTRY_FRAGMENTS.add(PerformanceRelativeLayoutFragment::class.java.name)
+//            ENTRY_FRAGMENTS.add(PerformanceRelativeLayoutFragment::class.java.name)
+//            ENTRY_FRAGMENTS.add(PerformanceRelativeLayoutFragment::class.java.name)
         }
     }
 

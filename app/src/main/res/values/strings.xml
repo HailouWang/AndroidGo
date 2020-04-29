@@ -55,6 +55,10 @@
 
     <string name="proxy_fragment1">Proxy/Demo</string>
 
+    <string name="performance_ll_no_weight">布局性能分析/LinearLayout/不使用layout_weight Measure 次数</string>
+    <string name="performance_ll_weight">布局性能分析/LinearLayout/使用layout_weight Measure 次数</string>
+    <string name="performance_rl_weight">布局性能分析/RelativeLayout/Measure 次数</string>
+
     <!--ImageLoader-->
     <string name="volley_sample_request">volley/SampleRequest</string>
     <string name="volley_create_request_queue">volley/CreateRequestQueue</string>

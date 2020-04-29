@@ -1,5 +1,9 @@
 apply plugin: 'com.android.application'
 
+//制作补丁时将这个打开，auto-patch-plugin紧跟着com.android.application
+//apply plugin: 'auto-patch-plugin'
+//apply plugin: 'robust'
+
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android-extensions'
@@ -132,4 +136,6 @@ dependencies {
     implementation deps.alibabaarouter
 //    annotationProcessor deps.alibabaarouter_compiler
     annotationProcessor project(path: ':arouter-compiler')
+
+    implementation 'com.meituan.robust:robust:0.4.99'
 }

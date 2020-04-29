@@ -25,6 +25,9 @@ import com.github.hailouwang.demosforapi.router.page.testservice.SingleService
 import kotlinx.android.synthetic.main.aroute_demo1_fragment.*
 import java.util.*
 
+/**
+ * https://www.jianshu.com/p/857aea5b54a8
+ */
 class ARouteDemo1Fragment : Fragment(),
     View.OnClickListener {
     override fun onCreateView(
