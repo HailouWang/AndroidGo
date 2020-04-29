@@ -11,9 +11,9 @@
  
 ## 三、UI
 
-![](./image/mulu.png)
-![](./image/save1.png)
-![](./image/save2.png)
+![](image/mulu.png)
+![](image/save1.png)
+![](image/save2.png)
 
 ## 四、开源协议
 
