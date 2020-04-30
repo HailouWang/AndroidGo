@@ -31,7 +31,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".main.router.RouterActivity"/>
+        <activity android:name=".main.router.RouterActivity" />
 
         <activity
             android:name="com.github.hailouwang.demosforapi.volley.SampleRequest"
@@ -1082,7 +1082,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.github.hailouwang.demosforapi.compatible.lineheight.MultiRomTextViewLineHeightTextActivity"
+        <activity
+            android:name="com.github.hailouwang.demosforapi.compatible.lineheight.MultiRomTextViewLineHeightTextActivity"
             android:label="@string/compatible_multi_rom_text_view_line_height_test"
             android:logo="@drawable/ic_settings">
             <intent-filter>
@@ -1092,8 +1093,7 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name="com.github.hailouwang.demosforapi.widget.skeleton.shimerrecyclerview.DemoActivity"/>
+        <activity android:name="com.github.hailouwang.demosforapi.widget.skeleton.shimerrecyclerview.DemoActivity" />
 
         <activity-alias
             android:name="com.github.hailouwang.demosforapi.widget.lifecycle.VisibleToUserFragmentActivity"
@@ -1176,9 +1176,9 @@
             android:hardwareAccelerated="true"
             android:windowSoftInputMode="adjustResize" />
 
-        <activity android:name="com.github.hailouwang.demosforapi.router.page.FirstARouterTestActivity"/>
-        <activity android:name="com.github.hailouwang.demosforapi.router.page.SecondARouterTestActivity"/>
-        <activity android:name="com.github.hailouwang.demosforapi.router.page.ThirdARouterTestActivity"/>
+        <activity android:name="com.github.hailouwang.demosforapi.router.page.FirstARouterTestActivity" />
+        <activity android:name="com.github.hailouwang.demosforapi.router.page.SecondARouterTestActivity" />
+        <activity android:name="com.github.hailouwang.demosforapi.router.page.ThirdARouterTestActivity" />
 
         <activity android:name=".router.page.SchemeFilterActivity">
 
@@ -1393,6 +1393,36 @@
             <meta-data
                 android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
                 android:value="com.github.hailouwang.demosforapi.mmkv.MMKVDemoFragment" />
+        </activity-alias>
+
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.livedata.LiveDataDemoObserverActivity"
+            android:label="@string/jetpack_livedata_observer"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.livedata.LiveDataDemoObserverFragment" />
+        </activity-alias>
+
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.livedata.LiveDataDemoObserveForeverActivity"
+            android:label="@string/jetpack_livedata_observerforever"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.livedata.LiveDataDemoObserveForeverFragment" />
         </activity-alias>
 
     </application>

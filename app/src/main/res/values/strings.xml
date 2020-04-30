@@ -28,7 +28,9 @@
 
     <string name="widget_da_collection_viewtree_test1">合集Demo/埋点、数据采集/RecyclerView 埋点数据采集</string>
 
-    <string name="jetpack_lifecycler_demo">Jetpack/Demo/LifeCycler</string>
+    <string name="jetpack_lifecycler_demo">Jetpack/LifeCycler/Demo</string>
+    <string name="jetpack_livedata_observer">Jetpack/LiveData/SimpleObserver</string>
+    <string name="jetpack_livedata_observerforever">Jetpack/LiveData/ObserverForever</string>
 
     <string name="widget_visible_to_user_fragment">合集Demo/页面是否展示给用户</string>
 

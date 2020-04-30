@@ -12,7 +12,7 @@ include ':gradleplugindemo'
 
 include ':flutter_demo'
 
-include ':arouter-compiler'
+// include ':arouter-compiler'
 include ':module-kotlin'
 include ':module-java'
 include ':routemoduletest'

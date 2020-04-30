@@ -134,8 +134,8 @@ dependencies {
     implementation project(path: ':module-kotlin')
 
     implementation deps.alibabaarouter
-//    annotationProcessor deps.alibabaarouter_compiler
-    annotationProcessor project(path: ':arouter-compiler')
+    annotationProcessor deps.alibabaarouter_compiler
+//    annotationProcessor project(path: ':arouter-compiler')
 
     implementation 'com.meituan.robust:robust:0.4.99'
 

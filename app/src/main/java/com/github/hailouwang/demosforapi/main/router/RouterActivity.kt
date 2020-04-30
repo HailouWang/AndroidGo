@@ -4,6 +4,8 @@ import com.github.hailouwang.demosforapi.annotation.AnnotationDemoFragment
 import com.github.hailouwang.demosforapi.classloader.ClassLoaderDemo1
 import com.github.hailouwang.demosforapi.flutter.demo1.FlutterDemoFragment1
 import com.github.hailouwang.demosforapi.java.TestJavaFragment
+import com.github.hailouwang.demosforapi.livedata.LiveDataDemoObserveForeverFragment
+import com.github.hailouwang.demosforapi.livedata.LiveDataDemoObserverFragment
 import com.github.hailouwang.demosforapi.mmkv.MMKVDemoFragment
 import com.github.hailouwang.demosforapi.proxy.JavaProxyDemoFragment
 import com.github.hailouwang.demosforapi.router.demo.ARouteDemo1Fragment
@@ -46,7 +48,21 @@ class RouterActivity : BMRouterFragmentActivity() {
             ENTRY_FRAGMENTS.add(PerformanceRelativeLayoutFragment::class.java.name)
             ENTRY_FRAGMENTS.add(AnalysisPerformanceFragment::class.java.name)
             ENTRY_FRAGMENTS.add(MMKVDemoFragment::class.java.name)
-//            ENTRY_FRAGMENTS.add(MMKVDemoFragment::class.java.name)
+            ENTRY_FRAGMENTS.add(LiveDataDemoObserveForeverFragment::class.java.name)
+            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
+
+//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
+//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
+//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
+//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
+//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
+//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
+//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
+//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
+//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
+//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
+//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
+//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
         }
     }
 
