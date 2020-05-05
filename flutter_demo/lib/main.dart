@@ -4,6 +4,7 @@ import 'dart:isolate';
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 import 'package:flutter/services.dart';
+import 'package:flutterdemo/provider/ProviderDemo.dart';
 import 'package:http/http.dart' as http;
 
 // => 单行函数或者方法的简写
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
         '/b': (BuildContext context) => new MyPage14(title: 'Page B'),
         '/c': (BuildContext context) => new MyPage14(title: 'Page C'),
         '/d': (BuildContext context) => new CustomButtonWidget(),
+        '/provider': (BuildContext context) => new ProviderDemo(),
       },
     );
   }
@@ -106,6 +108,7 @@ class RandomWords extends StatelessWidget {
     _ListDatas.add("17 Isolate 异步请求 runOnUiThread");
     _ListDatas.add("18 在Flutter中显示进度指示器");
     _ListDatas.add("19 在Flutter中监听生命周期");
+    _ListDatas.add("20 Google Provider Demo");
   }
 
   void _onClick(BuildContext context, int index) {
@@ -252,6 +255,8 @@ class RandomWords extends StatelessWidget {
           home: new LifecycleWatcher(),
         );
       }));
+    }else if (index == 20) {
+      Navigator.of(context).pushNamed('/provider');
     }
   }
 }
