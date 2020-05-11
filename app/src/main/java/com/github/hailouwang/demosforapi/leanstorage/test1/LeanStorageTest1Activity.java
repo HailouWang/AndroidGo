@@ -1,4 +1,4 @@
-package com.github.hailouwang.demosforapi.leancode.test1;
+package com.github.hailouwang.demosforapi.leanstorage.test1;
 
 import android.os.Bundle;
 import android.util.Log;

@@ -1072,7 +1072,7 @@
         </activity>
 
         <activity
-            android:name="com.github.hailouwang.demosforapi.leancode.test1.LeanStorageTest1Activity"
+            android:name="com.github.hailouwang.demosforapi.leanstorage.test1.LeanStorageTest1Activity"
             android:label="@string/lean_storage_test1"
             android:logo="@drawable/ic_settings">
             <intent-filter>
