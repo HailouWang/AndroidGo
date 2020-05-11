@@ -783,7 +783,7 @@ class ShoppingList extends StatefulWidget {
   final List<Product> products;
 
   // The framework calls createState the first time a widget appears at a given
-  // location in the tree. If the parent rebuilds and uses the same type of
+  // location in the intTreeNode. If the parent rebuilds and uses the same type of
   // widget (with the same key), the framework will re-use the State object
   // instead of creating a new State object.
 
@@ -870,7 +870,7 @@ class ShoppingListItem extends StatelessWidget {
   final CartChangedCallback onCartChanged;
 
   Color _getColor(BuildContext context) {
-    // The theme depends on the BuildContext because different parts of the tree
+    // The theme depends on the BuildContext because different parts of the intTreeNode
     // can have different themes.  The BuildContext indicates where the build is
     // taking place and therefore which theme to use.
 

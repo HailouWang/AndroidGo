@@ -33,7 +33,10 @@ android {
 
         javaCompileOptions {
             annotationProcessorOptions {
-                arguments = [AROUTER_MODULE_NAME: project.getName(), AROUTER_GENERATE_DOC: "enable"]
+                arguments = [AROUTER_MODULE_NAME    : project.getName(), AROUTER_GENERATE_DOC: "enable",
+                             "room.schemaLocation"  : "$projectDir/schemas".toString(),
+                             "room.incremental"     : "true",
+                             "room.expandProjection": "true"]
             }
         }
     }
@@ -141,4 +144,18 @@ dependencies {
 
 //    implementation deps.mmkv_static
     implementation deps.mmkv
+
+    // room start
+    implementation deps.room.runtime
+    annotationProcessor deps.room.compiler // For Kotlin use kapt instead of annotationProcessor
+
+    // optional - Kotlin Extensions and Coroutines support for Room
+    implementation deps.room.ktx
+
+    // optional - RxJava support for Room
+    implementation deps.room.rxjava2
+
+    // Test helpers
+    testImplementation deps.room.testing
+    // room end
 }

@@ -225,4 +225,7 @@
 
     <string name="lean_storage_test1">合集Demo/lean/LeanStorageTest1</string>
 
+    <!--图片三级缓存-->
+    <string name="drawable_cache_demo">三级缓存/DrawableDemo</string>
+
 </resources>

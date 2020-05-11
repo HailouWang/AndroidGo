@@ -1425,6 +1425,21 @@
                 android:value="com.github.hailouwang.demosforapi.livedata.LiveDataDemoObserveForeverFragment" />
         </activity-alias>
 
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.drawable.cache.ThreeCacheDemoActivity"
+            android:label="@string/drawable_cache_demo"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.drawable.cache.ThreeCacheDemoFragment" />
+        </activity-alias>
+
     </application>
 
 </manifest>

@@ -15,7 +15,8 @@
 /app/src/main/assets/index.android.bundle.meta
 /app/src/main/res/**/node_modules_*
 /app/src/main/res/**/app_img_*
-
+./javademo
+/javademo
 
 #热更新相关
 /app/robust/*
