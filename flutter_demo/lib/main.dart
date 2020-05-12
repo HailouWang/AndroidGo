@@ -35,6 +35,7 @@ class MyApp extends StatelessWidget {
         '/b': (BuildContext context) => new MyPage14(title: 'Page B'),
         '/c': (BuildContext context) => new MyPage14(title: 'Page C'),
         '/d': (BuildContext context) => new CustomButtonWidget(),
+        '/e': (BuildContext context) => new IntentsFromOuterClassPage(),
         '/provider': (BuildContext context) => new ProviderDemo(),
       },
     );
@@ -499,6 +500,7 @@ class IntentsFromOuterClassPageState extends State<IntentsFromOuterClassPage> {
   @override
   void initState() {
     super.initState();
+    getSharedText();
   }
 
   getSharedText() async {

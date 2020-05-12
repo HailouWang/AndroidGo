@@ -13,9 +13,9 @@ import androidx.fragment.app.Fragment;
 
 import com.github.hailouwang.demosforapi.DemosApp;
 import com.github.hailouwang.demosforapi.R;
+import com.github.hailouwang.demosforapi.flutter.channels.SimpleChannelsActivity;
 
 import io.flutter.embedding.android.FlutterActivity;
-import io.flutter.embedding.engine.FlutterEngine;
 
 /**
  * https://flutter.cn/docs/development/add-to-app/android/add-flutter-screen
@@ -26,6 +26,8 @@ public class FlutterDemoFragment1 extends Fragment {
     private Button changeRouter;
     private Button useCacheEngine;
     private Button stopDestoryCacheEngine;
+
+    private Button channels;
 
     @Nullable
     @Override
@@ -84,6 +86,18 @@ public class FlutterDemoFragment1 extends Fragment {
             @Override
             public void onClick(View v) {
                 DemosApp.getFlutterEngine().destroy();
+            }
+        });
+
+        channels = view.findViewById(R.id.channels);
+        channels.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent flutterIntent = new Intent(FlutterDemoFragment1.this.getContext(), SimpleChannelsActivity.class)
+                        .putExtra("initial_route", "/e");
+
+                startActivity(flutterIntent);
             }
         });
     }

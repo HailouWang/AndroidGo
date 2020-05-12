@@ -12,6 +12,7 @@ import java.lang.reflect.Proxy
 
 /**
  * http://a.codekk.com/detail/Android/Caij/%E5%85%AC%E5%85%B1%E6%8A%80%E6%9C%AF%E7%82%B9%E4%B9%8B%20Java%20%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86
+ * 动态代理：https://www.jianshu.com/p/820645faff4f
  */
 class JavaProxyDemoFragment : Fragment() {
     override fun onCreateView(
@@ -41,6 +42,8 @@ class JavaProxyDemoFragment : Fragment() {
                 timingInvocationHandler
             ) as Operate
 
+            Log.d("hlwang", "JavaProxyDemoFragment 动态代理类：${operate.javaClass}")
+
             // call method of proxy instance
             // call method of proxy instance
             operate.operateMethod1()
@@ -62,7 +65,7 @@ class JavaProxyDemoFragment : Fragment() {
             // print info of proxy class
             Log.d("hlwang", "proxy class is: " + operate::class.java.getName())
             Log.d("hlwang", "\r\nsuper class of proxy class is: " + operate::class.java.getName());
-            Log.d("hlwang", "\r\ninterfaces of proxy class are: ")
+            Log.d("hlwang", "\r\ninterfaces of proxy class are: " + operate::class)
 
             for (inter in operate::class.java.interfaces) {
                 Log.d("hlwang", "interfaces : " + inter.getName());

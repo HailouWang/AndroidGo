@@ -29,4 +29,10 @@
         android:layout_height="wrap_content"
         android:text = "停止/销毁缓存Engine"/>
 
+    <Button
+        android:id="@+id/channels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text = "Channelds 通信"/>
+
 </LinearLayout>
