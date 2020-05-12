@@ -11,6 +11,7 @@ import com.github.hailouwang.demosforapi.mmkv.MMKVDemoFragment
 import com.github.hailouwang.demosforapi.proxy.JavaProxyDemoFragment
 import com.github.hailouwang.demosforapi.room.RoomDemoFragment
 import com.github.hailouwang.demosforapi.router.demo.ARouteDemo1Fragment
+import com.github.hailouwang.demosforapi.thread.SafeStopThreadFragment
 import com.github.hailouwang.demosforapi.view.demo1.GlobalVisibleForViewFragment
 import com.github.hailouwang.demosforapi.view.demo1.LocalVisibleForViewFragment
 import com.github.hailouwang.demosforapi.view.demo2.GlobalVisibleForViewFragment2
@@ -54,8 +55,8 @@ class RouterActivity : BMRouterFragmentActivity() {
             ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
             ENTRY_FRAGMENTS.add(RoomDemoFragment::class.java.name)
             ENTRY_FRAGMENTS.add(ThreeCacheDemoFragment::class.java.name)
+            ENTRY_FRAGMENTS.add(SafeStopThreadFragment::class.java.name)
 
-//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
 //            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
 //            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
 //            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)

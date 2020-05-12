@@ -228,4 +228,7 @@
     <!--图片三级缓存-->
     <string name="drawable_cache_demo">三级缓存/DrawableDemo</string>
 
+    <!--安全停止一个线程-->
+    <string name="safe_stop_thread">线程/安全停止一个线程</string>
+
 </resources>
