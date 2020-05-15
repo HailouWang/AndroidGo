@@ -6,6 +6,9 @@ import android.util.Log;
 import com.github.hailouwang.demosforapi.R;
 import com.github.hailouwang.demosforapi.Tags;
 
+import org.reactivestreams.Subscriber;
+import org.reactivestreams.Subscription;
+
 import java.util.List;
 
 import io.reactivex.Flowable;
@@ -40,7 +43,6 @@ public class Demos_Flowable_concat_filter extends Demos_Flowable_BaseActivity {
                 }
             }
         });
-
 
     }
 }

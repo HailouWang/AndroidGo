@@ -8,15 +8,20 @@ import com.github.hailouwang.demosforapi.java.TestJavaFragment
 import com.github.hailouwang.demosforapi.livedata.LiveDataDemoObserveForeverFragment
 import com.github.hailouwang.demosforapi.livedata.LiveDataDemoObserverFragment
 import com.github.hailouwang.demosforapi.mmkv.MMKVDemoFragment
+import com.github.hailouwang.demosforapi.poet.PoetDemoFragment
 import com.github.hailouwang.demosforapi.proxy.JavaProxyDemoFragment
 import com.github.hailouwang.demosforapi.room.RoomDemoFragment
 import com.github.hailouwang.demosforapi.router.demo.ARouteDemo1Fragment
+import com.github.hailouwang.demosforapi.rxjava.AutoisponseDemoFragment
+import com.github.hailouwang.demosforapi.rxjava.BackpressDemoFragment
+import com.github.hailouwang.demosforapi.rxjava.SingleDemoFragment
 import com.github.hailouwang.demosforapi.thread.SafeStopThreadFragment
 import com.github.hailouwang.demosforapi.view.demo1.GlobalVisibleForViewFragment
 import com.github.hailouwang.demosforapi.view.demo1.LocalVisibleForViewFragment
 import com.github.hailouwang.demosforapi.view.demo2.GlobalVisibleForViewFragment2
 import com.github.hailouwang.demosforapi.view.demo2.LocalVisibleForViewFragment2
 import com.github.hailouwang.demosforapi.view.demo2.LocalVisibleForViewFragment2222
+import com.github.hailouwang.demosforapi.view.demo3.Demo3Fragment
 import com.github.hailouwang.demosforapi.view.performance.AnalysisPerformanceFragment
 import com.github.hailouwang.demosforapi.view.performance.PerformanceLinearLayoutNoWeightFragment
 import com.github.hailouwang.demosforapi.view.performance.PerformanceLinearLayoutWeightFragment
@@ -56,7 +61,25 @@ class RouterActivity : BMRouterFragmentActivity() {
             ENTRY_FRAGMENTS.add(RoomDemoFragment::class.java.name)
             ENTRY_FRAGMENTS.add(ThreeCacheDemoFragment::class.java.name)
             ENTRY_FRAGMENTS.add(SafeStopThreadFragment::class.java.name)
+            ENTRY_FRAGMENTS.add(PoetDemoFragment::class.java.name)
+            ENTRY_FRAGMENTS.add(Demo3Fragment::class.java.name)
+            ENTRY_FRAGMENTS.add(SingleDemoFragment::class.java.name)
+            ENTRY_FRAGMENTS.add(BackpressDemoFragment::class.java.name)
+            ENTRY_FRAGMENTS.add(AutoisponseDemoFragment::class.java.name)
 
+//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
+//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
+//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
+//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
+//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
+//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
+//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
+//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
+//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
+//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
+//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
+//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
+//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
 //            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
 //            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
 //            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)

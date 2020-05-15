@@ -945,6 +945,61 @@
         </activity>
 
         <!-- RxJava -->
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.rxjava.SingleDemoActivity"
+            android:label="@string/rxjava_flowable_single"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.rxjava.SingleDemoFragment" />
+        </activity-alias>
+
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.rxjava.BackpressDemoActivity"
+            android:label="@string/rxjava_flowable_backpress_01"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.rxjava.BackpressDemoFragment" />
+        </activity-alias>
+
+        <activity
+            android:name="com.github.hailouwang.demosforapi.rxjava.RxLifeCycleDemoActivity"
+            android:label="@string/rxjava_flowable_rxlifecycle">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.rxjava.AutuDisponseDemoActivity"
+            android:label="@string/rxjava_flowable_auto_disponse"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.rxjava.AutuDisponseDemoFragment" />
+        </activity-alias>
+
         <activity
             android:name="com.github.hailouwang.demosforapi.rxjava.Demos_Flowable_backpress"
             android:label="@string/rxjava_backpress_activity">
@@ -1470,6 +1525,36 @@
                 <data android:mimeType="text/plain" />
             </intent-filter>
         </activity>
+
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.poet.PoetDemoActivity"
+            android:label="@string/poet_demo_fragment"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.poet.PoetDemoFragment" />
+        </activity-alias>
+
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.view.demo3.Demo3Activity"
+            android:label="@string/touch_event_dispatch"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.view.demo3.Demo3Fragment" />
+        </activity-alias>
 
     </application>
 

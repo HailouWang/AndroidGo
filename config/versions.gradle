@@ -135,6 +135,9 @@ versions.fragment_router = "1.0.0"
 
 versions.mmkv = "1.1.1"
 
+versions.poet = "1.12.1"
+//versions.poet = "1.8.0"
+
 def deps = [:]
 
 // https://www.jianshu.com/p/029c1f527135
@@ -314,6 +317,10 @@ deps.hailouwang = hailouwang
 
 deps.mmkv_static = "com.tencent:mmkv-static:$versions.mmkv"
 deps.mmkv = "com.tencent:mmkv:$versions.mmkv"
+
+def square = [:]
+square.poet = "com.squareup:javapoet:$versions.poet"
+deps.square = square
 
 ext.deps = deps
 

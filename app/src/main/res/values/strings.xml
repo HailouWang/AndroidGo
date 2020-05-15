@@ -201,6 +201,10 @@
     <string name="rxjava_flowable_flatMap_activity">RxJava/Flowable Complex flatMap</string>
     <string name="rxjava_flowable_distinct_activity">RxJava/Flowable Complex distinct</string>
     <string name="rxjava_flowable_toList_activity">RxJava/Flowable Complex toList</string>
+    <string name="rxjava_flowable_single">RxJava/Single、Completable以及Maybe</string>
+    <string name="rxjava_flowable_backpress_01">RxJava/Backpress 背压</string>
+    <string name="rxjava_flowable_rxlifecycle">RxJava/RxLifeCycle 测试</string>
+    <string name="rxjava_flowable_auto_disponse">RxJava/AutoDisponse 测试</string>
 
     <!--picasso-->
     <string name="picasso_name">Picasso Test</string>
@@ -230,5 +234,10 @@
 
     <!--安全停止一个线程-->
     <string name="safe_stop_thread">线程/安全停止一个线程</string>
+
+    <string name="poet_demo_fragment">Square Poet/Demo1</string>
+
+    <!--事件分发-->
+    <string name="touch_event_dispatch">事件分发/Demo</string>
 
 </resources>
