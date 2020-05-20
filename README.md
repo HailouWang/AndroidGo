@@ -11,9 +11,9 @@
  
 ## 三、UI
 
-![页面1](https://github.com/HailouWang/AndroidGo/blob/master/image/mulu.png)
-![页面2](https://github.com/HailouWang/AndroidGo/blob/master/image/mulu.png)
-![页面3](https://github.com/HailouWang/AndroidGo/blob/master/image/mulu.png)
+![页面1](https://upload-images.jianshu.io/upload_images/3828779-541d87094fa2eabc.gif?imageMogr2/auto-orient/strip|imageView2/2/w/344/format/webp)
+![页面2](https://upload-images.jianshu.io/upload_images/3828779-6e5d9d3e61d4f9ce.gif?imageMogr2/auto-orient/strip|imageView2/2/w/344/format/webp)
+![页面3](https://upload-images.jianshu.io/upload_images/3828779-eb0cec16069aee43.gif?imageMogr2/auto-orient/strip|imageView2/2/w/344/format/webp)
 
 ## 四、开源协议
 
