@@ -21,6 +21,7 @@
     <string name="widget_recyclerview_test7">合集Demo/recyclerview/Dock 淘宝 实现样式</string>
     <string name="widget_recyclerview_test8">合集Demo/recyclerview/Dock 淘宝 实现样式2</string>
     <string name="widget_viewtree_test">合集Demo/viewtree/MeasureWidthHeight</string>
+    <string name="widget_auto_line_test">合集Demo/AutoWrapLine</string>
 
     <string name="widget_skeleton_shimmerrecyclerview_test">合集Demo/骨架图/Github Fake RecyclerView</string>
 

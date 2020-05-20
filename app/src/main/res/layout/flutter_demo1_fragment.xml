@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="60dp"
     android:orientation="vertical">
 
     <Button
@@ -34,5 +35,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text = "Channelds 通信"/>
+
+    <Button
+        android:id="@+id/plugin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text = "Plugin 插件开发 - 电池电量"/>
 
 </LinearLayout>

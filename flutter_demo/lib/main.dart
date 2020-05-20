@@ -4,7 +4,13 @@ import 'dart:isolate';
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 import 'package:flutter/services.dart';
+import 'package:flutterdemo/media/MediaQueryDataWidget.dart';
+import 'package:flutterdemo/plugin/PluginBatteryWidget.dart';
 import 'package:flutterdemo/provider/ProviderDemo.dart';
+import 'package:flutterdemo/widget/flex/FlexWidget.dart';
+import 'package:flutterdemo/widget/lifecycle/StateLifeCycle.dart';
+import 'package:flutterdemo/widget/oktoast/OKToastWidget.dart';
+import 'package:flutterdemo/widget/willpopscope/WillPopScopeWidget.dart';
 import 'package:http/http.dart' as http;
 
 // => 单行函数或者方法的简写
@@ -37,8 +43,65 @@ class MyApp extends StatelessWidget {
         '/d': (BuildContext context) => new CustomButtonWidget(),
         '/e': (BuildContext context) => new IntentsFromOuterClassPage(),
         '/provider': (BuildContext context) => new ProviderDemo(),
+        '/battery_plugin': (BuildContext context) => new PluginBatteryWidget(),
       },
+      //注册路由监听器
+      navigatorObservers: [
+        //这个监听器是个集合，可根据不同需求对路由做不同的设置
+        new MyNavigatorObserver(),
+      ],
     );
+  }
+}
+
+class MyNavigatorObserver extends NavigatorObserver {
+  @override
+  NavigatorState get navigator {}
+
+  @override
+  void didStopUserGesture() {
+    print('----------didStopUserGesture-----------');
+    print('----------end-----------');
+  }
+
+  @override
+  void didStartUserGesture(Route<dynamic> route, Route<dynamic> previousRoute) {
+    print('----------StartUserGesture-----------');
+    print('当前活动的路由：${route.settings}');
+    print('替换活动的路由：${previousRoute?.settings}');
+    print('----------end-----------');
+  }
+
+  @override
+  void didReplace({Route<dynamic> newRoute, Route<dynamic> oldRoute}) {
+    print('----------replace-----------');
+    print('当前活动的路由：${oldRoute.settings}');
+    print('替换活动的路由：${newRoute?.settings}');
+    print('----------end-----------');
+  }
+
+  @override
+  void didRemove(Route<dynamic> route, Route<dynamic> previousRoute) {
+    print('----------remove-----------');
+    print('当前活动的路由：${route.settings}');
+    print('先前活动的路由：${previousRoute?.settings}');
+    print('----------end-----------');
+  }
+
+  @override
+  void didPop(Route<dynamic> route, Route<dynamic> previousRoute) {
+    print('----------pop-----------');
+    print('当前活动的路由：${route.settings}');
+    print('先前活动的路由：${previousRoute?.settings}');
+    print('----------end-----------');
+  }
+
+  @override
+  void didPush(Route<dynamic> route, Route<dynamic> previousRoute) {
+    print('----------push-----------');
+    print('当前活动的路由：${route.settings}');
+    print('先前活动的路由：${previousRoute?.settings}');
+    print('----------end-----------');
   }
 }
 
@@ -110,6 +173,12 @@ class RandomWords extends StatelessWidget {
     _ListDatas.add("18 在Flutter中显示进度指示器");
     _ListDatas.add("19 在Flutter中监听生命周期");
     _ListDatas.add("20 Google Provider Demo");
+    _ListDatas.add("21 State 生命周期");
+    _ListDatas.add("22 MediaQueryData 屏幕信息");
+    _ListDatas.add("23 OKToast");
+    _ListDatas.add("24 WillPopScope 防误触");
+    _ListDatas.add("25 Flex 布局");
+    _ListDatas.add("26 Flutter Plugin 电量 Battery！！！");
   }
 
   void _onClick(BuildContext context, int index) {
@@ -214,7 +283,7 @@ class RandomWords extends StatelessWidget {
       }));
     } else if (index == 14) {
       if (count14 % 4 == 0) {
-        Navigator.of(context).pushNamed('/a',arguments: "hi");
+        Navigator.of(context).pushNamed('/a', arguments: "hi");
       } else if (count14 % 4 == 1) {
         Navigator.of(context).pushNamed('/b');
       } else if (count14 % 4 == 2) {
@@ -242,22 +311,59 @@ class RandomWords extends StatelessWidget {
           home: new ListAsyncPageIsolate(),
         );
       }));
-    }else if (index == 18) {
+    } else if (index == 18) {
       Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
         return new MaterialApp(
           title: '18 在Flutter中显示进度指示器',
           home: new ProgressIndicator(),
         );
       }));
-    }else if (index == 19) {
+    } else if (index == 19) {
       Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
         return new MaterialApp(
           title: '19 在Flutter中监听生命周期',
           home: new LifecycleWatcher(),
         );
       }));
-    }else if (index == 20) {
+    } else if (index == 20) {
       Navigator.of(context).pushNamed('/provider');
+    } else if (index == 21) {
+      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
+        return new MaterialApp(
+            title: '21 State 生命周期', // used by the OS task switcher
+            home: new StateLifeCycle());
+      }));
+    } else if (index == 22) {
+      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
+        return new MaterialApp(
+            title: '22 MediaQueryDataWidget ', // used by the OS task switcher
+            home: new MediaQueryDataWidget());
+      }));
+    } else if (index == 23) {
+      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
+        return new MaterialApp(
+            title: '23 OKToast ', // used by the OS task switcher
+            home: new OKToastWidget());
+      }));
+    } else if (index == 24) {
+      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
+        return new MaterialApp(
+            title: '24 WillPopScope 防误触 ', // used by the OS task switcher
+            home: new WillPopScopeWidget());
+      }));
+    } else if (index == 25) {
+      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
+        return new MaterialApp(
+            title: '25 Flex ', // used by the OS task switcher
+            home: new FlexWidget());
+      }));
+    } else if (index == 26) {
+      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
+        return new MaterialApp(
+            title: '26 Flutter Plugin 电量 Battery！！！',
+            // used by the OS task switcher
+            home: new PluginBatteryWidget());
+      }));
     }
   }
 }
@@ -269,7 +375,8 @@ class LifecycleWatcher extends StatefulWidget {
   _LifecycleWatcherState createState() => new _LifecycleWatcherState();
 }
 
-class _LifecycleWatcherState extends State<LifecycleWatcher> with WidgetsBindingObserver {
+class _LifecycleWatcherState extends State<LifecycleWatcher>
+    with WidgetsBindingObserver {
   AppLifecycleState _lastLifecyleState;
 
   @override
@@ -294,8 +401,10 @@ class _LifecycleWatcherState extends State<LifecycleWatcher> with WidgetsBinding
   @override
   Widget build(BuildContext context) {
     if (_lastLifecyleState == null)
-      return new Text('This widget has not observed any lifecycle changes.', textDirection: TextDirection.ltr);
-    return new Text('The most recent lifecycle state this widget observed was: $_lastLifecyleState.',
+      return new Text('This widget has not observed any lifecycle changes.',
+          textDirection: TextDirection.ltr);
+    return new Text(
+        'The most recent lifecycle state this widget observed was: $_lastLifecyleState.',
         textDirection: TextDirection.ltr);
   }
 }
@@ -356,7 +465,9 @@ class _SampleAppPageState18 extends State<ProgressIndicator> {
       });
 
   Widget getRow(int i) {
-    return new Padding(padding: new EdgeInsets.all(10.0), child: new Text("Row ${widgets[i]["title"]}"));
+    return new Padding(
+        padding: new EdgeInsets.all(10.0),
+        child: new Text("Row ${widgets[i]["title"]}"));
   }
 
   loadData() async {
@@ -525,10 +636,9 @@ class MyPage14 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     String obj = ModalRoute.of(context).settings.arguments;
-    if(obj != null){
-      print("参数---> "+obj);
+    if (obj != null) {
+      print("参数---> " + obj);
     }
 
     return new Scaffold(

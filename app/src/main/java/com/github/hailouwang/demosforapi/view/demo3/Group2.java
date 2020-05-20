@@ -13,6 +13,12 @@ public class Group2 extends FrameLayout {
 	}
 
 	@Override
+	public boolean dispatchTouchEvent(MotionEvent ev) {
+		Log.d(Constant.LOGCAT, "Group2 dispatchTouchEvent 触发事件："+Constant.getActionTAG(ev.getAction()));
+		return super.dispatchTouchEvent(ev);
+	}
+
+	@Override
 	public boolean onInterceptTouchEvent(MotionEvent ev) {
 		// TODO Auto-generated method stub
 		Log.d(Constant.LOGCAT, "Group2 onInterceptTouchEvent 触发事件："+Constant.getActionTAG(ev.getAction()));

@@ -26,6 +26,7 @@ import com.github.hailouwang.demosforapi.view.performance.AnalysisPerformanceFra
 import com.github.hailouwang.demosforapi.view.performance.PerformanceLinearLayoutNoWeightFragment
 import com.github.hailouwang.demosforapi.view.performance.PerformanceLinearLayoutWeightFragment
 import com.github.hailouwang.demosforapi.view.performance.PerformanceRelativeLayoutFragment
+import com.github.hailouwang.demosforapi.widget.autowrapline.AutoWrapLineDemoFragment
 import com.github.hailouwang.demosforapi.widget.da.ui.DataAnalysisRecyclerViewFragment
 import com.github.hailouwang.demosforapi.widget.lifecycle.VisibleToUserChangeFragment
 import com.github.hailouwang.demosforapi.widget.lifecycle.lifecycler.demo.LifeCyclerDemoFragment
@@ -66,8 +67,7 @@ class RouterActivity : BMRouterFragmentActivity() {
             ENTRY_FRAGMENTS.add(SingleDemoFragment::class.java.name)
             ENTRY_FRAGMENTS.add(BackpressDemoFragment::class.java.name)
             ENTRY_FRAGMENTS.add(AutoisponseDemoFragment::class.java.name)
-
-//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
+            ENTRY_FRAGMENTS.add(AutoWrapLineDemoFragment::class.java.name)
 //            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
 //            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
 //            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)

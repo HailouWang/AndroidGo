@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 
 import com.github.hailouwang.demosforapi.DemosApp;
 import com.github.hailouwang.demosforapi.R;
+import com.github.hailouwang.demosforapi.flutter.battery.FlutterBatteryPluginActivity;
 import com.github.hailouwang.demosforapi.flutter.channels.SimpleChannelsActivity;
 
 import io.flutter.embedding.android.FlutterActivity;
@@ -28,6 +29,7 @@ public class FlutterDemoFragment1 extends Fragment {
     private Button stopDestoryCacheEngine;
 
     private Button channels;
+    private Button plugin;
 
     @Nullable
     @Override
@@ -96,6 +98,17 @@ public class FlutterDemoFragment1 extends Fragment {
             public void onClick(View v) {
                 Intent flutterIntent = new Intent(FlutterDemoFragment1.this.getContext(), SimpleChannelsActivity.class)
                         .putExtra("initial_route", "/e");
+
+                startActivity(flutterIntent);
+            }
+        });
+
+        plugin = view.findViewById(R.id.plugin);
+        plugin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent flutterIntent = new Intent(FlutterDemoFragment1.this.getContext(), FlutterBatteryPluginActivity.class)
+                        .putExtra("initial_route", "/battery_plugin");
 
                 startActivity(flutterIntent);
             }

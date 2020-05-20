@@ -15,6 +15,8 @@ import androidx.fragment.app.Fragment;
  * 事件分发：https://www.cnblogs.com/xiaoQLu/archive/2013/04/02/2994030.html
  * <p>
  * 事件分发：https://www.cnblogs.com/SCAU_que/articles/2552871.html
+ *
+ * https://blog.csdn.net/mq2553299/article/details/105547607
  */
 public class Demo3Fragment extends Fragment {
     Group1 group1;

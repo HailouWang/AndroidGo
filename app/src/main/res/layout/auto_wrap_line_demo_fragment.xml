@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="多行，左右间距都有设定" />
+
+    <com.github.hailouwang.demosforapi.widget.autowrapline.AutoLinefeedLayout
+        android:id="@+id/autoLineDemo1"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="60dp"
+        app:horizontalGap="4dp"
+        app:verticalGap="3dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="多行，只展示一行，无左右间距设定" />
+
+    <com.github.hailouwang.demosforapi.widget.autowrapline.AutoLinefeedLayout
+        android:id="@+id/autoLineDemo2"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="60dp"
+        app:childCount="1" />
+
+</LinearLayout>

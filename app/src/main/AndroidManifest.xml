@@ -1526,6 +1526,21 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name="com.github.hailouwang.demosforapi.flutter.battery.FlutterBatteryPluginActivity"
+            android:launchMode="singleTop"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                android:name="io.flutter.app.android.SplashScreenUntilFirstFrame"
+                android:value="true" />
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <activity-alias
             android:name="com.github.hailouwang.demosforapi.poet.PoetDemoActivity"
             android:label="@string/poet_demo_fragment"
@@ -1554,6 +1569,21 @@
             <meta-data
                 android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
                 android:value="com.github.hailouwang.demosforapi.view.demo3.Demo3Fragment" />
+        </activity-alias>
+
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.widget.autowrapline.AutoWrapLineDemoActivity"
+            android:label="@string/widget_auto_line_test"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.widget.autowrapline.AutoWrapLineDemoFragment" />
         </activity-alias>
 
     </application>

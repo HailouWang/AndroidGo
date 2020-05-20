@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <bool name="atLeastHoneycomb">true</bool>
-    <style name="ThemeCurrent" parent="@android:Theme.Holo"/>
-    <style name="ThemeCurrentDialog" parent="@android:Theme.Holo.Dialog"/>
-    <style name="ThemeDefault" parent="@android:style/Theme.Holo"/>
-    <style name="ThemeDialogWhenLarge" parent="@android:style/Theme.Holo.DialogWhenLarge"/>
-</resources>

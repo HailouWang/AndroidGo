@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <bool name="atLeastIceCreamSandwich">true</bool>
-    <style name="ThemeDefault" parent="@android:style/Theme.DeviceDefault"/>
-</resources>

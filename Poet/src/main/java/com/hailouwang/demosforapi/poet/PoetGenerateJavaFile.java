@@ -25,6 +25,8 @@ public class PoetGenerateJavaFile {
         JavaFile javaFile = JavaFile.builder("com.hailouwang.demosforapi.poet", helloWorld)
                 .build();
 
+        System.out.println("PoetGenerateJavaFile javaFile : " + javaFile);
+
         try {
             javaFile.writeTo(System.out);
         } catch (IOException e) {
