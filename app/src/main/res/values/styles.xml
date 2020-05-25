@@ -98,4 +98,7 @@
     <style name="Widget.PicassoSample.DescriptionText" parent="android:Widget.TextView">
         <item name="android:textSize">12sp</item>
     </style>
+
+    <style name="FullscreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    </style>
 </resources>

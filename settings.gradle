@@ -1,4 +1,5 @@
-include ':app', ':messageview', ':dotspageindicator'
+include ':app', ':messageview', ':dotspageindicator', ':ijkplayer-java',
+        ':dkplayer-java', ':dkplayer-ui', ':dkplayer-videocache', ':dkplayer-players:ijk', ':dkplayer-players:exo', ':dkplayer-sample'/*, ':ijkplayer-java'*/
 setBinding(new Binding([gradle: this]))
 evaluate(new File(
   settingsDir,

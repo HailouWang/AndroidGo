@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DKPlayer</string>
+    <string name="str_api">API</string>
+    <string name="str_list">LIST</string>
+    <string name="str_extend">EXTEND</string>
+    <string name="str_pip">PiP</string>
+    <string name="str_api_vod">VOD</string>
+    <string name="str_api_live">LIVE</string>
+    <string name="str_definition">DEFINITION</string>
+    <string name="str_screen_shot">SCREEN SHOT</string>
+    <string name="str_raw_or_assets">Raw or Assets</string>
+    <string name="str_multi_player">Multi-player</string>
+    <string name="str_list_view">LIST VIEW</string>
+    <string name="str_recycler_view">RECYCLER VIEW</string>
+    <string name="str_auto_play_recycler_view">AUTO PLAY RECYCLER VIEW</string>
+    <string name="str_portrait_when_fullscreen">portrait when fullscreen</string>
+    <string name="str_tiktok">Tik Tok</string>
+    <string name="str_tiktok_1">Tik Tok (RecyclerView)</string>
+    <string name="str_tiktok_2">Tik Tok (VerticalViewPager)</string>
+    <string name="str_tiktok_3">Tik Tok (ViewPager2)</string>
+    <string name="str_fullscreen_directly">FULLSCREEN DIRECTLY</string>
+    <string name="str_danmu">barrage</string>
+    <string name="str_ad">AD</string>
+    <string name="str_pip_demo">PiP</string>
+    <string name="str_pip_in_list">PIP IN LIST</string>
+    <string name="str_pip_android_o">PIP Android O</string>
+    <string name="str_start_pip">PiP</string>
+    <string name="str_tiny_screen">tiny screen</string>
+    <string name="str_cache">CACHE</string>
+    <string name="str_play_list">PLAY LIST</string>
+    <string name="str_switch_player_btn">SWITCH_PLAYER</string>
+    <string name="str_seamless_play">SEAMLESS PLAY</string>
+</resources>

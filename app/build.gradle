@@ -25,10 +25,17 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
+        multiDexEnabled true
+
         externalNativeBuild {
             cmake {
                 cppFlags "-std=c++14"
             }
+        }
+
+        flavorDimensions "default"
+        productFlavors {
+//            all64 { minSdkVersion build_versions.min_sdk }
         }
 
         javaCompileOptions {
@@ -89,6 +96,7 @@ dependencies {
     implementation deps.androidx.core_utils
     implementation deps.androidx.constraintlayout
     implementation deps.androidx.preference
+    implementation deps.androidx.viewpager2
 
 //    implementation 'android.arch.lifecycle:extensions:1.1.1'
     implementation deps.lifecycle.runtime
@@ -161,6 +169,7 @@ dependencies {
 
 //    implementation 'org.checkerframework:checker:2.1.10'
     implementation deps.square.poet
+    implementation deps.square.otto
     implementation project(path: ':Poet')
 
     // rxlifecycle start
@@ -189,4 +198,26 @@ dependencies {
     implementation 'com.uber.autodispose:autodispose:0.6.1'
     implementation 'com.uber.autodispose:autodispose-android-archcomponents:0.6.1'
     // autodisponse end
+
+//    implementation deps.weex.devtools
+//    implementation deps.weex.sdk
+
+//    implementation deps.ijkplayer
+//    implementation deps.ijkplayer_v7a
+//    implementation project(path: ':ijkplayer-exo')
+//    implementation project(path: ':ijkplayer-java')
+
+//    all64Implementation project(':ijkplayer-arm64')
+
+    implementation project(':dkplayer-java')
+    implementation project(':dkplayer-ui')
+    implementation project(path: ':dkplayer-players:ijk')
+    implementation project(path: ':dkplayer-players:exo')
+    //缓存
+    implementation project(':dkplayer-videocache')
+    implementation project(':dkplayer-sample')
+
+    // 弹幕
+    implementation deps.damakuFlame
+    implementation deps.ndkbitmap
 }

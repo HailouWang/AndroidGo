@@ -1,0 +1,48 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion build_versions.compileSdkVersion
+    buildToolsVersion build_versions.build_tools
+
+    defaultConfig {
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation deps.kotlin.stdlib
+
+    implementation deps.androidx.annotations
+    implementation deps.androidx.legacy_support_v4
+    implementation deps.androidx.design
+    implementation deps.androidx.recyclerview
+    implementation deps.androidx.gridlayout
+    implementation deps.androidx.cardview
+    implementation deps.androidx.core_ktx
+    implementation deps.androidx.app_compat
+    implementation deps.androidx.core_utils
+    implementation deps.androidx.constraintlayout
+
+//    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    implementation deps.lifecycle.runtime
+    implementation deps.lifecycle.extensions
+    implementation deps.lifecycle.java8
+    annotationProcessor deps.lifecycle.compiler
+
+    testImplementation deps.junit
+    implementation deps.androidx.test_runner
+    implementation deps.androidx.espresso_core
+
+    implementation deps.androidx.legacy_support_v4
+
+    implementation project(':dkplayer-java')
+
+    api deps.exo.core
+    api deps.exo.dash
+    api deps.exo.hls
+    api deps.exo.smotth_streaming
+    api deps.exo.extension_rtmp
+}

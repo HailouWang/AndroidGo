@@ -1,0 +1,94 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion build_versions.compileSdkVersion
+    buildToolsVersion build_versions.build_tools
+
+    defaultConfig {
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+    }
+
+    signingConfigs {
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation deps.kotlin.stdlib
+
+    implementation deps.androidx.annotations
+    implementation deps.androidx.legacy_support_v4
+    implementation deps.androidx.design
+    implementation deps.androidx.recyclerview
+    implementation deps.androidx.gridlayout
+    implementation deps.androidx.cardview
+    implementation deps.androidx.core_ktx
+    implementation deps.androidx.app_compat
+    implementation deps.androidx.core_utils
+    implementation deps.androidx.constraintlayout
+
+//    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    implementation deps.lifecycle.runtime
+    implementation deps.lifecycle.extensions
+    implementation deps.lifecycle.java8
+    annotationProcessor deps.lifecycle.compiler
+
+    testImplementation deps.junit
+    implementation deps.androidx.test_runner
+    implementation deps.androidx.espresso_core
+
+    implementation deps.androidx.legacy_support_v4
+
+    testImplementation deps.junit
+    implementation deps.androidx.test_runner
+    implementation deps.androidx.espresso_core
+
+    implementation deps.androidx.legacy_support_v4
+
+    implementation deps.alibaba_vlayout
+
+    implementation deps.gson
+
+    implementation deps.retrofit
+
+    implementation deps.okhttp
+
+    implementation deps.picasso
+
+    implementation deps.rxjava2
+    implementation deps.rx_android
+
+    implementation deps.fresco
+
+    implementation deps.leancloud_storage
+    implementation deps.fastjson
+    implementation deps.glide
+
+    implementation project(':dkplayer-java')
+    implementation project(':dkplayer-ui')
+    implementation project(path: ':dkplayer-players:ijk')
+    implementation project(path: ':dkplayer-players:exo')
+    //缓存
+    implementation project(':dkplayer-videocache')
+
+    // 弹幕
+    implementation deps.damakuFlame
+    implementation deps.ndkbitmap
+
+    // permission
+    implementation 'com.yanzhenjie:permission:2.0.3'
+}

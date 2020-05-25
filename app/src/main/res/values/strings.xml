@@ -1,244 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_name">Android Go</string>
 
-    <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="N_A">N/A</string>
+    <string name="close">Close</string>
+    <string name="exit">Exit</string>
+    <string name="sample">Sample</string>
+    <string name="recent">Recent</string>
+    <string name="settings">Settings</string>
+    <string name="tracks">Tracks</string>
+    <string name="toggle_player">Player</string>
+    <string name="toggle_render">Render</string>
+    <string name="toggle_ratio">Scale</string>
+    <string name="show_info">Info</string>
+    <string name="vdec">vdec</string>
+    <string name="fps">fps</string>
+    <string name="v_cache">v-cache</string>
+    <string name="a_cache">a-cache</string>
+    <string name="load_cost">load-cost</string>
+    <string name="seek_cost">seek_cost</string>
+    <string name="seek_load_cost">seek_load_cost</string>
+    <string name="tcp_speed">tcp_speed</string>
+    <string name="bit_rate">bit_rate</string>
 
-    <string name="widget_labeled_seek_bar">合集Demo/LabeledSeekBar</string>
-    <string name="widget_labeled_selfOptionMenu">合集Demo/SelfOptionMenu</string>
-    <string name="app_activity_life_cycle">App/基础/Activity生命周期</string>
+    <string name="media_information">Media Information</string>
+    <string name="mi_player">Player</string>
+    <string name="mi_media">Media</string>
+    <string name="mi_profile_level">Profile level</string>
+    <string name="mi_pixel_format">Pixel format</string>
+    <string name="mi_resolution">Resolution</string>
+    <string name="mi_length">Length</string>
+    <string name="mi_stream_fmt1">Stream #%d</string>
+    <string name="mi_type">Type</string>
+    <string name="mi_language">Language</string>
+    <string name="mi_codec">Codec</string>
+    <string name="mi_frame_rate">Frame rate</string>
+    <string name="mi_bit_rate">Bit rate</string>
+    <string name="mi_sample_rate">Sample rate</string>
+    <string name="mi_channels">Channels</string>
+    <string name="mi__selected_video_track">*</string>
+    <string name="mi__selected_audio_track">*</string>
+    <string name="mi__selected_subtitle_track">*</string>
 
-    <string name="app_activity_actionbar">App/Action Bar/ActionBarDisplayOptions</string>
-    <string name="widget_view_vibration">合集Demo/View/触摸时振动</string>
-    <string name="widget_listview_test">合集Demo/ListView/ArrayAdapterTest</string>
-    <string name="widget_expand_test1">合集Demo/expandView/普通样式</string>
-    <string name="widget_recyclerview_test1">合集Demo/recyclerview/RecyclerView 嵌套</string>
-    <string name="widget_recyclerview_test2">合集Demo/recyclerview/Dock 实现样式1_1</string>
-    <string name="widget_recyclerview_test3">合集Demo/recyclerview/Dock 实现样式1_2</string>
-    <string name="widget_recyclerview_test4">合集Demo/recyclerview/Dock 实现样式2</string>
-    <string name="widget_recyclerview_test5_1">合集Demo/recyclerview/Dock 实现样式3_1</string>
-    <string name="widget_recyclerview_test5_2">合集Demo/recyclerview/Dock 实现样式3_2</string>
-    <string name="widget_recyclerview_test7">合集Demo/recyclerview/Dock 淘宝 实现样式</string>
-    <string name="widget_recyclerview_test8">合集Demo/recyclerview/Dock 淘宝 实现样式2</string>
-    <string name="widget_viewtree_test">合集Demo/viewtree/MeasureWidthHeight</string>
-    <string name="widget_auto_line_test">合集Demo/AutoWrapLine</string>
+    <string name="TrackType_video">Video</string>
+    <string name="TrackType_audio">Audio</string>
+    <string name="TrackType_subtitle">Subtitle</string>
+    <string name="TrackType_timedtext">Timed text</string>
+    <string name="TrackType_metadata">Meta data</string>
+    <string name="TrackType_unknown">Unknown</string>
 
-    <string name="widget_skeleton_shimmerrecyclerview_test">合集Demo/骨架图/Github Fake RecyclerView</string>
+    <string name="VideoView_error_text_invalid_progressive_playback">Invalid progressive playback</string>
+    <string name="VideoView_error_text_unknown">Unknown</string>
+    <string name="VideoView_error_button">OK</string>
 
-    <string name="compatible_multi_rom_text_view_line_height_test">合集Demo/适配兼容/行高适配</string>
+    <string name="VideoView_ar_aspect_fit_parent">Aspect / Fit parent</string>
+    <string name="VideoView_ar_aspect_fill_parent">Aspect / Fill parent</string>
+    <string name="VideoView_ar_aspect_wrap_content">Aspect / Wrap content</string>
+    <string name="VideoView_ar_match_parent">Free / Fill parent</string>
+    <string name="VideoView_ar_16_9_fit_parent">16:9 / Fit parent</string>
+    <string name="VideoView_ar_4_3_fit_parent">4:3 / Fit parent</string>
 
-    <string name="widget_da_collection_viewtree_test1">合集Demo/埋点、数据采集/RecyclerView 埋点数据采集</string>
+    <string name="VideoView_render_none">Render: None</string>
+    <string name="VideoView_render_surface_view">Render: SurfaceView</string>
+    <string name="VideoView_render_texture_view">Render: TextureView</string>
 
-    <string name="jetpack_lifecycler_demo">Jetpack/LifeCycler/Demo</string>
-    <string name="jetpack_livedata_observer">Jetpack/LiveData/SimpleObserver</string>
-    <string name="jetpack_livedata_observerforever">Jetpack/LiveData/ObserverForever</string>
-
-    <string name="widget_visible_to_user_fragment">合集Demo/页面是否展示给用户</string>
-
-    <string name="summary_battery_info">合集Demo/知识点/电池/电池基本信息</string>
-    <string name="summary_device_info">合集Demo/知识点/设备/设备基本信息</string>
-
-    <!-- Flutter -->
-    <string name="flutter_demo_1">服了它 Flutter/Demo1/官方Demo</string>
-
-    <!-- ARoute -->
-    <string name="aroute_demo_1">ARoute/Demo/Demo1</string>
-
-    <string name="view_local_visible_test">View/LocalVisibleRect/Demo1</string>
-    <string name="view_global_visible_test">View/GlobalVisibleRect/Demo1</string>
-
-    <string name="view_local_visible_test2">View/LocalVisibleForView/Demo2</string>
-    <string name="view_global_visible_test2">View/GlobalVisibleForView/Demo2</string>
-
-    <string name="java_test_fragment1">Java/Finalize/Demo1</string>
-
-    <string name="classloader_fragment1">ClassLoader/ActivityClassLoader/Demo1</string>
-
-    <string name="annotation_fragment1">Annotation/Demo</string>
-
-    <string name="proxy_fragment1">动态代理/Demo</string>
-
-    <string name="performance_ll_no_weight">布局性能分析/LinearLayout/不使用layout_weight Measure 次数</string>
-    <string name="performance_ll_weight">布局性能分析/LinearLayout/使用layout_weight Measure 次数</string>
-    <string name="performance_rl_weight">布局性能分析/RelativeLayout/Measure 次数</string>
-    <string name="performance_analysis">布局性能分析/时间统计</string>
-
-    <string name="mmkv_demo1">MMKV/使用Demo</string>
-
-    <!--ImageLoader-->
-    <string name="volley_sample_request">volley/SampleRequest</string>
-    <string name="volley_create_request_queue">volley/CreateRequestQueue</string>
-    <string name="volley_singleton_test">volley/MySingletonTest</string>
-    <string name="volley_json_request">volley/JsonRequest</string>
-    <string name="volley_image_request">volley/ImageRequest</string>
-    <string name="volley_image_loader">volley/ImageLoader</string>
-    <string name="volley_network_image_view">volley/NetworkImageView</string>
-    <string name="volley_custom_request">volley/CustomRequest</string>
-
-    <!--Network-->
-    <string name="network_simple_request">network/SimpleNetworkRequest</string>
-
-    <!--Xposed-->
-    <string name="xposed_welcome_activity">合集Demo/应用框架/Xposed抽屉Demo</string>
-    <string name="xposed_welcome_activity_drawer_open">开启</string>
-    <string name="xposed_welcome_activity_drawer_close">关闭</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
-    <!--ActivityLifeStyle-->
-    <string name="activity_life_style_a">App/Activity生命周期/ActivityA</string>
-    <string name="activity_life_style_b">App/Activity生命周期/ActivityB</string>
-    <string name="activity_life_style_c">App/Activity生命周期/ActivityC</string>
-
-    <!--Fragment-->
-    <string name="app_fragment">App/Fragment基础</string>
-
-    <!--动画-->
-    <string name="animations_title">Animation/animationsDemo</string>
-
-    <!--谷歌广告-->
-    <string name="google_ads_title">谷歌ADs/CatalogForAds</string>
-    <string name="simple_google_ads_title">谷歌ADs/SimpleGoogleAds</string>
-
-    <!--Snackbar-->
-    <string name="title_activity_snackbar_demo">合集Demo/Snackbar/SimpleSnackbar</string>
-    <string name="title_activity_mobike">MobikeActivity</string>
-
-    <string name="title_activity_drawer_demo">合集Demo/应用框架/Menu抽屉Demo</string>
-
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-
-    <string name="title_activity_mobike_drawer_demo">合集Demo/应用框架/Mobike</string>
-
-    <!--com.example.android.extra.CanvasInternal-->
-    <string name="title_activity_canvas_circle_demo">Canvas/Basic/绘制圆形</string>
-    <string name="title_activity_canvas_color_demo">Canvas/Basic/绘制颜色</string>
-    <string name="title_activity_canvas_point_demo">Canvas/Basic/绘制点</string>
-    <string name="title_activity_canvas_line_demo">Canvas/Basic/绘制直线</string>
-    <string name="title_activity_canvas_rect_demo">Canvas/Basic/绘制矩形</string>
-    <string name="title_activity_canvas_round_rect_demo">Canvas/Basic/绘制圆角矩形</string>
-    <string name="title_activity_canvas_oval_demo">Canvas/Basic/绘制椭圆</string>
-    <string name="title_activity_canvas_arc_demo">Canvas/Basic/绘制圆弧</string>
-    <string name="title_activity_paint_style_demo">Canvas/Paint/Paint.Style</string>
-    <string name="title_activity_paint_cap_demo">Canvas/Paint/Paint.CAP</string>
-    <string name="title_activity_paint_join_demo">Canvas/Paint/Paint.Join</string>
-    <string name="title_activity_pie_demo">Canvas/Basic/饼形图</string>
-
-    <string name="title_activity_canvas_translate_demo">Canvas/Canvas画布/Translate坐标系移动</string>
-    <string name="title_activity_canvas_scale_demo">Canvas/Canvas画布/Scale缩放</string>
-    <string name="title_activity_canvas_rotate_demo">Canvas/Canvas画布/Rotate旋转</string>
-    <string name="title_activity_canvas_skew_demo">Canvas/Canvas画布/Skew错切</string>
-    <string name="title_activity_canvas_save_restore_demo">Canvas/Canvas画布/Save_Restore画布</string>
-    <string name="title_activity_canvas_picture_demo">Canvas/Canvas画布/Picture图像</string>
-    <string name="title_activity_canvas_bitmap_demo">Canvas/Canvas画布/Bitmap图片</string>
-    <string name="title_activity_canvas_text_demo">Canvas/Canvas画布/Text绘制文字</string>
-
-    <string name="title_activity_canvas_path1_demo">Canvas/Path/绘制Path线1</string>
-    <string name="title_activity_canvas_path2_demo">Canvas/Path/绘制Path线2</string>
-    <string name="title_activity_canvas_path3_demo">Canvas/Path/绘制Path二阶贝塞尔</string>
-    <string name="title_activity_canvas_path4_demo">Canvas/Path/绘制Path三阶贝塞尔</string>
-    <string name="title_activity_canvas_path5_demo">Canvas/Path/绘制Path三阶贝塞尔圆弧</string>
-    <string name="title_activity_canvas_path6_demo">Canvas/Path/绘制Path线3</string>
-    <string name="title_activity_canvas_path7_demo">Canvas/Path/绘制Path线PathMeasure</string>
-
-    <string name="title_activity_canvas_matrix1_demo">Canvas/matrix矩阵/Matrix平移</string>
-    <string name="title_activity_canvas_matrix2_demo">Canvas/matrix矩阵/Matrix旋转</string>
-    <string name="title_activity_canvas_matrix3_demo">Canvas/matrix矩阵/Matrix缩放</string>
-    <string name="title_activity_canvas_matrix4_demo">Canvas/matrix矩阵/Matrix错切</string>
-    <string name="title_activity_canvas_matrix5_demo">Canvas/matrix矩阵/Matrix对称</string>
-    <string name="title_activity_canvas_matrix6_demo">Canvas/matrix矩阵/Matrix SetPreXXXPostXXX</string>
-    <string name="title_activity_canvas_matrix7_demo">Canvas/matrix矩阵/Matrix SetRectToRect</string>
-    <string name="title_activity_canvas_matrix8_demo">Canvas/matrix矩阵/Matrix SetPolyToPoly</string>
-    <string name="title_activity_canvas_matrix9_demo">Canvas/matrix矩阵/Matrix Invert</string>
-
-    <string name="title_activity_canvas_matrix_camera1_demo">Canvas/camera/平移</string>
-    <string name="title_activity_canvas_matrix_camera2_demo">Canvas/camera/旋转</string>
-
-
-    <string name="app_dimen_window_test">App/基础/Dimen Window 测试/</string>
-
-    <!--drawable-->
-    <string name="app_drawable_tilemode">App/Drawable/android:tileMode/</string>
-    <string name="app_drawable_bitmap_drawable">App/Drawable/BitmapDrawable/</string>
-    <string name="app_drawable_nine_patch_drawable">App/Drawable/NinePatch.9Drawable/</string>
-    <string name="app_drawable_layer_drawable">App/Drawable/LayerDrawable/</string>
-    <string name="app_drawable_statelist_drawable">App/Drawable/StateListDrawable/</string>
-    <string name="app_drawable_levelstate_drawable">App/Drawable/LevelListDrawable/</string>
-    <string name="app_drawable_transition_drawable">App/Drawable/TransitionDrawable/</string>
-    <string name="app_drawable_inset_drawable">App/Drawable/InsetDrawable/</string>
-    <string name="app_drawable_clip_drawable">App/Drawable/ClipDrawable/</string>
-    <string name="app_drawable_scale_drawable">App/Drawable/ScaleDrawable/</string>
-    <string name="app_drawable_rotate_drawable">App/Drawable/RotateDrawable/</string>
-    <string name="app_drawable_gradientbasic_drawable">App/Drawable/ShapeDrawable/GradientDrawable/</string>
-    <string name="app_drawable_vector_drawable">App/Drawable/VectorDrawable</string>
-    <string name="app_drawable_ripple_drawable">App/Drawable/RippleDrawable</string>
-
-
-    <!--动画-->
-    <string name="app_amimation_property_test1">Animation/Property Animation/</string>
-    <string name="app_amimation_view_test1">Animation/View Animation/</string>
-
-    <!--jni-->
-    <string name="app_jni_hellojni">App/JNI/HelloJni</string>
-
-    <!--h5webview-->
-    <string name="app_web_h5_demo">App/H5/H5 Demos1</string>
-
-    <!--layout布局-->
-    <string name="layout_grid_layout_manager">V7/GridLayoutManager</string>
-    <string name="layout_linearlayout_layout_manager">V7/LinearLayoutManager</string>
-
-    <!--RecyclerView-->
-    <string name="v7_simple_recycler_activity">V7/RecyclerViewActivity</string>
-    <string name="v7_asynclistutils_recycler_activity">V7/AsyncListUtilsActivity</string>
-
-    <!--RxJava-->
-    <string name="rxjava_backpress_activity">RxJava/BackpressTest</string>
-    <string name="rxjava_new_thread_activity">RxJava/NewThread</string>
-    <string name="rxjava_flowable_concat_activity">RxJava/Flowable Complex concat_filter</string>
-    <string name="rxjava_flowable_toFlowable_activity">RxJava/Flowable Complex firstEle_toFlowable</string>
-    <string name="rxjava_flowable_flatMap_activity">RxJava/Flowable Complex flatMap</string>
-    <string name="rxjava_flowable_distinct_activity">RxJava/Flowable Complex distinct</string>
-    <string name="rxjava_flowable_toList_activity">RxJava/Flowable Complex toList</string>
-    <string name="rxjava_flowable_single">RxJava/Single、Completable以及Maybe</string>
-    <string name="rxjava_flowable_backpress_01">RxJava/Backpress 背压</string>
-    <string name="rxjava_flowable_rxlifecycle">RxJava/RxLifeCycle 测试</string>
-    <string name="rxjava_flowable_auto_disponse">RxJava/AutoDisponse 测试</string>
-
-    <!--picasso-->
-    <string name="picasso_name">Picasso Test</string>
-    <string name="hide">HIDE</string>
-    <string name="more">MORE</string>
-    <string name="sample_widget">Picasso Sample Widget</string>
-    <string name="sample_notification">Picasso Sample Notification</string>
-    <string name="select_picture">Select Picture</string>
-    <string name="disk_cache_description">On Ice Cream Sandwich and above, a disk cache is
-    automatically used so that subsequent requests for the same URL do not re-download the
-    image.\n\nTo enable this functionality on pre-ICS use a standalone HTTP client with caching such
-    as OkHttp.
-    </string>
-
-    <string name="picasso_sample_grid_view_activity">Picasso/SampleGridViewActivity</string>
-    <string name="picasso_sample_contacts_activity">Picasso/SampleContactsActivity</string>
-    <string name="picasso_sample_gallery_activity">Picasso/SampleGalleryActivity</string>
-    <string name="picasso_sample_list_details_activity">Picasso/SampleListDetailActivity</string>
-
-    <!--UMeng-->
-    <string name="app_umeng_device_info">App/UMeng/DeviceInfo</string>
-
-    <string name="lean_storage_test1">合集Demo/lean/LeanStorageTest1</string>
-
-    <!--图片三级缓存-->
-    <string name="drawable_cache_demo">三级缓存/DrawableDemo</string>
-
-    <!--安全停止一个线程-->
-    <string name="safe_stop_thread">线程/安全停止一个线程</string>
-
-    <string name="poet_demo_fragment">Square Poet/Demo1</string>
-
-    <!--事件分发-->
-    <string name="touch_event_dispatch">事件分发/Demo</string>
+    <string name="VideoView_player_none">Player: None</string>
+    <string name="VideoView_player_AndroidMediaPlayer">Player: AndroidMediaPlayer</string>
+    <string name="VideoView_player_IjkMediaPlayer">Player: IjkMediaPlayer</string>
+    <string name="VideoView_player_IjkExoMediaPlayer">Player: IjkExoMediaPlayer</string>
 
 </resources>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.api.PlayerActivity">
+
+    <com.dueeeke.videoplayer.player.VideoView
+        android:id="@+id/player"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="16:10"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/player">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/scale_default"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onButtonClick"
+                    android:text="默认" />
+
+                <Button
+                    android:id="@+id/scale_169"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onButtonClick"
+                    android:text="16:9" />
+
+                <Button
+                    android:id="@+id/scale_43"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onButtonClick"
+                    android:text="4:3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/scale_original"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onButtonClick"
+                    android:text="原始大小" />
+
+                <Button
+                    android:id="@+id/scale_match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onButtonClick"
+                    android:text="填充" />
+
+                <Button
+                    android:id="@+id/scale_center_crop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onButtonClick"
+                    android:text="居中裁剪" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="播放速度：" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/speed_0_5"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="onButtonClick"
+                    android:padding="0dp"
+                    android:text="0.5" />
+
+                <Button
+                    android:id="@+id/speed_0_75"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="onButtonClick"
+                    android:padding="0dp"
+                    android:text="0.75" />
+
+                <Button
+                    android:id="@+id/speed_1_0"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="onButtonClick"
+                    android:padding="0dp"
+                    android:text="1.0" />
+
+                <Button
+                    android:id="@+id/speed_1_5"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="onButtonClick"
+                    android:padding="0dp"
+                    android:text="1.5" />
+
+                <Button
+                    android:id="@+id/speed_2_0"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="onButtonClick"
+                    android:padding="0dp"
+                    android:text="2.0" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/mirror_rotate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onButtonClick"
+                    android:text="镜像旋转" />
+
+                <Button
+                    android:id="@+id/screen_shot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onButtonClick"
+                    android:text="@string/str_screen_shot" />
+                <Button
+                    android:id="@+id/btn_mute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onButtonClick"
+                    android:text="静音" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_screen_shot"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_other_video"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="其他地址" />
+
+                <Button
+                    android:id="@+id/btn_start_play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="开始播放" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

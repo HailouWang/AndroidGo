@@ -18,10 +18,13 @@ import org.reactivestreams.Subscription;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import io.reactivex.BackpressureStrategy;
 import io.reactivex.Completable;
 import io.reactivex.CompletableEmitter;
 import io.reactivex.CompletableOnSubscribe;
 import io.reactivex.Flowable;
+import io.reactivex.FlowableEmitter;
+import io.reactivex.FlowableOnSubscribe;
 import io.reactivex.Maybe;
 import io.reactivex.MaybeEmitter;
 import io.reactivex.MaybeOnSubscribe;
@@ -33,9 +36,11 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Action;
 import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
+import kotlinx.coroutines.flow.Flow;
 
 /**
  * https://www.jianshu.com/p/2c4799fa91a4
+ * https://www.jianshu.com/p/a75ecf461e02
  * <p>
  * 背压策略的一个前提是异步环境，也就是说，被观察者和观察者处在不同的线程环境中。
  *
@@ -96,6 +101,13 @@ public class BackpressDemoFragment extends Fragment {
                         }
                     });
         });
+
+        Flowable.create(new FlowableOnSubscribe<Object>() {
+            @Override
+            public void subscribe(FlowableEmitter<Object> emitter) throws Exception {
+
+            }
+        }, BackpressureStrategy.BUFFER);
     }
 
     @Override

@@ -4,6 +4,7 @@ import android.app.Application;
 import android.util.Log;
 
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.dueeeke.dkplayer.app.MyApplication;
 import com.tencent.mmkv.MMKV;
 
 import cn.leancloud.AVLogger;
@@ -54,6 +55,10 @@ public class DemosApp extends Application {
         // MMKV
         String rootDir = MMKV.initialize(this);
         Log.d("hlwang", "DemosApp onCreate MMKV rootDir : " + rootDir);
+
+        // ijkplayer start
+        MyApplication.init(getApp());
+        // ijkplayer end
     }
 
     public static String getCacheEngine() {

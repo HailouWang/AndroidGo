@@ -46,13 +46,13 @@ class LocalVisibleForViewFragment2222 : Fragment() {
             override fun onTouch(v: View?, event: MotionEvent?): Boolean {
                 when (event?.getAction()) {
                     MotionEvent.ACTION_DOWN -> {
-                        lastX = event?.getRawX().toInt();
-                        lastY = event?.getRawY().toInt();
+                        lastX = event.getRawX().toInt();
+                        lastY = event.getRawY().toInt();
                     }
 
                     MotionEvent.ACTION_MOVE -> {
-                        var dx = (event?.getRawX().toInt()?:0) - lastX
-                        var dy = (event?.getRawY().toInt()?:0) - lastY
+                        var dx = (event.getRawX().toInt()) - lastX
+                        var dy = (event.getRawY().toInt()) - lastY
 
                         var left = (v?.left ?:0) + dx
                         var top = (v?.top ?:0) + dy

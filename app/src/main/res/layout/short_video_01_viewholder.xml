@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <TextView
+        android:id="@+id/centerErrorTips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:textColor="@android:color/white"
+        android:drawablePadding="19dp"
+        android:layout_gravity="center"
+        android:gravity="center"/>
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.github.hailouwang.demosforapi.shortvideo.widget.ShortVideoIjkPlayer
+            android:id="@+id/sivvPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <RelativeLayout
+            android:id="@+id/rlInfoDiv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/short_video_01"
+            android:clickable="true"
+            android:paddingBottom="35dp">
+
+            <ImageView
+                android:id="@+id/fivAuthorAvatar"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="12dp"/>
+
+            <TextView
+                android:id="@+id/tvAuthorName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/fivAuthorAvatar"
+                android:layout_alignTop="@id/fivAuthorAvatar"
+                android:layout_alignBottom="@id/fivAuthorAvatar"
+                android:layout_marginLeft="3dp"
+                android:textSize="14dp"
+                android:textColor="@android:color/white"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/tvDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="7dp"
+                android:layout_marginRight="81.67dp"
+                android:textSize="14.4dp"
+                android:textColor="#FFFFFF"
+                android:layout_below="@id/fivAuthorAvatar"
+                android:maxLines="4"
+                android:scrollbars="vertical"/>
+
+            <TextView
+                android:id="@+id/tvCouponIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginBottom="3.33dp"
+                android:layout_below="@id/tvDesc"
+                android:textSize="11.52dp"
+                android:textColor="#FFF2F2F2"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvZanAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11.52dp"
+            android:textColor="@android:color/white"
+            android:gravity="center_horizontal"
+            android:layout_marginRight="15dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="176.67dp"
+            android:drawablePadding="3.88dp"
+            android:drawableTop="@drawable/ic_zan_none"/>
+
+        <ImageView
+            android:id="@+id/ivPlayPause"
+            android:layout_width="57dp"
+            android:layout_height="57dp"
+            android:scaleType="fitXY"
+            android:layout_gravity="center"/>
+
+        <SeekBar
+            android:id="@+id/sbProgress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="14dp"
+            android:layout_gravity="bottom"
+            android:max="1000"
+            android:indeterminateOnly="false"
+            android:splitTrack="false"
+            android:thumb="@drawable/thumb1"
+            android:progressDrawable="@drawable/progress_drawable"
+            android:indeterminateDrawable="@drawable/progress_drawable"
+            android:background="@null"
+            android:thumbOffset="10dp"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"/>
+
+        <TextView
+            android:id="@+id/tvSeekBarTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:textSize="20dp"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="66dp"
+            android:visibility="invisible"/>
+
+<!--        <View
+            android:id="@+id/vlvLoading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="bottom"
+            app:minHeight="2dp"
+            app:minProgressWidth="2dp"
+            app:minWidth="2dp"
+            app:progressColor="#FFFFFF"
+            android:visibility="invisible"/>-->
+    </FrameLayout>
+
+</FrameLayout>

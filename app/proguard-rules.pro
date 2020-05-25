@@ -31,3 +31,34 @@
 # -keep class * implements com.alibaba.android.arouter.facade.template.IProvider
 
 -keepclassmembers class **{ public static com.meituan.robust.ChangeQuickRedirect *; }
+
+# weex start
+-keep class com.taobao.weex.bridge.** { *; }
+-keep class com.taobao.weex.layout.** { *; }
+-keep class com.taobao.weex.WXSDKEngine { *; }
+-keep class com.taobao.weex.base.SystemMessageHandler { *; }
+-dontwarn com.taobao.weex.bridge.**
+# weex end
+
+-keep class om.github.hailouwang.demosforapi.shortvideo.** {*;}
+
+-keep class com.dueeeke.videoplayer.** { *; }
+-dontwarn com.dueeeke.videoplayer.**
+
+# IjkPlayer
+-keep class tv.danmaku.ijk.** { *; }
+-dontwarn tv.danmaku.ijk.**
+
+# ExoPlayer
+-keep class com.google.android.exoplayer2.** { *; }
+-dontwarn com.google.android.exoplayer2.**
+
+
+
+
+
+
+
+
+
+

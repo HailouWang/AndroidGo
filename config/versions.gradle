@@ -16,6 +16,7 @@ versions.junit = "4.12"
 
 versions.androidx = '1.1.0'
 versions.support = "1.0.0"
+versions.viewpager2 = "1.0.0"
 
 versions.android_gradle_plugin = "3.4.1"
 versions.android_apt = "1.8"
@@ -123,7 +124,7 @@ versions.jsoup = "1.10.3"
 
 versions.fresco = "0.12.0"
 
-versions.glide_version = "4.5.0"
+versions.glide_version = "4.11.0"
 
 versions.leancloud_storage = "6.1.5"
 
@@ -137,6 +138,17 @@ versions.mmkv = "1.1.1"
 
 versions.poet = "1.12.1"
 //versions.poet = "1.8.0"
+versions.otto = "1.3.8"
+
+versions.weex_devtools = "0.24.2.11"
+versions.weex_sdk = "0.28.0"
+
+versions.ijkplayer = "0.8.8"
+
+versions.exo = "2.11.3"
+
+versions.damakuFlame = "0.9.25"
+versions.ndkbitmap = "0.9.21"
 
 def deps = [:]
 
@@ -155,6 +167,7 @@ androidx.test_runner = "androidx.test:runner:1.2.0"
 androidx.espresso_core = "androidx.test.espresso:espresso-core:3.2.0"
 androidx.gridlayout = "androidx.gridlayout:gridlayout:1.0.0"
 androidx.preference = "androidx.preference:preference:1.1.0"
+androidx.viewpager2 = "androidx.viewpager2:viewpager2:$versions.viewpager2"
 deps.androidx = androidx
 
 def lifecycle = [:]
@@ -320,7 +333,28 @@ deps.mmkv = "com.tencent:mmkv:$versions.mmkv"
 
 def square = [:]
 square.poet = "com.squareup:javapoet:$versions.poet"
+square.otto = "com.squareup:otto:$versions.otto"
 deps.square = square
+
+def weex = [:]
+weex.devtools = "com.taobao.android:weex_inspector:$versions.weex_devtools"
+weex.sdk = "org.apache.weex:sdk:$versions.weex_sdk"
+deps.weex = weex
+
+deps.ijkplayer = "tv.danmaku.ijk.media:ijkplayer-java:$versions.ijkplayer"
+deps.ijkplayer_v7a = "tv.danmaku.ijk.media:ijkplayer-armv7a:$versions.ijkplayer"
+
+// 弹幕
+deps.damakuFlame = "com.github.ctiao:DanmakuFlameMaster:$versions.damakuFlame"
+deps.ndkbitmap = "com.github.ctiao:ndkbitmap-armv7a:$versions.ndkbitmap"
+
+def exo = [:]
+exo.core = "com.google.android.exoplayer:exoplayer-core:$versions.exo"
+exo.dash =  "com.google.android.exoplayer:exoplayer-dash:$versions.exo"
+exo.hls = "com.google.android.exoplayer:exoplayer-hls:$versions.exo"
+exo.smotth_streaming = "com.google.android.exoplayer:exoplayer-smoothstreaming:$versions.exo"
+exo.extension_rtmp = "com.google.android.exoplayer:extension-rtmp:$versions.exo"
+deps.exo = exo
 
 ext.deps = deps
 
