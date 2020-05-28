@@ -951,6 +951,21 @@
 
         <!-- RxJava -->
         <activity-alias
+            android:name="com.github.hailouwang.demosforapi.rxjava.ObservableLifeCycleActivity"
+            android:label="@string/rxjava_lifecycle"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.rxjava.ObservableLifeCycle" />
+        </activity-alias>
+
+        <activity-alias
             android:name="com.github.hailouwang.demosforapi.rxjava.SingleDemoActivity"
             android:label="@string/rxjava_flowable_single"
             android:targetActivity=".main.router.RouterActivity">

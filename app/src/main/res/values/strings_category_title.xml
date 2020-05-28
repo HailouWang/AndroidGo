@@ -204,6 +204,7 @@
     <string name="rxjava_flowable_backpress_01">RxJava/Backpress 背压</string>
     <string name="rxjava_flowable_rxlifecycle">RxJava/RxLifeCycle 测试</string>
     <string name="rxjava_flowable_auto_disponse">RxJava/AutoDisponse 测试</string>
+    <string name="rxjava_lifecycle">RxJava/生命周期/1.just</string>
 
     <!--picasso-->
     <string name="picasso_name">Picasso Test</string>

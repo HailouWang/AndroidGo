@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/observable_lifecycle"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="Observable 工作生命周期方法" />
+
+    <TextView
+        android:id="@+id/subscribeOn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="多次subscribeOn，主题运行在哪个线程？" />
+
+    <TextView
+        android:id="@+id/thread_switch"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="RxJava subscribeOn线程切换测试！" />
+
+    <TextView
+        android:id="@+id/doOnSubscribeOn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="RxJava doOnSubscribeOn测试！！！" />
+
+</LinearLayout>

@@ -14,6 +14,7 @@ import com.github.hailouwang.demosforapi.room.RoomDemoFragment
 import com.github.hailouwang.demosforapi.router.demo.ARouteDemo1Fragment
 import com.github.hailouwang.demosforapi.rxjava.AutoisponseDemoFragment
 import com.github.hailouwang.demosforapi.rxjava.BackpressDemoFragment
+import com.github.hailouwang.demosforapi.rxjava.ObservableLifeCycle
 import com.github.hailouwang.demosforapi.rxjava.SingleDemoFragment
 import com.github.hailouwang.demosforapi.shortvideo.demo2.ShortVideo01Fragment
 import com.github.hailouwang.demosforapi.thread.SafeStopThreadFragment
@@ -70,8 +71,8 @@ class RouterActivity : BMRouterFragmentActivity() {
             ENTRY_FRAGMENTS.add(AutoisponseDemoFragment::class.java.name)
             ENTRY_FRAGMENTS.add(AutoWrapLineDemoFragment::class.java.name)
             ENTRY_FRAGMENTS.add(ShortVideo01Fragment::class.java.name)
+            ENTRY_FRAGMENTS.add(ObservableLifeCycle::class.java.name)
 
-//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
 //            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
 //            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
 //            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
