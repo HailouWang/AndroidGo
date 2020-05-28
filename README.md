@@ -9,13 +9,22 @@
  
  1、[HailouWang](https://github.com/HailouWang)  微信 ：15911136758
  
-## 三、UI
+## 三、问题
+
+### 3.1、``git clone`` 之后，需要更改 ``./flutter_demo/.android/local.properties`` 中 环境变量信息
+
+```properties
+sdk.dir=/Users/hailuwang/Library/Android/sdk
+flutter.sdk=/Users/hailuwang/tools/flutter
+```
+ 
+## 四、UI
 
 ![页面1](https://upload-images.jianshu.io/upload_images/3828779-541d87094fa2eabc.gif?imageMogr2/auto-orient/strip|imageView2/2/w/344/format/webp)
 ![页面2](https://upload-images.jianshu.io/upload_images/3828779-6e5d9d3e61d4f9ce.gif?imageMogr2/auto-orient/strip|imageView2/2/w/344/format/webp)
 ![页面3](https://upload-images.jianshu.io/upload_images/3828779-eb0cec16069aee43.gif?imageMogr2/auto-orient/strip|imageView2/2/w/344/format/webp)
 
-## 四、开源协议
+## 五、开源协议
 
 Copyright (c) [2020] [wanghailu]
 
