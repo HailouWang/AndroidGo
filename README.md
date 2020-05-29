@@ -18,6 +18,12 @@ sdk.dir=/Users/hailuwang/Library/Android/sdk
 flutter.sdk=/Users/hailuwang/tools/flutter
 ```
 
+``flutter_demo`` 工程，如果遇到问题，需要先行编译，编译命令：
+
+```groovy
+flutter --no-color packages get
+```
+
 ### 3.2、已适配androidx，Flutter 环境，需要更新到最新，建议更换Flutter 的更新源，配置如下：
 
 ``{flutterRoot}/flutter/packages/flutter_tools/gradle/flutter.gradle``

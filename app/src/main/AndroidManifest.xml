@@ -1607,17 +1607,20 @@
         </activity-alias>
 
         <!--ijkplayer start -->
-        <activity
-            android:name=".shortvideo.demo1.ShortVideoDianboFragment"
-            android:configChanges="orientation|keyboardHidden|screenSize"
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.shortvideo.demo1.ShortVideoDianboActivity"
             android:label="@string/ijkplayer_demo1_dianbo"
-            android:screenOrientation="user"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            android:targetActivity=".main.router.RouterActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.SAMPLE_CODE" />
             </intent-filter>
-        </activity>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.shortvideo.demo1.ShortVideoDianboFragment" />
+        </activity-alias>
         <!--ijkplayer end-->
 
     </application>

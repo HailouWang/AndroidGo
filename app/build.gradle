@@ -224,4 +224,7 @@ dependencies {
     implementation deps.damakuFlame
     implementation deps.ndkbitmap
     implementation project(path: ':fragmentbackhandler')
+
+    implementation deps.butterknife.butterknife
+    annotationProcessor deps.butterknife.butterknife_compiler
 }

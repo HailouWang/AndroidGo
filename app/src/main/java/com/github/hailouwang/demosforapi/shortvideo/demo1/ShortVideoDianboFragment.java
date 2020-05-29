@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.bumptech.glide.Glide;
+import com.dueeeke.dkplayer.util.DataUtil;
 import com.dueeeke.dkplayer.util.IntentKeys;
 import com.dueeeke.dkplayer.widget.component.DebugInfoView;
 import com.dueeeke.dkplayer.widget.component.PlayerMonitor;
@@ -26,7 +27,11 @@ import com.dueeeke.videocontroller.component.TitleView;
 import com.dueeeke.videocontroller.component.VodControlView;
 import com.dueeeke.videoplayer.player.VideoView;
 import com.dueeeke.videoplayer.util.L;
+import com.github.hailouwang.demosforapi.R;
 import com.github.hailouwang.demosforapi.shortvideo.BaseShortVideoFragment;
+
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class ShortVideoDianboFragment extends BaseShortVideoFragment {
     private static final String THUMB = "https://cms-bucket.nosdn.127.net/eb411c2810f04ffa8aaafc42052b233820180418095416.jpeg";
@@ -39,16 +44,39 @@ public class ShortVideoDianboFragment extends BaseShortVideoFragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(com.dueeeke.dkplayer.R.layout.activity_player_dueeeke, container, false);
+        return inflater.inflate(R.layout.activity_player_dueeeke, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        ButterKnife.bind(view);
+
+        view.findViewById(R.id.scale_default).setOnClickListener(this::onButtonClick);
+        view.findViewById(R.id.scale_169).setOnClickListener(this::onButtonClick);
+        view.findViewById(R.id.scale_43).setOnClickListener(this::onButtonClick);
+        view.findViewById(R.id.scale_original).setOnClickListener(this::onButtonClick);
+        view.findViewById(R.id.scale_match_parent).setOnClickListener(this::onButtonClick);
+        view.findViewById(R.id.scale_center_crop).setOnClickListener(this::onButtonClick);
+        view.findViewById(R.id.speed_0_5).setOnClickListener(this::onButtonClick);
+        view.findViewById(R.id.speed_0_75).setOnClickListener(this::onButtonClick);
+        view.findViewById(R.id.speed_1_0).setOnClickListener(this::onButtonClick);
+        view.findViewById(R.id.speed_1_5).setOnClickListener(this::onButtonClick);
+        view.findViewById(R.id.speed_2_0).setOnClickListener(this::onButtonClick);
+        view.findViewById(R.id.screen_shot).setOnClickListener(this::onButtonClick);
+        view.findViewById(R.id.mirror_rotate).setOnClickListener(this::onButtonClick);
+        view.findViewById(R.id.btn_mute).setOnClickListener(this::onButtonClick);
+
         mVideoView = view.findViewById(com.dueeeke.dkplayer.R.id.player);
 
         Bundle intent = getArguments();
+        if (!intent.containsKey(IntentKeys.URL)) {
+            intent.putBoolean(IntentKeys.IS_LIVE, false);
+            intent.putString(IntentKeys.TITLE, "ijkPlayer - 点播");
+            intent.putString(IntentKeys.URL, DataUtil.SAMPLE_URL);
+        }
+
         if (intent != null) {
             StandardVideoController controller = new StandardVideoController(getContext());
             //根据屏幕方向自动进入/退出全屏
@@ -109,7 +137,7 @@ public class ShortVideoDianboFragment extends BaseShortVideoFragment {
             //如果你不想要UI，不要设置控制器即可
             mVideoView.setVideoController(controller);
 
-            mVideoView.setUrl(getArguments().getString(IntentKeys.URL));
+            mVideoView.setUrl(intent.getString(IntentKeys.URL));
 
             //保存播放进度
 //            mVideoView.setProgressManager(new ProgressManagerImpl());
@@ -185,36 +213,36 @@ public class ShortVideoDianboFragment extends BaseShortVideoFragment {
 
     public void onButtonClick(View view) {
         int id = view.getId();
-        if (id == com.dueeeke.dkplayer.R.id.scale_default) {
+        if (id == R.id.scale_default) {
             mVideoView.setScreenScaleType(VideoView.SCREEN_SCALE_DEFAULT);
-        } else if (id == com.dueeeke.dkplayer.R.id.scale_169) {
+        } else if (id == R.id.scale_169) {
             mVideoView.setScreenScaleType(VideoView.SCREEN_SCALE_16_9);
-        } else if (id == com.dueeeke.dkplayer.R.id.scale_43) {
+        } else if (id == R.id.scale_43) {
             mVideoView.setScreenScaleType(VideoView.SCREEN_SCALE_4_3);
-        } else if (id == com.dueeeke.dkplayer.R.id.scale_original) {
+        } else if (id == R.id.scale_original) {
             mVideoView.setScreenScaleType(VideoView.SCREEN_SCALE_ORIGINAL);
-        } else if (id == com.dueeeke.dkplayer.R.id.scale_match_parent) {
+        } else if (id == R.id.scale_match_parent) {
             mVideoView.setScreenScaleType(VideoView.SCREEN_SCALE_MATCH_PARENT);
-        } else if (id == com.dueeeke.dkplayer.R.id.scale_center_crop) {
+        } else if (id == R.id.scale_center_crop) {
             mVideoView.setScreenScaleType(VideoView.SCREEN_SCALE_CENTER_CROP);
-        } else if (id == com.dueeeke.dkplayer.R.id.speed_0_5) {
+        } else if (id == R.id.speed_0_5) {
             mVideoView.setSpeed(0.5f);
-        } else if (id == com.dueeeke.dkplayer.R.id.speed_0_75) {
+        } else if (id == R.id.speed_0_75) {
             mVideoView.setSpeed(0.75f);
-        } else if (id == com.dueeeke.dkplayer.R.id.speed_1_0) {
+        } else if (id == R.id.speed_1_0) {
             mVideoView.setSpeed(1.0f);
-        } else if (id == com.dueeeke.dkplayer.R.id.speed_1_5) {
+        } else if (id == R.id.speed_1_5) {
             mVideoView.setSpeed(1.5f);
-        } else if (id == com.dueeeke.dkplayer.R.id.speed_2_0) {
+        } else if (id == R.id.speed_2_0) {
             mVideoView.setSpeed(2.0f);
-        } else if (id == com.dueeeke.dkplayer.R.id.screen_shot) {
-            ImageView imageView = view.findViewById(com.dueeeke.dkplayer.R.id.iv_screen_shot);
+        } else if (id == R.id.screen_shot) {
+            ImageView imageView = view.findViewById(R.id.iv_screen_shot);
             Bitmap bitmap = mVideoView.doScreenShot();
             imageView.setImageBitmap(bitmap);
-        } else if (id == com.dueeeke.dkplayer.R.id.mirror_rotate) {
+        } else if (id == R.id.mirror_rotate) {
             mVideoView.setMirrorRotation(i % 2 == 0);
             i++;
-        } else if (id == com.dueeeke.dkplayer.R.id.btn_mute) {
+        } else if (id == R.id.btn_mute) {
             mVideoView.setMute(true);
         }
     }
@@ -227,5 +255,13 @@ public class ShortVideoDianboFragment extends BaseShortVideoFragment {
     @Override
     public void onResume() {
         super.onResume();
+    }
+
+    @Override
+    public boolean onBackPressed() {
+        if (mVideoView == null || !mVideoView.onBackPressed()) {
+            return super.onBackPressed();
+        }
+        return true;
     }
 }

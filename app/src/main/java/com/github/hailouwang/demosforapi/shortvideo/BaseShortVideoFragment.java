@@ -2,11 +2,11 @@ package com.github.hailouwang.demosforapi.shortvideo;
 
 import androidx.fragment.app.Fragment;
 
-import com.dueeeke.dkplayer.widget.videoview.IjkVideoView;
+import com.dueeeke.videoplayer.player.VideoView;
 import com.hailouwang.fragmentbackhandler.FragmentBackHandler;
 
 public class BaseShortVideoFragment extends Fragment implements FragmentBackHandler {
-    protected IjkVideoView mVideoView;
+    protected VideoView mVideoView;
 
     @Override
     public void onStart() {
