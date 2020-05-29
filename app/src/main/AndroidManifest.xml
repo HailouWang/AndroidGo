@@ -142,6 +142,17 @@
         </activity>
 
         <activity
+            android:name="com.github.hailouwang.demosforapi.widget.slidegridview.SlideGridActivity"
+            android:label="@string/view_slide_grid"
+            android:logo="@drawable/ic_settings">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+
+        <activity
             android:name="com.github.hailouwang.demosforapi.widget.recyclerview.test7.RecyclerViewActivity2"
             android:label="@string/widget_recyclerview_test7"
             android:logo="@drawable/ic_settings">
