@@ -16,7 +16,7 @@ import com.github.hailouwang.demosforapi.rxjava.AutoisponseDemoFragment
 import com.github.hailouwang.demosforapi.rxjava.BackpressDemoFragment
 import com.github.hailouwang.demosforapi.rxjava.ObservableLifeCycle
 import com.github.hailouwang.demosforapi.rxjava.SingleDemoFragment
-import com.github.hailouwang.demosforapi.shortvideo.demo2.ShortVideo01Fragment
+import com.github.hailouwang.demosforapi.shortvideo.demo1.ShortVideoDianboFragment
 import com.github.hailouwang.demosforapi.thread.SafeStopThreadFragment
 import com.github.hailouwang.demosforapi.view.demo1.GlobalVisibleForViewFragment
 import com.github.hailouwang.demosforapi.view.demo1.LocalVisibleForViewFragment
@@ -32,6 +32,7 @@ import com.github.hailouwang.demosforapi.widget.autowrapline.AutoWrapLineDemoFra
 import com.github.hailouwang.demosforapi.widget.da.ui.DataAnalysisRecyclerViewFragment
 import com.github.hailouwang.demosforapi.widget.lifecycle.VisibleToUserChangeFragment
 import com.github.hailouwang.demosforapi.widget.lifecycle.lifecycler.demo.LifeCyclerDemoFragment
+import com.hailouwang.fragmentbackhandler.BackHandlerHelper
 import com.hailouwang.fragmentrouter.BMRouterFragmentActivity
 
 class RouterActivity : BMRouterFragmentActivity() {
@@ -70,7 +71,7 @@ class RouterActivity : BMRouterFragmentActivity() {
             ENTRY_FRAGMENTS.add(BackpressDemoFragment::class.java.name)
             ENTRY_FRAGMENTS.add(AutoisponseDemoFragment::class.java.name)
             ENTRY_FRAGMENTS.add(AutoWrapLineDemoFragment::class.java.name)
-            ENTRY_FRAGMENTS.add(ShortVideo01Fragment::class.java.name)
+            ENTRY_FRAGMENTS.add(ShortVideoDianboFragment::class.java.name)
             ENTRY_FRAGMENTS.add(ObservableLifeCycle::class.java.name)
 
 //            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
@@ -102,5 +103,11 @@ class RouterActivity : BMRouterFragmentActivity() {
 
     override fun isValidFragment(fragmentName: String?): Boolean {
         return ENTRY_FRAGMENTS.contains(fragmentName)
+    }
+
+    override fun onBackPressed() {
+        if (!BackHandlerHelper.handleBackPress(this)) {
+            super.onBackPressed()
+        }
     }
 }

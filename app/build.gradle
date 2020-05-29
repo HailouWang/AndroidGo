@@ -138,10 +138,13 @@ dependencies {
     implementation deps.shimmer_recycler_view
     implementation deps.shimmer_layout
 
-    implementation deps.hailouwang.fragmentrouter
+//    implementation deps.hailouwang.fragmentrouter
+    implementation project(path: ':fragmentrouter')
+
     implementation project(path: ':flutter')
     implementation project(path: ':routemoduletest')
     implementation project(path: ':module-java')
+    implementation project(path: ':module-kotlin')
     implementation project(path: ':module-kotlin')
 
     implementation deps.alibabaarouter
@@ -220,4 +223,5 @@ dependencies {
     // 弹幕
     implementation deps.damakuFlame
     implementation deps.ndkbitmap
+    implementation project(path: ':fragmentbackhandler')
 }

@@ -17,6 +17,33 @@
 sdk.dir=/Users/hailuwang/Library/Android/sdk
 flutter.sdk=/Users/hailuwang/tools/flutter
 ```
+
+### 3.2、已适配androidx，Flutter 环境，需要更新到最新，建议更换Flutter 的更新源，配置如下：
+
+``{flutterRoot}/flutter/packages/flutter_tools/gradle/flutter.gradle``
+
+```properties
+ buildscript {
+     repositories {
+-        google()
+-        jcenter()
++maven { url 'https://maven.aliyun.com/repository/google' }
++maven { url 'https://maven.aliyun.com/repository/jcenter' }
++maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+     }
+     dependencies {
+         classpath 'com.android.tools.build:gradle:3.5.0'
+@@ -41,7 +42,8 @@ android {
+ apply plugin: FlutterPlugin
+ 
+ class FlutterPlugin implements Plugin<Project> {
+-    private static final String MAVEN_REPO      = "https://storage.googleapis.com/download.flutter.io";
++    //private static final String MAVEN_REPO      = "https://storage.googleapis.com/download.flutter.io";
++    private static final String MAVEN_REPO      = "https://storage.flutter-io.cn/download.flutter.io";
+ 
+     // The platforms that can be passed to the `--Ptarget-platform` flag.
+     private static final String PLATFORM_ARM32  = "android-arm";
+```
  
 ## 四、UI
 

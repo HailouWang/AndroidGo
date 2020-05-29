@@ -1,5 +1,5 @@
 include ':app', ':messageview', ':dotspageindicator', ':ijkplayer-java',
-        ':dkplayer-java', ':dkplayer-ui', ':dkplayer-videocache', ':dkplayer-players:ijk', ':dkplayer-players:exo', ':dkplayer-sample'/*, ':ijkplayer-java'*/
+        ':dkplayer-java', ':dkplayer-ui', ':dkplayer-videocache', ':dkplayer-players:ijk', ':dkplayer-players:exo', ':dkplayer-sample', ':fragmentrouter'/*, ':ijkplayer-java'*/
 setBinding(new Binding([gradle: this]))
 evaluate(new File(
   settingsDir,
@@ -18,3 +18,4 @@ include ':module-kotlin'
 include ':module-java'
 include ':routemoduletest'
 include ':Poet'
+include ':fragmentbackhandler'

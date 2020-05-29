@@ -240,6 +240,6 @@
     <!--事件分发-->
     <string name="touch_event_dispatch">事件分发/Demo</string>
 
-    <string name="ijkplayer_demo1">短视频 ijkPlayer/官方Demo </string>
+    <string name="ijkplayer_demo1_dianbo">短视频 ijkPlayer/短视频合集/点播 </string>
 
 </resources>
