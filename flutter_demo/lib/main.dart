@@ -10,8 +10,13 @@ import 'package:flutterdemo/provider/ProviderDemo.dart';
 import 'package:flutterdemo/widget/flex/FlexWidget.dart';
 import 'package:flutterdemo/widget/lifecycle/StateLifeCycle.dart';
 import 'package:flutterdemo/widget/oktoast/OKToastWidget.dart';
+import 'package:flutterdemo/widget/sliver/SliverAppBarDemo.dart';
+import 'package:flutterdemo/widget/sliver/SliverPersistentHeaderShrinkOffsetDemo.dart';
 import 'package:flutterdemo/widget/willpopscope/WillPopScopeWidget.dart';
 import 'package:http/http.dart' as http;
+
+import 'widget/sliver/CustomScrollViewDemo.dart';
+import 'widget/sliver/SliverPersistentHeaderStickyDemo.dart';
 
 // => 单行函数或者方法的简写
 void main() => runApp(MyApp());
@@ -179,6 +184,10 @@ class RandomWords extends StatelessWidget {
     _ListDatas.add("24 WillPopScope 防误触");
     _ListDatas.add("25 Flex 布局");
     _ListDatas.add("26 Flutter Plugin 电量 Battery！！！");
+    _ListDatas.add("27 Sliver Grid Sliver List");
+    _ListDatas.add("28 Sliver AppBar");
+    _ListDatas.add("29 Sliver 吸顶效果");
+    _ListDatas.add("30 Sliver 过度效果");
   }
 
   void _onClick(BuildContext context, int index) {
@@ -363,6 +372,35 @@ class RandomWords extends StatelessWidget {
             title: '26 Flutter Plugin 电量 Battery！！！',
             // used by the OS task switcher
             home: new PluginBatteryWidget());
+      }));
+    } else if (index == 27) {
+      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
+        return new MaterialApp(
+            title: '27 Sliver Grid Sliver List',
+            // used by the OS task switcher
+            home: CustomScrollViewDemo(title: '27 Sliver Grid Sliver List'));
+      }));
+    } else if (index == 28) {
+      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
+        return new MaterialApp(
+            title: '28 Sliver AppBar',
+            // used by the OS task switcher
+            home: SliverAppBarDemo(title: '28 Sliver AppBa'));
+      }));
+    } else if (index == 29) {
+      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
+        return new MaterialApp(
+            title: '29 Sliver 吸顶效果',
+            // used by the OS task switcher
+            home: SliverPersistentHeaderStickyDemo(title: '29 Sliver 吸顶效果'));
+      }));
+    } else if (index == 30) {
+      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
+        return new MaterialApp(
+            title: '30 Sliver 顶部过度效果',
+            // used by the OS task switcher
+            home: SliverPersistentHeaderShrinkOffsetDemo(
+                title: '30 Sliver 过度效果'));
       }));
     }
   }
