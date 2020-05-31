@@ -85,6 +85,9 @@ class SliverCustomHeaderDelegate extends SliverPersistentHeaderDelegate {
     final int alpha = (shrinkOffset / (this.maxExtent - this.minExtent) * 255)
         .clamp(0, 255)
         .toInt();
+
+    print("alpha : $alpha");
+
     return Color.fromARGB(alpha, 255, 255, 255);
   }
 
@@ -129,7 +132,7 @@ class SliverCustomHeaderDelegate extends SliverPersistentHeaderDelegate {
               ),
             ),
           ),
-          Positioned(
+          Positioned( // todo 文章： https://blog.csdn.net/whqwjb/article/details/87890799
             left: 0,
             right: 0,
             top: 0,

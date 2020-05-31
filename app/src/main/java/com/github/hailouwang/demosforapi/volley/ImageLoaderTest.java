@@ -29,7 +29,7 @@ public class ImageLoaderTest extends AppCompatActivity {
 
         //3、初始化ImageListener,第一个参数是imageView，第二个参数是刷新图片，第三个图片是默认图片
         ImageLoader.ImageListener imageListener = ImageLoader.getImageListener(imageView,
-                R.drawable.ic_sync_black_24dp,R.drawable.ic_launcher);
+                R.drawable.ic_sync_black_24dp,R.drawable.ic_launcher_androidgo);
 
         //4、发起ImageLoader请求，并配置ImageListener
         String url = "http://upload-images.jianshu.io/upload_images/3828779-6224599660db3125.png";

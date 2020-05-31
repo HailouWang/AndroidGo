@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">DK播放器</string>
     <string name="str_api">API</string>
     <string name="str_list">列表</string>
     <string name="str_extend">扩展</string>

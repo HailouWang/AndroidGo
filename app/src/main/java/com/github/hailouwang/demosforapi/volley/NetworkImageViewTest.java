@@ -26,7 +26,7 @@ public class NetworkImageViewTest extends AppCompatActivity {
         ImageLoader imageLoader = new ImageLoader(requestQueue,new ImageLoaderTest.MyImageCache());
 
         //3、
-        networkImageView.setDefaultImageResId(R.drawable.ic_launcher);
+        networkImageView.setDefaultImageResId(R.drawable.ic_launcher_androidgo);
         networkImageView.setErrorImageResId(R.drawable.ic_sync_black_24dp);
         String url = "https://ss1.bdstatic.com/5aAHeD3nKgcUp2HgoI7O1ygwehsv/media/ch1000/png/JQRZFpc170726-bg.png";
         networkImageView.setImageUrl(url,imageLoader);

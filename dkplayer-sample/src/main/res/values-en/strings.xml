@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">DKPlayer</string>
     <string name="str_api">API</string>
     <string name="str_list">LIST</string>
     <string name="str_extend">EXTEND</string>
