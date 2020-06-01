@@ -1,19 +1,21 @@
-package com.dueeeke.dkplayer.fragment.list;
+package com.github.hailouwang.demosforapi.shortvideo.list;
 
 import android.content.pm.ActivityInfo;
+import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.dueeeke.dkplayer.R;
 import com.dueeeke.dkplayer.activity.MainActivity;
 import com.dueeeke.dkplayer.adapter.VideoRecyclerViewAdapter;
 import com.dueeeke.dkplayer.adapter.listener.OnItemChildClickListener;
 import com.dueeeke.dkplayer.bean.VideoBean;
-import com.dueeeke.dkplayer.fragment.BaseFragment;
 import com.dueeeke.dkplayer.util.DataUtil;
 import com.dueeeke.dkplayer.util.ProgressManagerImpl;
 import com.dueeeke.dkplayer.util.Tag;
@@ -25,14 +27,17 @@ import com.dueeeke.videocontroller.component.GestureView;
 import com.dueeeke.videocontroller.component.TitleView;
 import com.dueeeke.videocontroller.component.VodControlView;
 import com.dueeeke.videoplayer.player.VideoView;
+import com.github.hailouwang.demosforapi.R;
+import com.github.hailouwang.demosforapi.shortvideo.BaseShortVideoFragment;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * RecyclerView demo
+ * 视频播放列表
+ * - 单 播放实例
  */
-public class RecyclerViewFragment extends BaseFragment implements OnItemChildClickListener {
+public class ShortVideoRecyclerViewFragment extends BaseShortVideoFragment implements OnItemChildClickListener {
 
     protected List<VideoBean> mVideos = new ArrayList<>();
     protected VideoRecyclerViewAdapter mAdapter;
@@ -55,8 +60,48 @@ public class RecyclerViewFragment extends BaseFragment implements OnItemChildCli
     protected int mLastPos = mCurPos;
 
     @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+    }
+
+    @Override
     protected int getLayoutResId() {
         return R.layout.dueeeke_fragment_recycler_view;
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
     }
 
     @Override
@@ -67,7 +112,7 @@ public class RecyclerViewFragment extends BaseFragment implements OnItemChildCli
         //保存进度
         mVideoView.setProgressManager(new ProgressManagerImpl());
 
-        mRecyclerView = findViewById(R.id.rv);
+        mRecyclerView = findViewById(com.dueeeke.dkplayer.R.id.rv);
         mLinearLayoutManager = new LinearLayoutManager(getContext());
         mRecyclerView.setLayoutManager(mLinearLayoutManager);
         mAdapter = new VideoRecyclerViewAdapter(mVideos);
@@ -81,7 +126,7 @@ public class RecyclerViewFragment extends BaseFragment implements OnItemChildCli
 
             @Override
             public void onChildViewDetachedFromWindow(@NonNull View view) {
-                FrameLayout playerContainer = view.findViewById(R.id.player_container);
+                FrameLayout playerContainer = view.findViewById(com.dueeeke.dkplayer.R.id.player_container);
                 View v = playerContainer.getChildAt(0);
                 if (v != null && v == mVideoView && !mVideoView.isFullScreen()) {
                     releaseVideoView();
@@ -89,7 +134,7 @@ public class RecyclerViewFragment extends BaseFragment implements OnItemChildCli
             }
         });
 
-        View view = findViewById(R.id.add);
+        View view = findViewById(com.dueeeke.dkplayer.R.id.add);
         view.setVisibility(View.VISIBLE);
         view.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -136,26 +181,6 @@ public class RecyclerViewFragment extends BaseFragment implements OnItemChildCli
     @Override
     protected boolean isLazyLoad() {
         return true;
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        pause();
-    }
-
-    /**
-     * 由于onPause必须调用super。故增加此方法，
-     * 子类将会重写此方法，改变onPause的逻辑
-     */
-    protected void pause() {
-        releaseVideoView();
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        resume();
     }
 
     /**

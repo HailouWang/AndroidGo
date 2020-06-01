@@ -24,6 +24,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_androidgo"
         android:label="@string/android_go_app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_androidgo_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -1620,6 +1621,126 @@
             <meta-data
                 android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
                 android:value="com.github.hailouwang.demosforapi.shortvideo.demo1.ShortVideoDianboFragment" />
+        </activity-alias>
+
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.shortvideo.demo1.ShortVideoZhiboActivity"
+            android:label="@string/ijkplayer_demo1_zhibo"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.shortvideo.demo1.ShortVideoZhiboFragment" />
+        </activity-alias>
+
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.shortvideo.demo1.ShortVideoRawOrAssetsActivity"
+            android:label="@string/ijkplayer_demo1_raw_or_assets"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.shortvideo.demo1.ShortVideoRawOrAssetsFragment" />
+        </activity-alias>
+
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.shortvideo.demo1.ShortVideoMultiItemActivity"
+            android:label="@string/ijkplayer_demo1_multi_item"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.shortvideo.demo1.ShortVideoMultiItemFragment" />
+        </activity-alias>
+
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.shortvideo.list.ShortVideoRecyclerViewActivity"
+            android:label="@string/ijkplayer_list_recyclerview"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.shortvideo.list.ShortVideoRecyclerViewFragment" />
+        </activity-alias>
+
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.shortvideo.list.ShortVideoRecyclerViewAutoPlayActivity"
+            android:label="@string/ijkplayer_list_recyclerview_autoplay"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.shortvideo.list.ShortVideoRecyclerViewAutoPlayFragment" />
+        </activity-alias>
+
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.shortvideo.list.ShortVideoTikTokListFragment"
+            android:label="@string/ijkplayer_list_tiktok"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.shortvideo.list.ShortVideoTikTokListFragment" />
+        </activity-alias>
+
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.shortvideo.list.ShortVideoSeamlessActivity"
+            android:label="@string/ijkplayer_list_seamless"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.shortvideo.list.ShortVideoSeamlessFragment" />
+        </activity-alias>
+
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.shortvideo.list.ShortVideoStartFullScreenActivity"
+            android:label="@string/ijkplayer_list_start_to_full_screen"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.shortvideo.list.ShortVideoStartFullScreenFragment" />
         </activity-alias>
         <!--ijkplayer end-->
 

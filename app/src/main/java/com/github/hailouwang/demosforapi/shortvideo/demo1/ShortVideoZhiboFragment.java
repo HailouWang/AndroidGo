@@ -1,6 +1,5 @@
 package com.github.hailouwang.demosforapi.shortvideo.demo1;
 
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -31,13 +30,13 @@ import com.github.hailouwang.demosforapi.R;
 import com.github.hailouwang.demosforapi.shortvideo.BaseShortVideoFragment;
 
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 /**
- * 点播
+ * 直播
  */
-public class ShortVideoDianboFragment extends BaseShortVideoFragment {
+public class ShortVideoZhiboFragment extends BaseShortVideoFragment {
     private static final String THUMB = "https://cms-bucket.nosdn.127.net/eb411c2810f04ffa8aaafc42052b233820180418095416.jpeg";
+    private static final String LIVE_URL = "http://220.161.87.62:8800/hls/0/index.m3u8";
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -75,9 +74,9 @@ public class ShortVideoDianboFragment extends BaseShortVideoFragment {
 
         Bundle intent = getArguments();
         if (!intent.containsKey(IntentKeys.URL)) {
-            intent.putBoolean(IntentKeys.IS_LIVE, false);
-            intent.putString(IntentKeys.TITLE, "ijkPlayer - 点播");
-            intent.putString(IntentKeys.URL, DataUtil.SAMPLE_URL);
+            intent.putBoolean(IntentKeys.IS_LIVE, true);
+            intent.putString(IntentKeys.TITLE, "ijkPlayer - 直播");
+            intent.putString(IntentKeys.URL, LIVE_URL);
         }
 
         if (intent != null) {

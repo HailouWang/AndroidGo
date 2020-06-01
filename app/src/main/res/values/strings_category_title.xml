@@ -241,5 +241,14 @@
     <string name="touch_event_dispatch">事件分发/Demo</string>
 
     <string name="ijkplayer_demo1_dianbo">短视频 ijkPlayer/短视频合集/点播 </string>
+    <string name="ijkplayer_demo1_zhibo">短视频 ijkPlayer/短视频合集/直播 </string>
+    <string name="ijkplayer_demo1_raw_or_assets">短视频 ijkPlayer/短视频合集/Raw Or Assets本地视频 </string>
+    <string name="ijkplayer_demo1_multi_item">短视频 ijkPlayer/短视频合集/多实例播放 </string>
+
+    <string name="ijkplayer_list_recyclerview">短视频 ijkPlayer/短视频合集/List/RecyclerView 视频列表 </string>
+    <string name="ijkplayer_list_recyclerview_autoplay">短视频 ijkPlayer/短视频合集/List/RecyclerView 视频列表 自动播放 </string>
+    <string name="ijkplayer_list_tiktok">短视频 ijkPlayer/短视频合集/List/仿抖音 </string>
+    <string name="ijkplayer_list_seamless">短视频 ijkPlayer/短视频合集/List/无缝播放 </string>
+    <string name="ijkplayer_list_start_to_full_screen">短视频 ijkPlayer/短视频合集/List/ startToFullScreen </string>
 
 </resources>

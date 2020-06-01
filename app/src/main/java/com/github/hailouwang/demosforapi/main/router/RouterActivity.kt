@@ -17,6 +17,10 @@ import com.github.hailouwang.demosforapi.rxjava.BackpressDemoFragment
 import com.github.hailouwang.demosforapi.rxjava.ObservableLifeCycle
 import com.github.hailouwang.demosforapi.rxjava.SingleDemoFragment
 import com.github.hailouwang.demosforapi.shortvideo.demo1.ShortVideoDianboFragment
+import com.github.hailouwang.demosforapi.shortvideo.demo1.ShortVideoMultiItemFragment
+import com.github.hailouwang.demosforapi.shortvideo.demo1.ShortVideoRawOrAssetsFragment
+import com.github.hailouwang.demosforapi.shortvideo.demo1.ShortVideoZhiboFragment
+import com.github.hailouwang.demosforapi.shortvideo.list.*
 import com.github.hailouwang.demosforapi.thread.SafeStopThreadFragment
 import com.github.hailouwang.demosforapi.view.demo1.GlobalVisibleForViewFragment
 import com.github.hailouwang.demosforapi.view.demo1.LocalVisibleForViewFragment
@@ -73,15 +77,15 @@ class RouterActivity : BMRouterFragmentActivity() {
             ENTRY_FRAGMENTS.add(AutoWrapLineDemoFragment::class.java.name)
             ENTRY_FRAGMENTS.add(ShortVideoDianboFragment::class.java.name)
             ENTRY_FRAGMENTS.add(ObservableLifeCycle::class.java.name)
+            ENTRY_FRAGMENTS.add(ShortVideoZhiboFragment::class.java.name)
+            ENTRY_FRAGMENTS.add(ShortVideoRawOrAssetsFragment::class.java.name)
+            ENTRY_FRAGMENTS.add(ShortVideoMultiItemFragment::class.java.name)
+            ENTRY_FRAGMENTS.add(ShortVideoRecyclerViewFragment::class.java.name)
+            ENTRY_FRAGMENTS.add(ShortVideoRecyclerViewAutoPlayFragment::class.java.name)
+            ENTRY_FRAGMENTS.add(ShortVideoTikTokListFragment::class.java.name)
+            ENTRY_FRAGMENTS.add(ShortVideoSeamlessFragment::class.java.name)
+            ENTRY_FRAGMENTS.add(ShortVideoStartFullScreenFragment::class.java.name)
 
-//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
-//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
-//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
-//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
-//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
-//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
-//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
-//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
 //            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
 //            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
 //            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)

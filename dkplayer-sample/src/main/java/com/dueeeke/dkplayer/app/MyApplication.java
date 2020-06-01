@@ -5,6 +5,7 @@ import android.app.Application;
 import com.dueeeke.videoplayer.ijk.IjkPlayerFactory;
 import com.dueeeke.videoplayer.player.VideoViewConfig;
 import com.dueeeke.videoplayer.player.VideoViewManager;
+import com.google.android.exoplayer2.source.hls.BuildConfig;
 
 /**
  * app
@@ -19,12 +20,12 @@ public class MyApplication {
         instance = application;
         //播放器配置，注意：此为全局配置，按需开启
         VideoViewManager.setConfig(VideoViewConfig.newBuilder()
-//                .setLogEnabled(BuildConfig.DEBUG)//调试的时候请打开日志，方便排错
+                .setLogEnabled(BuildConfig.DEBUG)//调试的时候请打开日志，方便排错
                 .setPlayerFactory(IjkPlayerFactory.create())
 //                .setPlayerFactory(ExoMediaPlayerFactory.create())
 //                .setRenderViewFactory(SurfaceRenderViewFactory.create())
 //                .setEnableOrientation(true)
-//                .setEnableAudioFocus(false)
+                .setEnableAudioFocus(false)
 //                .setScreenScaleType(VideoView.SCREEN_SCALE_MATCH_PARENT)
 //                .setAdaptCutout(false)
 //                .setPlayOnMobileNetwork(true)

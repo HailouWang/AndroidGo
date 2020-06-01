@@ -40,10 +40,11 @@ public class DebugInfoView extends AppCompatTextView implements IControlComponen
     }
 
     {
-        setTextColor(ContextCompat.getColor(getContext(), android.R.color.white));
+        setTextColor(ContextCompat.getColor(getContext(), android.R.color.holo_red_light));
         setBackgroundResource(android.R.color.black);
         setTextSize(10);
         FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        lp.topMargin = 300;
         lp.gravity = Gravity.CENTER_HORIZONTAL;
         setLayoutParams(lp);
     }

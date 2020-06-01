@@ -40,6 +40,7 @@ public class TikTokListAdapter extends RecyclerView.Adapter<TikTokListAdapter.Ti
         TiktokBean item = data.get(position);
         holder.mTitle.setText(item.title);
         Glide.with(holder.mThumb.getContext())
+                .asDrawable()
                 .load(item.coverImgUrl)
                 .into(holder.mThumb);
 
