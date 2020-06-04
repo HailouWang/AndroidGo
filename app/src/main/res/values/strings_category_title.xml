@@ -50,7 +50,12 @@
 
     <string name="java_test_fragment1">Java/Finalize/Demo1</string>
 
-    <string name="classloader_fragment1">ClassLoader/ActivityClassLoader/Demo1</string>
+    <string name="classloader_fragment1">类装载机制ClassLoader/双亲委派机制/查看ClassLoader 父子关系</string>
+    <string name="classloader_fragment2">类装载机制ClassLoader/类装载生命周期/类初始化阶段顺序</string>
+    <string name="classloader_fragment3">类装载机制ClassLoader/类装载流程/类 静态方法，会触发实例化吗？</string>
+
+    <string name="state_machine_01">状态机-状态模式/Helloworld，单状态</string>
+    <string name="state_machine_02">状态机-状态模式/多状态协同，状态切换</string>
 
     <string name="annotation_fragment1">Annotation/Demo</string>
 
@@ -250,5 +255,8 @@
     <string name="ijkplayer_list_tiktok">短视频 ijkPlayer/短视频合集/List/仿抖音 </string>
     <string name="ijkplayer_list_seamless">短视频 ijkPlayer/短视频合集/List/无缝播放 </string>
     <string name="ijkplayer_list_start_to_full_screen">短视频 ijkPlayer/短视频合集/List/ startToFullScreen </string>
+
+    <string name="ijkplayer_extend_start_to_full_screen">短视频 ijkPlayer/短视频合集/Extend/全屏播放 </string>
+    <string name="ijkplayer_extend_start_to_danmuku">短视频 ijkPlayer/短视频合集/Extend/弹幕 </string>
 
 </resources>

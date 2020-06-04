@@ -11,7 +11,17 @@
  
 ## 三、问题
 
-### 3.1、``git clone`` 之后，需要更改 ``./flutter_demo/.android/local.properties`` 中 环境变量信息
+### 3.1、升级Flutter 版本。
+
+```
+localhost:AndroidGo hailuwang$ flutter --version
+Flutter 1.17.1 • channel unknown • unknown source
+Framework • revision f7a6a7906b (3 weeks ago) • 2020-05-12 18:39:00 -0700
+Engine • revision 6bc433c6b6
+Tools • Dart 2.8.2
+```
+
+### 3.2、``git clone`` 之后，需要更改 ``./flutter_demo/.android/local.properties`` 中 环境变量信息
 
 ```properties
 sdk.dir=/Users/hailuwang/Library/Android/sdk

@@ -5,19 +5,19 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/autodisponse"
+        android:id="@+id/tips"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="60dp"
         android:gravity="center"
-        android:text="Uber Autodisponse" />
+        android:text="执行空对象的静态方法，会空指针吗？ \n  命令：adb logcat -v time -s hlwang" />
 
     <TextView
-        android:id="@+id/autodisponseWithEvent"
+        android:id="@+id/action"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="60dp"
         android:gravity="center"
-        android:text="Uber Autodisponse 指定退出生命周期方法" />
+        android:text="点击，查看" />
 
 </LinearLayout>

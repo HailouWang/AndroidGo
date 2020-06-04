@@ -5,19 +5,27 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/autodisponse"
+        android:id="@+id/tips"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="60dp"
         android:gravity="center"
-        android:text="Uber Autodisponse" />
+        android:text="执行，查看类装载生命周期\n 命令：adb logcat -v time -s hlwang" />
 
     <TextView
-        android:id="@+id/autodisponseWithEvent"
+        android:id="@+id/action"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="60dp"
         android:gravity="center"
-        android:text="Uber Autodisponse 指定退出生命周期方法" />
+        android:text="点击，查看类装载的生命周期" />
+
+    <TextView
+        android:id="@+id/tips2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="再点击一次，静态方法以及静态域，不会2次执行！！！" />
 
 </LinearLayout>

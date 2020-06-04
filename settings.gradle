@@ -1,3 +1,4 @@
+include ':statemachine'
 include ':app', ':messageview', ':dotspageindicator', ':ijkplayer-java',
         ':dkplayer-java', ':dkplayer-ui', ':dkplayer-videocache', ':dkplayer-players:ijk', ':dkplayer-players:exo', ':dkplayer-sample', ':fragmentrouter'/*, ':ijkplayer-java'*/
 setBinding(new Binding([gradle: this]))

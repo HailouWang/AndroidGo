@@ -38,6 +38,11 @@
         </activity>
 
         <activity android:name=".main.router.RouterActivity" />
+        <activity
+            android:name=".main.router.RouterLandActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout"
+            android:screenOrientation="landscape"
+            tools:ignore="LockedOrientationActivity" />
 
         <activity
             android:name="com.github.hailouwang.demosforapi.volley.SampleRequest"
@@ -1382,6 +1387,36 @@
         </activity-alias>
 
         <activity-alias
+            android:name="com.github.hailouwang.demosforapi.classloader.ClassLoaderInitLifecycleDemoActivity"
+            android:label="@string/classloader_fragment2"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.classloader.ClassLoaderInitLifecycleDemoFragment" />
+        </activity-alias>
+
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.classloader.ClassLoaderInitStaticMethodInvokeDemoActivity"
+            android:label="@string/classloader_fragment3"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.classloader.ClassLoaderInitStaticMethodInvokeDemoFragment" />
+        </activity-alias>
+
+        <activity-alias
             android:name="com.github.hailouwang.demosforapi.annotation.AnnotationDemoActivity"
             android:label="@string/annotation_fragment1"
             android:targetActivity=".main.router.RouterActivity">
@@ -1742,7 +1777,71 @@
                 android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
                 android:value="com.github.hailouwang.demosforapi.shortvideo.list.ShortVideoStartFullScreenFragment" />
         </activity-alias>
+
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.shortvideo.extend.ShortVideoFullscreenDirectlyActivity"
+            android:label="@string/ijkplayer_extend_start_to_full_screen"
+            android:screenOrientation="landscape"
+            android:targetActivity=".main.router.RouterLandActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.shortvideo.extend.ShortVideoFullscreenDirectlyFragment" />
+        </activity-alias>
+
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.shortvideo.extend.ShortVideoDanmakuActivity"
+            android:label="@string/ijkplayer_extend_start_to_danmuku"
+            android:screenOrientation="landscape"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.shortvideo.extend.ShortVideoDanmakuFragment" />
+        </activity-alias>
         <!--ijkplayer end-->
+
+        <!--stateMachine start-->
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.statemachine.StateMachineHelloWorldActivity"
+            android:label="@string/state_machine_01"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.statemachine.StateMachineHelloWorldFragment" />
+        </activity-alias>
+
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.statemachine.StateMachineMoreStateActivity"
+            android:label="@string/state_machine_02"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.statemachine.StateMachineMoreStateFragment" />
+        </activity-alias>
+        <!--stateMachine end-->
 
     </application>
 

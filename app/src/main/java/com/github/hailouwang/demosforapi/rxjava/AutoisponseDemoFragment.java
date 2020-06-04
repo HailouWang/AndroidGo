@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Lifecycle;
 
 import com.github.hailouwang.demosforapi.R;
 import com.trello.rxlifecycle3.components.RxActivity;
@@ -35,7 +36,7 @@ public class AutoisponseDemoFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.rxjava_auto_disponse_demo,container,false);
+        View view = inflater.inflate(R.layout.rxjava_auto_disponse_demo, container, false);
         return view;
     }
 
@@ -45,6 +46,17 @@ public class AutoisponseDemoFragment extends Fragment {
         view.findViewById(R.id.autodisponse).setOnClickListener(v -> {
             Disposable disposable = Observable.interval(1, TimeUnit.MILLISECONDS)
                     .as(AutoDispose.autoDisposable(AndroidLifecycleScopeProvider.from(this)))
+                    .subscribe(new Consumer<Long>() {
+                        @Override
+                        public void accept(Long aLong) throws Exception {
+                            Log.d("hlwang", "RxLifeCycleDemoFragment Observable aLong : " + aLong);
+                        }
+                    });
+        });
+
+        view.findViewById(R.id.autodisponseWithEvent).setOnClickListener(v -> {
+            Disposable disposable = Observable.interval(1, TimeUnit.MILLISECONDS)
+                    .as(AutoDispose.autoDisposable(AndroidLifecycleScopeProvider.from(this, Lifecycle.Event.ON_DESTROY)))
                     .subscribe(new Consumer<Long>() {
                         @Override
                         public void accept(Long aLong) throws Exception {

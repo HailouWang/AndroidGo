@@ -36,6 +36,11 @@ public class RxLifeCycleDemoActivity extends RxActivity {
         setContentView(R.layout.rxjava_lifecycle_demo);
         Log.d("hlwang", "RxLifeCycleDemoFragment Observable onCreate");
 
+        // 1、take(1)，得到 发起观察者时的生命周期
+        // 2、skip(1)，忽略第一个，得到后续的生命周期状态
+        // 3、将 1 中的生命周期，得到匹配的退出时的生命周期状态
+        // 4、Observable.combineLatest 生成  false、false、true(目标生命周期) 数据
+        // 5、Observable#takeUntil ，遇到true，数据，停止，并执行通道 资源释放
         findViewById(R.id.rxLifeCycle).setOnClickListener(v -> {
             Disposable disposable = Observable.interval(1, TimeUnit.MILLISECONDS)
                     .compose(bindToLifecycle())

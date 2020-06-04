@@ -227,4 +227,6 @@ dependencies {
 
     implementation deps.butterknife.butterknife
     annotationProcessor deps.butterknife.butterknife_compiler
+
+    implementation project(':statemachine')
 }

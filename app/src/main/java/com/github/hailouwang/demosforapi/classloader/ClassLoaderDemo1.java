@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment;
 
 /**
  * https://www.jianshu.com/p/7193600024e7
+ *
+ * 类的本质以及装载过程：https://baijiahao.baidu.com/s?id=1638197211509726483&wfr=spider&for=pc
  */
 public class ClassLoaderDemo1 extends Fragment {
     @Override

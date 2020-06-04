@@ -23,12 +23,14 @@
         app:layout_constraintTop_toBottomOf="@id/player">
 
         <Button
+            android:id="@+id/showDanMu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="showDanMu"
             android:text="显示弹幕" />
 
         <Button
+            android:id="@+id/hideDanMu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="hideDanMu"
@@ -44,12 +46,14 @@
         app:layout_constraintTop_toBottomOf="@id/layout">
 
         <Button
+            android:id="@+id/addDanmaku"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="addDanmaku"
             android:text="发送一条普通弹幕" />
 
         <Button
+            android:id="@+id/addDanmakuWithDrawable"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="addDanmakuWithDrawable"

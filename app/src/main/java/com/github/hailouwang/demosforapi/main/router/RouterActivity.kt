@@ -2,6 +2,8 @@ package com.github.hailouwang.demosforapi.main.router
 
 import com.github.hailouwang.demosforapi.annotation.AnnotationDemoFragment
 import com.github.hailouwang.demosforapi.classloader.ClassLoaderDemo1
+import com.github.hailouwang.demosforapi.classloader.ClassLoaderInitLifecycleDemoFragment
+import com.github.hailouwang.demosforapi.classloader.ClassLoaderInitStaticMethodInvokeDemoFragment
 import com.github.hailouwang.demosforapi.drawable.cache.ThreeCacheDemoFragment
 import com.github.hailouwang.demosforapi.flutter.demo1.FlutterDemoFragment1
 import com.github.hailouwang.demosforapi.java.TestJavaFragment
@@ -20,7 +22,11 @@ import com.github.hailouwang.demosforapi.shortvideo.demo1.ShortVideoDianboFragme
 import com.github.hailouwang.demosforapi.shortvideo.demo1.ShortVideoMultiItemFragment
 import com.github.hailouwang.demosforapi.shortvideo.demo1.ShortVideoRawOrAssetsFragment
 import com.github.hailouwang.demosforapi.shortvideo.demo1.ShortVideoZhiboFragment
+import com.github.hailouwang.demosforapi.shortvideo.extend.ShortVideoDanmakuFragment
+import com.github.hailouwang.demosforapi.shortvideo.extend.ShortVideoFullscreenDirectlyFragment
 import com.github.hailouwang.demosforapi.shortvideo.list.*
+import com.github.hailouwang.demosforapi.statemachine.StateMachineHelloWorldFragment
+import com.github.hailouwang.demosforapi.statemachine.StateMachineMoreStateFragment
 import com.github.hailouwang.demosforapi.thread.SafeStopThreadFragment
 import com.github.hailouwang.demosforapi.view.demo1.GlobalVisibleForViewFragment
 import com.github.hailouwang.demosforapi.view.demo1.LocalVisibleForViewFragment
@@ -39,7 +45,7 @@ import com.github.hailouwang.demosforapi.widget.lifecycle.lifecycler.demo.LifeCy
 import com.hailouwang.fragmentbackhandler.BackHandlerHelper
 import com.hailouwang.fragmentrouter.BMRouterFragmentActivity
 
-class RouterActivity : BMRouterFragmentActivity() {
+open class RouterActivity : BMRouterFragmentActivity() {
 
     companion object {
         private val ENTRY_FRAGMENTS: MutableSet<String> = HashSet()
@@ -85,7 +91,25 @@ class RouterActivity : BMRouterFragmentActivity() {
             ENTRY_FRAGMENTS.add(ShortVideoTikTokListFragment::class.java.name)
             ENTRY_FRAGMENTS.add(ShortVideoSeamlessFragment::class.java.name)
             ENTRY_FRAGMENTS.add(ShortVideoStartFullScreenFragment::class.java.name)
+            ENTRY_FRAGMENTS.add(ShortVideoFullscreenDirectlyFragment::class.java.name)
+            ENTRY_FRAGMENTS.add(ShortVideoDanmakuFragment::class.java.name)
+            ENTRY_FRAGMENTS.add(ClassLoaderInitLifecycleDemoFragment::class.java.name)
+            ENTRY_FRAGMENTS.add(ClassLoaderInitStaticMethodInvokeDemoFragment::class.java.name)
+            ENTRY_FRAGMENTS.add(StateMachineHelloWorldFragment::class.java.name)
+            ENTRY_FRAGMENTS.add(StateMachineMoreStateFragment::class.java.name)
 
+//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
+//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
+//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
+//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
+//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
+//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
+//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
+//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
+//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
+//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
+//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
+//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
 //            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
 //            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
 //            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
