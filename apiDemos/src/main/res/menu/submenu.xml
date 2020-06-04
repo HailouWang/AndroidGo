@@ -35,9 +35,9 @@
                   android:title="Ccccccc (More)">
 
                 <menu>
-                    <item android:id="@+id/d"
+                    <item android:id="@+id/d1"
                           android:title="Dddddd" />
-                    <item android:id="@+id/d"
+                    <item android:id="@+id/d2"
                           android:title="Eeeeee">
                         <menu>
                             <item android:title="Ffffff" />

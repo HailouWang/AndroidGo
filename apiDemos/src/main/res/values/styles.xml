@@ -14,7 +14,7 @@
      limitations under the License.
 -->
 
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <style name="CustomTheme" parent="android:Theme.Light">
         <item name="android:windowBackground">@color/custom_theme_color</item>
         <item name="android:colorBackground">@color/custom_theme_color</item>
@@ -72,14 +72,14 @@
     <!-- A theme that has a wallpaper background.  Here we explicitly specify
          that this theme is to inherit from the system's wallpaper theme,
          which sets up various attributes correctly. -->
-    <style name="Theme.Wallpaper" parent="android:style/Theme.Wallpaper">
+    <style name="Theme.Wallpaper" parent="android:style/Theme.Wallpaper" tools:ignore="ResourceCycle">
         <item name="android:colorForeground">#fff</item>
     </style>
 
     <!-- A theme that has a translucent background.  Here we explicitly specify
          that this theme is to inherit from the system's translucent theme,
          which sets up various attributes correctly. -->
-    <style name="Theme.Translucent" parent="android:style/Theme.Translucent">
+    <style name="Theme.Translucent" parent="android:style/Theme.Translucent" tools:ignore="ResourceCycle">
         <item name="android:windowBackground">@drawable/translucent_background</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:colorForeground">#fff</item>

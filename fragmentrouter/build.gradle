@@ -70,7 +70,7 @@ publish {
     //描述，不重要
     desc = '单 Activity 、多 Fragment 模式'
     //网站，不重要
-    website = 'https://github.com/HailouWang/DemosAndApis'
+    website = 'https://github.com/HailouWang/AndroidGo'
 
     userOrg = ''
 }
