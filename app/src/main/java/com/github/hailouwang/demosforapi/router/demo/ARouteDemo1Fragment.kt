@@ -20,6 +20,7 @@ import com.github.hailouwang.demosforapi.main.ui.DemosForApiActivity
 import com.github.hailouwang.demosforapi.router.page.testinject.TestObj
 import com.github.hailouwang.demosforapi.router.page.testinject.TestParcelable
 import com.github.hailouwang.demosforapi.router.page.testinject.TestSerializable
+import com.github.hailouwang.demosforapi.router.page.testservice.AndroidGoPathReplaceService
 import com.github.hailouwang.demosforapi.router.page.testservice.HelloService
 import com.github.hailouwang.demosforapi.router.page.testservice.SingleService
 import kotlinx.android.synthetic.main.aroute_demo1_fragment.*
@@ -66,6 +67,7 @@ class ARouteDemo1Fragment : Fragment(),
         failNav.setOnClickListener(this::onClick)
         failNav2.setOnClickListener(this::onClick)
         failNav3.setOnClickListener(this::onClick)
+        replaceService.setOnClickListener(this::onClick)
     }
 
     /**
@@ -167,7 +169,8 @@ class ARouteDemo1Fragment : Fragment(),
                     .withObject("map", map)
                     .navigation()
             }
-            R.id.navByName -> (ARouter.getInstance().build("/yourservicegroupname/hello").navigation() as HelloService).sayHello(
+            R.id.navByName -> (ARouter.getInstance().build("/yourservicegroupname/hello")
+                .navigation() as HelloService).sayHello(
                 "mike"
             )
             R.id.navByType -> ARouter.getInstance().navigation(
@@ -214,6 +217,9 @@ class ARouteDemo1Fragment : Fragment(),
                     "找到Fragment:$fragment",
                     Toast.LENGTH_SHORT
                 ).show()
+            }
+            R.id.replaceService -> {
+                ARouter.getInstance().build("/test/fragment");
             }
             else -> {
             }

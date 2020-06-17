@@ -14,6 +14,7 @@ import androidx.lifecycle.Lifecycle;
 import com.github.hailouwang.demosforapi.R;
 import com.trello.rxlifecycle3.components.RxActivity;
 import com.uber.autodispose.AutoDispose;
+import com.uber.autodispose.ObservableSubscribeProxy;
 import com.uber.autodispose.android.lifecycle.AndroidLifecycleScopeProvider;
 
 import java.util.concurrent.TimeUnit;

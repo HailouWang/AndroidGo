@@ -7,6 +7,7 @@ import 'package:flutter/services.dart';
 import 'package:flutterdemo/media/MediaQueryDataWidget.dart';
 import 'package:flutterdemo/plugin/PluginBatteryWidget.dart';
 import 'package:flutterdemo/provider/ProviderDemo.dart';
+import 'package:flutterdemo/widget/NativeViewDemo.dart';
 import 'package:flutterdemo/widget/flex/FlexWidget.dart';
 import 'package:flutterdemo/widget/lifecycle/StateLifeCycle.dart';
 import 'package:flutterdemo/widget/oktoast/OKToastWidget.dart';
@@ -65,52 +66,52 @@ class MyNavigatorObserver extends NavigatorObserver {
 
   @override
   void didStopUserGesture() {
-    print('----------didStopUserGesture-----------');
-    print('----------end-----------');
+    print('MyNavigatorObserver ----------didStopUserGesture-----------');
+    print('MyNavigatorObserver----------end-----------');
   }
 
   @override
   void didStartUserGesture(Route<dynamic> route, Route<dynamic> previousRoute) {
-    print('----------StartUserGesture-----------');
-    print('当前活动的路由：${route.settings}');
-    print('替换活动的路由：${previousRoute?.settings}');
-    print('----------end-----------');
+    print('MyNavigatorObserver ----------StartUserGesture-----------');
+    print('MyNavigatorObserver 当前活动的路由：${route.settings}');
+    print('MyNavigatorObserver 替换活动的路由：${previousRoute?.settings}');
+    print('MyNavigatorObserver ----------end-----------');
   }
 
   @override
   void didReplace({Route<dynamic> newRoute, Route<dynamic> oldRoute}) {
-    print('----------replace-----------');
-    print('当前活动的路由：${oldRoute.settings}');
-    print('替换活动的路由：${newRoute?.settings}');
-    print('----------end-----------');
+    print('MyNavigatorObserver ----------replace-----------');
+    print('MyNavigatorObserver 当前活动的路由：${oldRoute.settings}');
+    print('MyNavigatorObserver 替换活动的路由：${newRoute?.settings}');
+    print('MyNavigatorObserver ----------end-----------');
   }
 
   @override
   void didRemove(Route<dynamic> route, Route<dynamic> previousRoute) {
-    print('----------remove-----------');
-    print('当前活动的路由：${route.settings}');
-    print('先前活动的路由：${previousRoute?.settings}');
-    print('----------end-----------');
+    print('MyNavigatorObserver ----------remove-----------');
+    print('MyNavigatorObserver 当前活动的路由：${route.settings}');
+    print('MyNavigatorObserver 先前活动的路由：${previousRoute?.settings}');
+    print('MyNavigatorObserver ----------end-----------');
   }
 
   @override
   void didPop(Route<dynamic> route, Route<dynamic> previousRoute) {
-    print('----------pop-----------');
-    print('当前活动的路由：${route.settings}');
-    print('先前活动的路由：${previousRoute?.settings}');
-    print('----------end-----------');
+    print('MyNavigatorObserver ----------pop-----------');
+    print('MyNavigatorObserver 当前活动的路由：${route.settings}');
+    print('MyNavigatorObserver 先前活动的路由：${previousRoute?.settings}');
+    print('MyNavigatorObserver ----------end-----------');
   }
 
   @override
   void didPush(Route<dynamic> route, Route<dynamic> previousRoute) {
-    print('----------push-----------');
-    print('当前活动的路由：${route.settings}');
-    print('先前活动的路由：${previousRoute?.settings}');
-    print('----------end-----------');
+    print('MyNavigatorObserver ----------push-----------');
+    print('MyNavigatorObserver 当前活动的路由：${route.settings}');
+    print('MyNavigatorObserver 先前活动的路由：${previousRoute?.settings}');
+    print('MyNavigatorObserver ----------end-----------');
   }
 }
 
-class RandomWords extends StatelessWidget {
+class RandomWords extends StatelessWidget with WidgetsBindingObserver {
   final _ListDatas = <String>[];
 
   final _biggerFont = const TextStyle(fontSize: 18.0);
@@ -129,6 +130,7 @@ class RandomWords extends StatelessWidget {
   }
 
   Widget _buildListDatas(BuildContext context) {
+    WidgetsBinding.instance.addObserver(this);
     return new ListView.builder(
       padding: const EdgeInsets.all(16.0),
       itemBuilder: (context, i) {
@@ -188,6 +190,7 @@ class RandomWords extends StatelessWidget {
     _ListDatas.add("28 Sliver AppBar");
     _ListDatas.add("29 Sliver 吸顶效果");
     _ListDatas.add("30 Sliver 过度效果");
+    _ListDatas.add("31 借助原生视图能力，android 绘制");
   }
 
   void _onClick(BuildContext context, int index) {
@@ -402,7 +405,60 @@ class RandomWords extends StatelessWidget {
             home: SliverPersistentHeaderShrinkOffsetDemo(
                 title: '30 Sliver 过度效果'));
       }));
+    } else if (index == 31) {
+      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
+        return new MaterialApp(
+            title: '31 借助原生视图能力，android 绘制',
+            // used by the OS task switcher
+            home: NativeViewDemo());
+      }));
     }
+  }
+
+
+  @override
+  Future<bool> didPopRoute() {
+    print('RandomWords ----------didPopRoute-----------');
+  }
+
+  @override
+  Future<bool> didPushRoute(String route) {
+    print('RandomWords ----------didPushRoute-----------route:${route}');
+  }
+
+  @override
+  void didChangeMetrics() {
+    print('RandomWords ----------didChangeMetrics-----------');
+  }
+
+  @override
+  void didChangeTextScaleFactor() {
+    print('RandomWords ----------didChangeTextScaleFactor-----------');
+  }
+
+  @override
+  void didChangePlatformBrightness() {
+    print('RandomWords ----------didChangePlatformBrightness-----------');
+  }
+
+  @override
+  void didChangeLocales(List<Locale> locale) {
+    print('RandomWords ----------didChangeLocales-----------');
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    print('RandomWords ----------didChangeAppLifecycleState-----------state : ${state}');
+  }
+
+  @override
+  void didHaveMemoryPressure() {
+    print('RandomWords ----------didHaveMemoryPressure-----------');
+  }
+
+  @override
+  void didChangeAccessibilityFeatures() {
+    print('RandomWords ----------didChangeAccessibilityFeatures-----------');
   }
 }
 

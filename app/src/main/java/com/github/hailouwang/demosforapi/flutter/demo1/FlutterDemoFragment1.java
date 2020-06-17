@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 
 import com.github.hailouwang.demosforapi.DemosApp;
 import com.github.hailouwang.demosforapi.R;
+import com.github.hailouwang.demosforapi.flutter.activity.FlutterCustomActivity;
 import com.github.hailouwang.demosforapi.flutter.battery.FlutterBatteryPluginActivity;
 import com.github.hailouwang.demosforapi.flutter.channels.SimpleChannelsActivity;
 
@@ -30,6 +31,8 @@ public class FlutterDemoFragment1 extends Fragment {
 
     private Button channels;
     private Button plugin;
+
+    private Button startFlutter;
 
     @Nullable
     @Override
@@ -54,6 +57,16 @@ public class FlutterDemoFragment1 extends Fragment {
                  *           .putExtra(EXTRA_DESTROY_ENGINE_WITH_ACTIVITY, true);
                  */
                 Intent flutterIntent = FlutterActivity.createDefaultIntent(getContext());
+                startActivity(flutterIntent);
+            }
+        });
+
+        startFlutter = view.findViewById(R.id.startFlutter);
+        startFlutter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent flutterIntent = new Intent(FlutterDemoFragment1.this.getContext(), FlutterCustomActivity.class);
+
                 startActivity(flutterIntent);
             }
         });

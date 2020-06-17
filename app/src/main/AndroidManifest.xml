@@ -1257,6 +1257,12 @@
             android:hardwareAccelerated="true"
             android:windowSoftInputMode="adjustResize" />
 
+        <activity
+            android:name=".flutter.activity.FlutterCustomActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize" />
+
         <activity android:name="com.github.hailouwang.demosforapi.router.page.FirstARouterTestActivity" />
         <activity android:name="com.github.hailouwang.demosforapi.router.page.SecondARouterTestActivity" />
         <activity android:name="com.github.hailouwang.demosforapi.router.page.ThirdARouterTestActivity" />

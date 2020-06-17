@@ -13,6 +13,12 @@
         android:text = "启动默认路由Flutter界面"/>
 
     <Button
+        android:id="@+id/startFlutter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="更换一个FlutterActivity 壳子，做一些特别的事情" />
+
+    <Button
         android:id="@+id/addFlutterChangeRouter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
