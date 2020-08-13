@@ -24,7 +24,6 @@ if (flutterVersionName == null) {
 }
 
 apply plugin: 'com.android.library'
-apply from: "../../../config/versions.gradle"
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 group 'com.hailouwang.flutterdemo'

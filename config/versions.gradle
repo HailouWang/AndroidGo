@@ -18,7 +18,7 @@ versions.androidx = '1.1.0'
 versions.support = "1.0.0"
 versions.viewpager2 = "1.0.0"
 
-versions.android_gradle_plugin = "3.4.1"
+versions.android_gradle_plugin = '3.4.1'
 versions.android_apt = "1.8"
 versions.atsl_runner = "1.0.1"
 versions.atsl_rules = "1.0.1"
@@ -366,8 +366,8 @@ build_versions.build_tools = "29.0.1"
 ext.build_versions = build_versions
 
 def addRepos(RepositoryHandler handler) {
-    handler.maven {//本地Maven仓库地址
-        url uri('./repo')
+    handler.maven { //本地Maven仓库地址
+        url uri("../repo")
     }
 
     handler.maven {

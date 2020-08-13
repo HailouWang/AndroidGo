@@ -14,10 +14,8 @@ import com.github.hailouwang.demosforapi.poet.PoetDemoFragment
 import com.github.hailouwang.demosforapi.proxy.JavaProxyDemoFragment
 import com.github.hailouwang.demosforapi.room.RoomDemoFragment
 import com.github.hailouwang.demosforapi.router.demo.ARouteDemo1Fragment
-import com.github.hailouwang.demosforapi.rxjava.AutoisponseDemoFragment
-import com.github.hailouwang.demosforapi.rxjava.BackpressDemoFragment
-import com.github.hailouwang.demosforapi.rxjava.ObservableLifeCycle
-import com.github.hailouwang.demosforapi.rxjava.SingleDemoFragment
+import com.github.hailouwang.demosforapi.rxjava.*
+import com.github.hailouwang.demosforapi.rxjava.certtest.RxJavaCertTestCommonFragment
 import com.github.hailouwang.demosforapi.shortvideo.demo1.ShortVideoDianboFragment
 import com.github.hailouwang.demosforapi.shortvideo.demo1.ShortVideoMultiItemFragment
 import com.github.hailouwang.demosforapi.shortvideo.demo1.ShortVideoRawOrAssetsFragment
@@ -97,9 +95,9 @@ open class RouterActivity : BMRouterFragmentActivity() {
             ENTRY_FRAGMENTS.add(ClassLoaderInitStaticMethodInvokeDemoFragment::class.java.name)
             ENTRY_FRAGMENTS.add(StateMachineHelloWorldFragment::class.java.name)
             ENTRY_FRAGMENTS.add(StateMachineMoreStateFragment::class.java.name)
+            ENTRY_FRAGMENTS.add(ObservableErrorDemoFragment::class.java.name)
+            ENTRY_FRAGMENTS.add(RxJavaCertTestCommonFragment::class.java.name)
 
-//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
-//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
 //            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
 //            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
 //            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)

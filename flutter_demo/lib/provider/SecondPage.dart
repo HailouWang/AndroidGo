@@ -6,6 +6,7 @@ import 'model/Counter.dart';
 class SecondPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    print("hlwang SecondPage value : ${Provider.of<Counter>(context).count} ");
     return Scaffold(
       appBar: AppBar(
         title: Text("SecondPage"),

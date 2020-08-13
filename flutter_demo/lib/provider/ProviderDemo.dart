@@ -14,7 +14,7 @@ class ProviderDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<Counter>.value(
-        notifier: Counter(0),
+        value: Counter(0),
         child: HomePage());
   }
 }

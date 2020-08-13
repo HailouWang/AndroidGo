@@ -210,6 +210,8 @@
     <string name="rxjava_flowable_rxlifecycle">RxJava/RxLifeCycle 测试</string>
     <string name="rxjava_flowable_auto_disponse">RxJava/AutoDisponse 测试</string>
     <string name="rxjava_lifecycle">RxJava/生命周期/1.just</string>
+    <string name="rxjava_lifecycle_onerror">RxJava/生命周期/错误异常-兼容性测试</string>
+    <string name="rxjava_cert_test_common">RxJava/技能等级测试/全国卷</string>
 
     <!--picasso-->
     <string name="picasso_name">Picasso Test</string>

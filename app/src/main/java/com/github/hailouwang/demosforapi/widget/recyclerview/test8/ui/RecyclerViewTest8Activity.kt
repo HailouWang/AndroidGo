@@ -18,7 +18,7 @@ class RecyclerViewTest8Activity : AppCompatActivity() {
 
     var lastBackPressedTime = 0L
 
-    lateinit var parentRecyclerView:ParentRecyclerView
+    lateinit var parentRecyclerView: ParentRecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,7 +49,7 @@ class RecyclerViewTest8Activity : AppCompatActivity() {
             super.onBackPressed()
         } else {
             parentRecyclerView.scrollToPosition(0)
-            Toast.makeText(this,"再按一次退出程序",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "再按一次退出程序", Toast.LENGTH_SHORT).show()
             lastBackPressedTime = System.currentTimeMillis()
         }
     }

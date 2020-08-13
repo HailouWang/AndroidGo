@@ -1,6 +1,8 @@
-include ':statemachine'
+include ':modulizationtemplete'
 include ':app', ':messageview', ':dotspageindicator', ':ijkplayer-java',
-        ':dkplayer-java', ':dkplayer-ui', ':dkplayer-videocache', ':dkplayer-players:ijk', ':dkplayer-players:exo', ':dkplayer-sample', ':fragmentrouter'/*, ':ijkplayer-java'*/
+        ':dkplayer-java', ':dkplayer-ui', ':dkplayer-videocache', ':dkplayer-players:ijk', ':dkplayer-players:exo', ':dkplayer-sample',
+        ':fragmentrouter'/*, ':ijkplayer-java'*/
+include ':statemachine'
 setBinding(new Binding([gradle: this]))
 evaluate(new File(
   settingsDir,
@@ -14,9 +16,8 @@ include ':gradleplugindemo'
 
 include ':flutter_demo'
 
-// include ':arouter-compiler'
 include ':module-kotlin'
-include ':module-java'
+//include ':module-java'
 include ':routemoduletest'
 include ':Poet'
 include ':fragmentbackhandler'

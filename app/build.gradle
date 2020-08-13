@@ -1,5 +1,7 @@
 apply plugin: 'com.android.application'
 
+apply plugin: 'maven'
+
 //制作补丁时将这个打开，auto-patch-plugin紧跟着com.android.application
 //apply plugin: 'auto-patch-plugin'
 //apply plugin: 'robust'
@@ -142,7 +144,7 @@ dependencies {
 
     implementation project(path: ':flutter')
     implementation project(path: ':routemoduletest')
-    implementation project(path: ':module-java')
+//    implementation project(path: ':module-java')
     implementation project(path: ':module-kotlin')
     implementation project(path: ':module-kotlin')
 

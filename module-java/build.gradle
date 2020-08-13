@@ -5,6 +5,7 @@ dependencies {
     annotationProcessor deps.alibabaarouter_compiler
     implementation deps.androidx.app_compat
 }
+
 android {
     compileSdkVersion build_versions.compileSdkVersion
     buildToolsVersion build_versions.build_tools

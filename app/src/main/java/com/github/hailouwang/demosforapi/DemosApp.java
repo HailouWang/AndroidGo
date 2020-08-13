@@ -7,11 +7,15 @@ import com.alibaba.android.arouter.launcher.ARouter;
 import com.dueeeke.dkplayer.app.MyApplication;
 import com.tencent.mmkv.MMKV;
 
+import java.io.IOException;
+
 import cn.leancloud.AVLogger;
 import cn.leancloud.AVOSCloud;
 import io.flutter.embedding.engine.FlutterEngine;
 import io.flutter.embedding.engine.FlutterEngineCache;
 import io.flutter.embedding.engine.dart.DartExecutor;
+import io.reactivex.exceptions.UndeliverableException;
+import io.reactivex.plugins.RxJavaPlugins;
 
 public class DemosApp extends Application {
 
@@ -33,6 +37,8 @@ public class DemosApp extends Application {
         }
         ARouter.init(this); // As early as possible, it is recommended to initialize in the Application
         // ARouter end
+
+        initRxErrorHandler();
 
         AVOSCloud.initialize(this, "cMTWImC5AHMXIlzvbKHoA1Xg-MdYXbMMI", "1RNk2jAVtPrdIFDOkA4waWXa");
         // 在 AVOSCloud.initialize 之前调用
@@ -71,5 +77,31 @@ public class DemosApp extends Application {
 
     public static Application getApp() {
         return demosApp;
+    }
+
+    private void initRxErrorHandler() {
+        RxJavaPlugins.setErrorHandler(e -> {
+            if (e instanceof UndeliverableException) {
+                e = e.getCause();
+            }
+            if (e instanceof IOException) {
+                // fine, irrelevant network problem or API that throws on cancellation
+                return;
+            }
+            if (e instanceof InterruptedException) {
+                // fine, some blocking code was interrupted by a dispose call
+                return;
+            }
+            if ((e instanceof NullPointerException) || (e instanceof IllegalArgumentException)) {
+                // that's likely a bug in the application
+                Thread.currentThread().getUncaughtExceptionHandler().uncaughtException(Thread.currentThread(), e);
+                return;
+            }
+            if (e instanceof IllegalStateException) {
+                // that's a bug in RxJava or in a custom operator
+                Thread.currentThread().getUncaughtExceptionHandler().uncaughtException(Thread.currentThread(), e);
+                return;
+            }
+        });
     }
 }

@@ -15,7 +15,9 @@ import io.flutter.embedding.engine.plugins.shim.ShimPluginRegistry;
 public final class GeneratedPluginRegistrant {
   public static void registerWith(@NonNull FlutterEngine flutterEngine) {
     ShimPluginRegistry shimPluginRegistry = new ShimPluginRegistry(flutterEngine);
+    flutterEngine.getPlugins().add(new io.flutter.plugins.connectivity.ConnectivityPlugin());
       com.idlefish.flutterboost.FlutterBoostPlugin.registerWith(shimPluginRegistry.registrarFor("com.idlefish.flutterboost.FlutterBoostPlugin"));
     flutterEngine.getPlugins().add(new com.hailouwang.flutterbatteryplugin.FlutterbatterypluginPlugin());
+    flutterEngine.getPlugins().add(new io.flutter.plugins.sharedpreferences.SharedPreferencesPlugin());
   }
 }

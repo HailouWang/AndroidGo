@@ -1,26 +1,51 @@
-apply plugin: 'groovy'
+apply plugin: 'kotlin'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'java'
 apply plugin: 'maven'
 
-repositories {
-    mavenLocal()
-    jcenter()
+sourceSets {
+    main {
+        java {
+            srcDirs += ['src/main/kotlin', 'src/main/java']
+        }
+        kotlin {
+            srcDirs += ['src/main/kotlin', 'src/main/java']
+        }
+    }
 }
+
+//repositories {
+//    mavenLocal()
+//    jcenter()
+//}
+addRepos(repositories)
 
 dependencies {
     implementation gradleApi()
     implementation localGroovy()
+
+    implementation 'com.android.tools.build:gradle:3.4.1'
+    implementation 'com.android.tools.build:gradle-api:3.4.1'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.3.72'
+
     //noinspection GradleDependency
     implementation 'org.ow2.asm:asm:7.2'
     //noinspection GradleDependency
     implementation 'org.ow2.asm:asm-util:7.2'
     //noinspection GradleDependency
     implementation 'org.ow2.asm:asm-commons:7.2'
+
+    implementation 'org.javassist:javassist:3.20.0-GA'
     implementation 'com.quinn.hunter:hunter-transform:0.9.3'
+}
 
-
-    //版本不能太高 否则会跟项目的as版本冲突
-    implementation 'com.android.tools.build:gradle:3.0.0'
-    implementation 'com.android.tools.build:gradle-api:3.0.0'
+task renameGroovyToJava {
+    doLast {
+        delete "$buildDir/classes/java"
+        File file = new File("$buildDir/classes/groovy")
+        // file.name = "java" 不行，会报错
+        println file.renameTo("$buildDir/classes/java")
+    }
 }
 
 //publish to local directory
@@ -29,6 +54,11 @@ group "com.github.hailouwang.demosforapi"
 version versionName
 
 uploadArchives{ //当前项目可以发布到本地文件夹中
+    repositories {
+        mavenDeployer {
+            mavenLocal()
+        }
+    }
     repositories {
         mavenDeployer {
             repository(url: uri('../repo')) //定义本地maven仓库的地址

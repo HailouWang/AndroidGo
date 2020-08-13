@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.github.hailouwang.demosforapi</groupId>
   <artifactId>gradleplugindemo</artifactId>
   <version>1.0.0</version>
   <dependencies>
+    <dependency>
+      <groupId>com.android.tools.build</groupId>
+      <artifactId>gradle</artifactId>
+      <version>3.4.1</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.android.tools.build</groupId>
+      <artifactId>gradle-api</artifactId>
+      <version>3.4.1</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jetbrains.kotlin</groupId>
+      <artifactId>kotlin-stdlib</artifactId>
+      <version>1.3.72</version>
+      <scope>runtime</scope>
+    </dependency>
     <dependency>
       <groupId>org.ow2.asm</groupId>
       <artifactId>asm</artifactId>
@@ -25,21 +42,15 @@
       <scope>runtime</scope>
     </dependency>
     <dependency>
+      <groupId>org.javassist</groupId>
+      <artifactId>javassist</artifactId>
+      <version>3.20.0-GA</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
       <groupId>com.quinn.hunter</groupId>
       <artifactId>hunter-transform</artifactId>
       <version>0.9.3</version>
-      <scope>runtime</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.android.tools.build</groupId>
-      <artifactId>gradle</artifactId>
-      <version>3.0.0</version>
-      <scope>runtime</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.android.tools.build</groupId>
-      <artifactId>gradle-api</artifactId>
-      <version>3.0.0</version>
       <scope>runtime</scope>
     </dependency>
   </dependencies>

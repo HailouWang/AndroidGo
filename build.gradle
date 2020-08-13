@@ -18,7 +18,10 @@ buildscript {
         classpath 'com.novoda:bintray-release:0.9.2'
 
         // 了解 GradlePlugin 开发过程，这里要打开
-//        classpath 'com.github.hailouwang.demosforapi:gradleplugindemo:1.0.0'
+        classpath 'com.github.hailouwang.demosforapi:gradleplugindemo:1.0.0'
+    }
+    repositories {
+        google()
     }
 }
 

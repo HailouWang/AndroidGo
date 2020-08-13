@@ -40,7 +40,6 @@
         android:text="Button03---------------------"/>
 
     <TextView
-        android:id="@+id/tv03"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
