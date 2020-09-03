@@ -1,6 +1,7 @@
 package com.github.hailouwang.demosforapi;
 
 import android.app.Application;
+import android.content.Context;
 import android.util.Log;
 
 import com.alibaba.android.arouter.launcher.ARouter;
@@ -25,9 +26,13 @@ public class DemosApp extends Application {
 
     private static DemosApp demosApp;
 
+    public static Context context;
+
     @Override
     public void onCreate() {
         super.onCreate();
+
+        context = getApp();
 
         demosApp = this;
 
