@@ -1,0 +1,6 @@
+<resources>
+    <string name="open_native">"打开原生界面"</string>
+    <string name="open_flutter">"打开 Flutter 界面"</string>
+    <string name="open_flutter_fragment">"打开 Flutter Fragment 界面"</string>
+    <string name="native_info">"这是一个原生界面"</string>
+</resources>

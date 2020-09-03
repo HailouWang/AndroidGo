@@ -14,6 +14,7 @@ import io.reactivex.Observer
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
+import kotlinx.android.synthetic.main.activity_common_demo.*
 
 /**
  * RxJava 测试全国卷
@@ -41,10 +42,16 @@ class RxJavaCertTestCommonFragment : Fragment() {
         savedInstanceState: Bundle?
     ) {
         super.onViewCreated(view, savedInstanceState)
-        view.findViewById<View>(R.id.test1)
-            .setOnClickListener { v: View? ->
+        test1.apply {
+            text = "点击测试程式输出"
+            setOnClickListener { v: View? ->
                 MainLooper.runOnUiThread(Runnable { rxJavaExamination() })
             }
+        }
+
+        test2.apply {
+            text = "通过 adb logcat -v time -s hlwang 来查看输出"
+        }
     }
 
     private fun rxJavaExamination() {

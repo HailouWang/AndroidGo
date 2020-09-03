@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_boost/flutter_boost.dart';
 import 'package:flutterdemo/plugin/PluginBatteryWidget.dart';
 import 'package:flutterdemo/provider/ProviderDemo.dart';
+import 'package:flutterdemo/simple_page_widgets.dart';
 import 'package:flutterdemo/ui/demos/DemoList.dart';
 import 'package:flutterdemo/ui/mine/MineList.dart';
 import 'package:flutterdemo/ui/special/SpecialList.dart';
 
-class HomeUI extends StatelessWidget {
+class HomeUI extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() => _HomeUIState();
+}
+
+class _HomeUIState extends State<HomeUI> {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -24,17 +31,8 @@ class HomeUI extends StatelessWidget {
           // is not restarted.
           primarySwatch: Colors.blue,
           primaryColor: Colors.white),
-      home: new TabContainer(),
-      routes: <String, WidgetBuilder>{
-        // 全局路由表
-        '/a': (BuildContext context) => new MyPage14(title: 'Page A'),
-        '/b': (BuildContext context) => new MyPage14(title: 'Page B'),
-        '/c': (BuildContext context) => new MyPage14(title: 'Page C'),
-        '/d': (BuildContext context) => new CustomButtonWidget(),
-        '/e': (BuildContext context) => new IntentsFromOuterClassPage(),
-        '/provider': (BuildContext context) => new ProviderDemo(),
-        '/battery_plugin': (BuildContext context) => new PluginBatteryWidget(),
-      },
+      builder: FlutterBoost.init(postPush: _onRoutePushed),
+      home: Container(color: Colors.white),
       //注册路由监听器
       navigatorObservers: [
         //这个监听器是个集合，可根据不同需求对路由做不同的设置
@@ -44,6 +42,64 @@ class HomeUI extends StatelessWidget {
         print("Main OnGenerateRoute routeSettings : ${routeSettings}");
       },
     );
+  }
+
+  void _onRoutePushed(
+    String pageName,
+    String uniqueId,
+    Map<String, dynamic> params,
+    Route<dynamic> route,
+    Future<dynamic> _,
+  ) {}
+
+  @override
+  void initState() {
+    FlutterBoost.singleton.registerPageBuilders(<String, PageBuilder>{
+      'embeded': (String pageName, Map<String, dynamic> params, String _) =>
+          EmbeddedFirstRouteWidget(),
+      'first': (String pageName, Map<String, dynamic> params, String _) =>
+          FirstRouteWidget(),
+      'firstFirst': (String pageName, Map<String, dynamic> params, String _) =>
+          FirstFirstRouteWidget(),
+      'second': (String pageName, Map<String, dynamic> params, String _) =>
+          SecondRouteWidget(),
+      'secondStateful':
+          (String pageName, Map<String, dynamic> params, String _) =>
+              SecondStatefulRouteWidget(),
+      'tab': (String pageName, Map<String, dynamic> params, String _) =>
+          TabRouteWidget(),
+      'platformView':
+          (String pageName, Map<String, dynamic> params, String _) =>
+              PlatformRouteWidget(),
+      'flutterFragment':
+          (String pageName, Map<String, dynamic> params, String _) =>
+              FragmentRouteWidget(params),
+
+      ///可以在native层通过 getContainerParams 来传递参数
+      'flutterPage': (String pageName, Map<String, dynamic> params, String _) {
+        print('flutterPage params:$params');
+
+        return FlutterRouteWidget(params: params);
+      },
+      'main': (String pageName, Map<String, dynamic> params, String _) =>
+          new TabContainer(),
+      '/a': (String pageName, Map<String, dynamic> params, String _) =>
+          new MyPage14(title: 'Page A'),
+      '/b': (String pageName, Map<String, dynamic> params, String _) =>
+          new MyPage14(title: 'Page B'),
+      '/c': (String pageName, Map<String, dynamic> params, String _) =>
+          new MyPage14(title: 'Page C'),
+      '/d': (String pageName, Map<String, dynamic> params, String _) =>
+          new CustomButtonWidget(),
+      '/e': (String pageName, Map<String, dynamic> params, String _) =>
+          new IntentsFromOuterClassPage(),
+      '/provider': (String pageName, Map<String, dynamic> params, String _) =>
+          new ProviderDemo(),
+      '/battery_plugin':
+          (String pageName, Map<String, dynamic> params, String _) =>
+              new PluginBatteryWidget(),
+    });
+    FlutterBoost.singleton.addBoostNavigatorObserver(MyNavigatorObserver());
   }
 }
 

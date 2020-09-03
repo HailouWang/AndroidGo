@@ -18,6 +18,7 @@ public final class GeneratedPluginRegistrant {
     flutterEngine.getPlugins().add(new io.flutter.plugins.connectivity.ConnectivityPlugin());
       com.idlefish.flutterboost.FlutterBoostPlugin.registerWith(shimPluginRegistry.registrarFor("com.idlefish.flutterboost.FlutterBoostPlugin"));
     flutterEngine.getPlugins().add(new com.hailouwang.flutterbatteryplugin.FlutterbatterypluginPlugin());
+    flutterEngine.getPlugins().add(new com.baseflow.permissionhandler.PermissionHandlerPlugin());
     flutterEngine.getPlugins().add(new io.flutter.plugins.sharedpreferences.SharedPreferencesPlugin());
   }
 }

@@ -166,7 +166,9 @@ androidx.constraintlayout = "androidx.constraintlayout:constraintlayout:1.1.3"
 androidx.test_runner = "androidx.test:runner:1.2.0"
 androidx.espresso_core = "androidx.test.espresso:espresso-core:3.2.0"
 androidx.gridlayout = "androidx.gridlayout:gridlayout:1.0.0"
-androidx.preference = "androidx.preference:preference:1.1.0"
+androidx.preference = "androidx.preference:preference:1.1.1"
+androidx.preference_leanback = "androidx.leanback:leanback-preference:1.0.0"
+androidx.preference_v14 = "androidx.legacy:legacy-preference-v14:1.0.0"
 androidx.viewpager2 = "androidx.viewpager2:viewpager2:$versions.viewpager2"
 deps.androidx = androidx
 
@@ -201,9 +203,14 @@ atsl.rules = "com.android.support.test:rules:$versions.atsl_runner"
 deps.atsl = atsl
 
 def kotlin = [:]
-kotlin.stdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin"
 kotlin.test = "org.jetbrains.kotlin:kotlin-test-junit:$versions.kotlin"
-kotlin.plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin"
+kotlin.plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.72"
+
+kotlin.stdlib = 'org.jetbrains.kotlin:kotlin-stdlib:1.3.72'
+kotlin.corotines_core = 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.7'
+kotlin.corotines_android = 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.7'
+kotlin.reflect = 'org.jetbrains.kotlin:kotlin-reflect:1.3.72'
+
 deps.kotlin = kotlin
 
 def butterknife = [:]

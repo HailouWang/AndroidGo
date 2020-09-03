@@ -38,6 +38,8 @@
 
     <!-- Flutter -->
     <string name="flutter_demo_1">服了它 Flutter/Demo1/官方Demo</string>
+    <!-- Flutter -->
+    <string name="flutter_boost_demo">服了它 Flutter/闲鱼 FlutterBoost</string>
 
     <!-- ARoute -->
     <string name="aroute_demo_1">ARoute/Demo/Demo1</string>
@@ -211,7 +213,8 @@
     <string name="rxjava_flowable_auto_disponse">RxJava/AutoDisponse 测试</string>
     <string name="rxjava_lifecycle">RxJava/生命周期/1.just</string>
     <string name="rxjava_lifecycle_onerror">RxJava/生命周期/错误异常-兼容性测试</string>
-    <string name="rxjava_cert_test_common">RxJava/技能等级测试/全国卷</string>
+    <string name="rxjava_cert_test_common">RxJava/RxJava等级测试/全国卷</string>
+    <string name="rxjava_cert_test_shandong">RxJava/RxJava等级测试/山东卷</string>
 
     <!--picasso-->
     <string name="picasso_name">Picasso Test</string>

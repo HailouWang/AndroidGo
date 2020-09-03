@@ -8,6 +8,7 @@ apply plugin: 'maven'
 
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 // 了解 GradlePlugin 开发过程，这里要打开
 //apply plugin: 'gradleplugindemo'
@@ -97,7 +98,14 @@ dependencies {
     implementation deps.androidx.core_utils
     implementation deps.androidx.constraintlayout
     implementation deps.androidx.preference
+    implementation deps.androidx.preference_leanback
+    implementation deps.androidx.preference_v14
     implementation deps.androidx.viewpager2
+
+    implementation deps.kotlin.stdlib
+    implementation deps.kotlin.corotines_core
+    implementation deps.kotlin.corotines_android
+    implementation deps.kotlin.reflect
 
 //    implementation 'android.arch.lifecycle:extensions:1.1.1'
     implementation deps.lifecycle.runtime
@@ -142,7 +150,10 @@ dependencies {
 //    implementation deps.hailouwang.fragmentrouter
     implementation project(path: ':fragmentrouter')
 
-    implementation project(path: ':flutter')
+    implementation project(':flutter_boost_demo')
+    api project(path: ':flutter')
+    api project(path: ':flutter_boost')
+
     implementation project(path: ':routemoduletest')
 //    implementation project(path: ':module-java')
     implementation project(path: ':module-kotlin')

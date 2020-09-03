@@ -973,6 +973,21 @@
         </activity-alias>
 
         <activity-alias
+            android:name="com.github.hailouwang.demosforapi.rxjava.certtest.RxJavaCertTestShanDongActivity"
+            android:label="@string/rxjava_cert_test_shandong"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.rxjava.certtest.RxJavaCertTestShanDongFragment" />
+        </activity-alias>
+
+        <activity-alias
             android:name="com.github.hailouwang.demosforapi.rxjava.ObservableErrorDemoFragment"
             android:label="@string/rxjava_lifecycle_onerror"
             android:targetActivity=".main.router.RouterActivity">
@@ -1879,6 +1894,16 @@
                 android:value="com.github.hailouwang.demosforapi.statemachine.StateMachineMoreStateFragment" />
         </activity-alias>
         <!--stateMachine end-->
+
+        <activity
+            android:name="com.github.hailouwang.flutter_boost_demo.FlutterMainActivity"
+            android:label="@string/flutter_boost_demo"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
 
     </application>
 

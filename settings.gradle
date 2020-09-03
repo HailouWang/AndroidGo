@@ -1,13 +1,18 @@
+include ':flutter_boost_demo'
 include ':modulizationtemplete'
 include ':app', ':messageview', ':dotspageindicator', ':ijkplayer-java',
         ':dkplayer-java', ':dkplayer-ui', ':dkplayer-videocache', ':dkplayer-players:ijk', ':dkplayer-players:exo', ':dkplayer-sample',
         ':fragmentrouter'/*, ':ijkplayer-java'*/
 include ':statemachine'
+
 setBinding(new Binding([gradle: this]))
 evaluate(new File(
   settingsDir,
   'flutter_demo/.android/include_flutter.groovy'
 ))
+include ':flutter_demo'
+project(':flutter_demo').projectDir = new File('./flutter_demo')
+
 include ':volley'
 include ':apiDemos'
 

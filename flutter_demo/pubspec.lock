@@ -115,11 +115,11 @@ packages:
     dependency: "direct main"
     description:
       path: "."
-      ref: "1.12.13"
-      resolved-ref: "69a752f870253bec15413b2a85f6577edf1b4b93"
+      ref: "v1.17.1-hotfixes"
+      resolved-ref: ffb6780d4102f3d7b0516c86efb07eb07bbcc844
       url: "https://github.com/alibaba/flutter_boost.git"
     source: git
-    version: "1.12.13"
+    version: "1.12.13+2"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -188,6 +188,20 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.6.4"
+  permission_handler:
+    dependency: "direct main"
+    description:
+      name: permission_handler
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "5.0.1+1"
+  permission_handler_platform_interface:
+    dependency: transitive
+    description:
+      name: permission_handler_platform_interface
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "2.0.1"
   petitparser:
     dependency: transitive
     description:

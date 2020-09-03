@@ -5,6 +5,7 @@ import android.util.Log;
 
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.dueeeke.dkplayer.app.MyApplication;
+import com.github.hailouwang.flutter_boost_demo.ApplicationFlutterModel;
 import com.tencent.mmkv.MMKV;
 
 import java.io.IOException;
@@ -65,6 +66,9 @@ public class DemosApp extends Application {
         // ijkplayer start
         MyApplication.init(getApp());
         // ijkplayer end
+
+        // Flutter Boost
+        new ApplicationFlutterModel().init(this);
     }
 
     public static String getCacheEngine() {
