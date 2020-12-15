@@ -1,4 +1,4 @@
-package com.github.hailouwang.flutter_boost_demo;
+package com.github.hailouwang.flutter_boost_demo.ui.demo;
 
 import android.os.Bundle;
 import android.view.View;
@@ -6,6 +6,9 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.github.hailouwang.flutter_boost_demo.R;
+import com.github.hailouwang.flutter_boost_demo.model.FlutterPageRouter;
 
 import java.lang.ref.WeakReference;
 import java.util.HashMap;
@@ -50,11 +53,11 @@ public class FlutterMainActivity extends AppCompatActivity implements View.OnCli
         params.put("test2","v_test2");
         //Add some params if needed.
         if (v == mOpenNative) {
-            FlutterPageRouter.openPageByUrl(this, FlutterPageRouter.NATIVE_PAGE_URL , params);
+            FlutterPageRouter.INSTANCE.openPageByUrl(this, FlutterPageRouter.NATIVE_PAGE_URL , params);
         } else if (v == mOpenFlutter) {
-            FlutterPageRouter.openPageByUrl(this, FlutterPageRouter.FLUTTER_PAGE_URL,params);
+            FlutterPageRouter.INSTANCE.openPageByUrl(this, FlutterPageRouter.FLUTTER_PAGE_URL,params);
         } else if (v == mOpenFlutterFragment) {
-            FlutterPageRouter.openPageByUrl(this, FlutterPageRouter.FLUTTER_FRAGMENT_PAGE_URL,params);
+            FlutterPageRouter.INSTANCE.openPageByUrl(this, FlutterPageRouter.FLUTTER_FRAGMENT_PAGE_URL,params);
         }
     }
 }

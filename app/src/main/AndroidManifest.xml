@@ -1907,7 +1907,7 @@
         <!--stateMachine end-->
 
         <activity
-            android:name="com.github.hailouwang.flutter_boost_demo.FlutterMainActivity"
+            android:name="com.github.hailouwang.flutter_boost_demo.ui.demo.FlutterMainActivity"
             android:label="@string/flutter_boost_demo"
             android:targetActivity=".main.router.RouterActivity">
             <intent-filter>
@@ -1915,6 +1915,51 @@
                 <category android:name="android.intent.category.SAMPLE_CODE" />
             </intent-filter>
         </activity>
+
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.template.java.PageTemplateJavaRouterFragmentActivity"
+            android:label="@string/java_template_demo"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.template.java.PageTemplateJavaRouterFragment" />
+        </activity-alias>
+
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.template.java.PageTemplateKotlinRouterFragmentActivity"
+            android:label="@string/kotlin_template_demo"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.template.kotlin.PageTemplateKotlinRouterFragment" />
+        </activity-alias>
+
+        <activity-alias
+            android:name="com.github.hailouwang.demosforapi.widget.recyclerview.test9.RecyclerViewSuperUseCaseJavaRouterFragmentActivity"
+            android:label="@string/widget_recyclerview_test9"
+            android:targetActivity=".main.router.RouterActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="BMRouterFragmentActivity.FRAGMENT_CLASS"
+                android:value="com.github.hailouwang.demosforapi.widget.recyclerview.test9.RecyclerViewSuperUseCaseJavaRouterFragment" />
+        </activity-alias>
 
     </application>
 

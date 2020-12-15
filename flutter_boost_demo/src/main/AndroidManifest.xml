@@ -3,33 +3,39 @@
 
     <application>
         <activity
-            android:name="com.idlefish.flutterboost.containers.BoostFlutterActivity"
-            android:theme="@style/Theme.AppCompat"
+            android:name=".ui.container.AndroidGoFlutterContainerActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density"
             android:hardwareAccelerated="true"
-            android:windowSoftInputMode="adjustResize" >
-            <meta-data android:name="io.flutter.embedding.android.SplashScreenDrawable" android:resource="@drawable/page_loading"/>
-
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                android:name="io.flutter.embedding.android.SplashScreenDrawable"
+                android:resource="@drawable/page_loading" />
         </activity>
 
         <activity
-            android:name=".FlutterFragmentPageActivity"
-            android:theme="@style/Theme.AppCompat"
+            android:name=".ui.demo.FlutterFragmentPageActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density"
             android:hardwareAccelerated="true"
             android:windowSoftInputMode="adjustResize">
-            <meta-data android:name="io.flutter.embedding.android.SplashScreenDrawable" android:resource="@drawable/page_loading"/>
-
+            <meta-data
+                android:name="io.flutter.embedding.android.SplashScreenDrawable"
+                android:resource="@drawable/page_loading" />
         </activity>
 
         <activity
-            android:name=".NativePageActivity"
-            android:theme="@style/Theme.AppCompat"
+            android:name=".ui.demo.NativePageActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density"
-            android:windowSoftInputMode="adjustResize"/>
-        <meta-data android:name="flutterEmbedding"
-            android:value="2">
-        </meta-data>
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.notfound.AndroidGoPageNotFound"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density"
+            android:windowSoftInputMode="adjustResize" />
+
+        <meta-data
+            android:name="flutterEmbedding"
+            android:value="2"></meta-data>
 
     </application>
 </manifest>

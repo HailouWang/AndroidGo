@@ -7,6 +7,18 @@
     android:orientation="vertical">
 
     <Button
+        android:id="@+id/demo1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="官方 案例" />
+
+    <Button
+        android:id="@+id/demo2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Flutter 案例集合" />
+
+    <Button
         android:id="@+id/addFlutter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

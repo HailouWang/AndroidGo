@@ -23,13 +23,15 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
 
   http: ^0.11.0
   english_words: ^3.1.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^0.1.2
+  cupertino_icons: ^0.1.3
 
   oktoast: ^2.3.2
 
@@ -37,10 +39,10 @@ dependencies:
     path: ../flutter_battery_plugin
 
   fluro: 1.6.3
-  provider: 3.2.0
-  dio: 3.0.7
+  provider: ^4.3.2
+  dio: 3.0.10
   uuid: 2.0.4
-  shared_preferences: 0.5.4+6
+  shared_preferences: ^0.5.8
   crypto: 2.1.4
   connectivity: ^0.4.8+6
   json_annotation: ^3.0.0
@@ -48,8 +50,9 @@ dependencies:
   permission_handler: ^5.0.1+1
   flutter_boost:
     git:
-      url: 'https://github.com/alibaba/flutter_boost.git'
-      ref: 'v1.17.1-hotfixes'
+      # 建议使用这个，修正了空指针，Activity 继承自 AppCompatActivity ，非 android.app.Activity，更灵活
+      url: 'git@github.com:HailouWang/flutter_boost.git'
+      ref: 'master'
 
 dev_dependencies:
   flutter_test:

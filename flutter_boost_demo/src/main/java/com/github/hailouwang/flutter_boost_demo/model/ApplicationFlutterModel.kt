@@ -1,7 +1,8 @@
-package com.github.hailouwang.flutter_boost_demo
+package com.github.hailouwang.flutter_boost_demo.model
 
 import android.app.Application
 import android.os.Build
+import com.github.hailouwang.flutter_boost_demo.widget.TextPlatformViewFactory
 import com.idlefish.flutterboost.FlutterBoost
 import com.idlefish.flutterboost.FlutterBoost.BoostLifecycleListener
 import com.idlefish.flutterboost.Utils
@@ -17,7 +18,10 @@ class ApplicationFlutterModel {
             INativeRouter { context, url, urlParams, requestCode, exts ->
                 val assembleUrl =
                     Utils.assembleUrl(url, urlParams)
-                FlutterPageRouter.openPageByUrl(context, assembleUrl, urlParams)
+                FlutterPageRouter.openPageByUrl(
+                    context,
+                    assembleUrl
+                )
             }
 
         val boostLifecycleListener: BoostLifecycleListener = object : BoostLifecycleListener {
@@ -45,7 +49,9 @@ class ApplicationFlutterModel {
                     .registry
                     .registerViewFactory(
                         "plugins.test/view",
-                        TextPlatformViewFactory(StandardMessageCodec.INSTANCE)
+                        TextPlatformViewFactory(
+                            StandardMessageCodec.INSTANCE
+                        )
                     )
             }
 

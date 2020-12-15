@@ -1,9 +1,9 @@
-
 import 'dart:convert';
 import 'dart:isolate';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_boost/flutter_boost.dart';
 import 'package:flutterdemo/media/MediaQueryDataWidget.dart';
 import 'package:flutterdemo/plugin/PluginBatteryWidget.dart';
 import 'package:flutterdemo/widget/NativeViewDemo.dart';
@@ -100,227 +100,9 @@ class DemoList extends StatelessWidget with WidgetsBindingObserver {
   }
 
   void _onClick(BuildContext context, int index) {
-    index += 1;
-
-    if (index == 1) {
-      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
-        return Center(
-            child: new Text("Hello,World", textDirection: TextDirection.ltr));
-      }));
-    } else if (index == 2) {
-      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
-        return new MaterialApp(
-            title: '布局', // used by the OS task switcher
-            home: new MyScaffold());
-      }));
-    } else if (index == 3) {
-      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
-        return new MaterialApp(
-          title: 'Flutter Tutorial',
-          home: new TutorialHome(),
-        );
-      }));
-    } else if (index == 4) {
-      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
-        return new MaterialApp(
-          title: '手势',
-          home: new MyButton(),
-        );
-      }));
-    } else if (index == 5) {
-      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
-        return new MaterialApp(
-          title: 'StateFullWidget',
-          home: new Counter(),
-        );
-      }));
-    } else if (index == 6) {
-      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
-        return new MaterialApp(
-          title: 'StateFullWidget',
-          home: new Counter06(),
-        );
-      }));
-    } else if (index == 7) {
-      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
-        return new MaterialApp(
-          title: 'StateFullWidget',
-          home: new ShoppingList(
-            products: <Product>[
-              new Product(name: 'Eggs'),
-              new Product(name: 'Flour'),
-              new Product(name: 'Chocolate chips'),
-            ],
-          ),
-        );
-      }));
-    } else if (index == 8) {
-      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
-        return new MaterialApp(
-          title: 'StateFullWidget',
-          home: new Text(
-            '08 与 Android 相比：StatelessWidget',
-            style: new TextStyle(fontWeight: FontWeight.bold),
-          ),
-        );
-      }));
-    } else if (index == 9) {
-      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
-        return new MaterialApp(
-          title: 'StateFullWidget',
-          home: new SampleAppPage(),
-        );
-      }));
-    } else if (index == 10) {
-      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
-        return new MaterialApp(
-          title: '10 添加/删除组件',
-          home: new SampleAppPage10(),
-        );
-      }));
-    } else if (index == 11) {
-      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
-        return new MaterialApp(
-          title: '11 与 Android 相比：View.animate',
-          home: new SampleAppPage11(),
-        );
-      }));
-    } else if (index == 12) {
-      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
-        return new MaterialApp(
-          title: '12 与 Android 相比：View.animate',
-          home: new Signature(),
-        );
-      }));
-    } else if (index == 13) {
-      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
-        return new MaterialApp(
-          title: '13 自定义Widgets',
-          home: new CustomButtonWidget(),
-        );
-      }));
-    } else if (index == 14) {
-      if (count14 % 4 == 0) {
-        Navigator.of(context).pushNamed('/a', arguments: "hi");
-      } else if (count14 % 4 == 1) {
-        Navigator.of(context).pushNamed('/b');
-      } else if (count14 % 4 == 2) {
-        Navigator.of(context).pushNamed('/c');
-      } else if (count14 % 4 == 3) {
-        Navigator.of(context).pushNamed('/d');
-      }
-
-      count14++;
-    } else if (index == 15) {
-      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
-        return new IntentsFromOuterClassPage();
-      }));
-    } else if (index == 16) {
-      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
-        return new MaterialApp(
-          title: '16 ---> 异步请求 runOnUiThread',
-          home: new ListAsyncPage(),
-        );
-      }));
-    } else if (index == 17) {
-      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
-        return new MaterialApp(
-          title: '17 ---> Isolate 异步请求 runOnUiThread',
-          home: new ListAsyncPageIsolate(),
-        );
-      }));
-    } else if (index == 18) {
-      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
-        return new MaterialApp(
-          title: '18 在Flutter中显示进度指示器',
-          home: new ProgressIndicator(),
-        );
-      }));
-    } else if (index == 19) {
-      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
-        return new MaterialApp(
-          title: '19 在Flutter中监听生命周期',
-          home: new LifecycleWatcher(),
-        );
-      }));
-    } else if (index == 20) {
-      Navigator.of(context).pushNamed('/provider');
-    } else if (index == 21) {
-      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
-        return new MaterialApp(
-            title: '21 State 生命周期', // used by the OS task switcher
-            home: new StateLifeCycle());
-      }));
-    } else if (index == 22) {
-      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
-        return new MaterialApp(
-            title: '22 MediaQueryDataWidget ', // used by the OS task switcher
-            home: new MediaQueryDataWidget());
-      }));
-    } else if (index == 23) {
-      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
-        return new MaterialApp(
-            title: '23 OKToast ', // used by the OS task switcher
-            home: new OKToastWidget());
-      }));
-    } else if (index == 24) {
-      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
-        return new MaterialApp(
-            title: '24 WillPopScope 防误触 ', // used by the OS task switcher
-            home: new WillPopScopeWidget());
-      }));
-    } else if (index == 25) {
-      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
-        return new MaterialApp(
-            title: '25 Flex ', // used by the OS task switcher
-            home: new FlexWidget());
-      }));
-    } else if (index == 26) {
-      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
-        return new MaterialApp(
-            title: '26 Flutter Plugin 电量 Battery！！！',
-            // used by the OS task switcher
-            home: new PluginBatteryWidget());
-      }));
-    } else if (index == 27) {
-      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
-        return new MaterialApp(
-            title: '27 Sliver Grid Sliver List',
-            // used by the OS task switcher
-            home: CustomScrollViewDemo(title: '27 Sliver Grid Sliver List'));
-      }));
-    } else if (index == 28) {
-      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
-        return new MaterialApp(
-            title: '28 Sliver AppBar',
-            // used by the OS task switcher
-            home: SliverAppBarDemo(title: '28 Sliver AppBa'));
-      }));
-    } else if (index == 29) {
-      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
-        return new MaterialApp(
-            title: '29 Sliver 吸顶效果',
-            // used by the OS task switcher
-            home: SliverPersistentHeaderStickyDemo(title: '29 Sliver 吸顶效果'));
-      }));
-    } else if (index == 30) {
-      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
-        return new MaterialApp(
-            title: '30 Sliver 顶部过度效果',
-            // used by the OS task switcher
-            home: SliverPersistentHeaderShrinkOffsetDemo(
-                title: '30 Sliver 过度效果'));
-      }));
-    } else if (index == 31) {
-      Navigator.of(context).push(new MaterialPageRoute(builder: (context) {
-        return new MaterialApp(
-            title: '31 借助原生视图能力，android 绘制',
-            // used by the OS task switcher
-            home: NativeViewDemo());
-      }));
-    }
+    String path = _ListDatas[index];
+    FlutterBoost.singleton.open(path);
   }
-
 
   @override
   Future<bool> didPopRoute() {
@@ -412,8 +194,8 @@ class _LifecycleWatcherState extends State<LifecycleWatcher>
 
 // 18、在Flutter中显示进度指示器
 
-class ProgressIndicator extends StatefulWidget {
-  ProgressIndicator({Key key}) : super(key: key);
+class ProgressIndicatorDemo extends StatefulWidget {
+  ProgressIndicatorDemo({Key key}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() {
@@ -459,12 +241,11 @@ class _SampleAppPageState18 extends State<ProgressIndicator> {
         body: getBody());
   }
 
-  ListView getListView() =>
-      new ListView.builder(
-          itemCount: widgets.length,
-          itemBuilder: (BuildContext context, int position) {
-            return getRow(position);
-          });
+  ListView getListView() => new ListView.builder(
+      itemCount: widgets.length,
+      itemBuilder: (BuildContext context, int position) {
+        return getRow(position);
+      });
 
   Widget getRow(int i) {
     return new Padding(
@@ -638,10 +419,7 @@ class MyPage14 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String obj = ModalRoute
-        .of(context)
-        .settings
-        .arguments;
+    String obj = ModalRoute.of(context).settings.arguments;
     if (obj != null) {
       print("参数---> " + obj);
     }
@@ -733,9 +511,8 @@ class SignatureState extends State<Signature> {
         setState(() {
           RenderBox referenceBox = context.findRenderObject();
           Offset localPosition =
-          referenceBox.globalToLocal(details.globalPosition);
-          _poinits = new List.from(_poinits)
-            ..add(localPosition);
+              referenceBox.globalToLocal(details.globalPosition);
+          _poinits = new List.from(_poinits)..add(localPosition);
         });
       },
       onPanEnd: (DragEndDetails details) {
@@ -992,9 +769,7 @@ class ShoppingListItem extends StatelessWidget {
     // can have different themes.  The BuildContext indicates where the build is
     // taking place and therefore which theme to use.
 
-    return inCart ? Colors.black54 : Theme
-        .of(context)
-        .primaryColor;
+    return inCart ? Colors.black54 : Theme.of(context).primaryColor;
   }
 
   TextStyle _getTextStyle(BuildContext context) {
@@ -1224,10 +999,7 @@ class MyScaffold extends StatelessWidget {
           new MyAppBar(
             title: new Text(
               'Example title',
-              style: Theme
-                  .of(context)
-                  .primaryTextTheme
-                  .title,
+              style: Theme.of(context).primaryTextTheme.title,
             ),
           ),
           new Expanded(

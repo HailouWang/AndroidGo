@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_boost/flutter_boost.dart';
-import 'package:flutterdemo/plugin/PluginBatteryWidget.dart';
-import 'package:flutterdemo/provider/ProviderDemo.dart';
-import 'package:flutterdemo/simple_page_widgets.dart';
 import 'package:flutterdemo/ui/demos/DemoList.dart';
 import 'package:flutterdemo/ui/mine/MineList.dart';
 import 'package:flutterdemo/ui/special/SpecialList.dart';
@@ -54,51 +51,6 @@ class _HomeUIState extends State<HomeUI> {
 
   @override
   void initState() {
-    FlutterBoost.singleton.registerPageBuilders(<String, PageBuilder>{
-      'embeded': (String pageName, Map<String, dynamic> params, String _) =>
-          EmbeddedFirstRouteWidget(),
-      'first': (String pageName, Map<String, dynamic> params, String _) =>
-          FirstRouteWidget(),
-      'firstFirst': (String pageName, Map<String, dynamic> params, String _) =>
-          FirstFirstRouteWidget(),
-      'second': (String pageName, Map<String, dynamic> params, String _) =>
-          SecondRouteWidget(),
-      'secondStateful':
-          (String pageName, Map<String, dynamic> params, String _) =>
-              SecondStatefulRouteWidget(),
-      'tab': (String pageName, Map<String, dynamic> params, String _) =>
-          TabRouteWidget(),
-      'platformView':
-          (String pageName, Map<String, dynamic> params, String _) =>
-              PlatformRouteWidget(),
-      'flutterFragment':
-          (String pageName, Map<String, dynamic> params, String _) =>
-              FragmentRouteWidget(params),
-
-      ///可以在native层通过 getContainerParams 来传递参数
-      'flutterPage': (String pageName, Map<String, dynamic> params, String _) {
-        print('flutterPage params:$params');
-
-        return FlutterRouteWidget(params: params);
-      },
-      'main': (String pageName, Map<String, dynamic> params, String _) =>
-          new TabContainer(),
-      '/a': (String pageName, Map<String, dynamic> params, String _) =>
-          new MyPage14(title: 'Page A'),
-      '/b': (String pageName, Map<String, dynamic> params, String _) =>
-          new MyPage14(title: 'Page B'),
-      '/c': (String pageName, Map<String, dynamic> params, String _) =>
-          new MyPage14(title: 'Page C'),
-      '/d': (String pageName, Map<String, dynamic> params, String _) =>
-          new CustomButtonWidget(),
-      '/e': (String pageName, Map<String, dynamic> params, String _) =>
-          new IntentsFromOuterClassPage(),
-      '/provider': (String pageName, Map<String, dynamic> params, String _) =>
-          new ProviderDemo(),
-      '/battery_plugin':
-          (String pageName, Map<String, dynamic> params, String _) =>
-              new PluginBatteryWidget(),
-    });
     FlutterBoost.singleton.addBoostNavigatorObserver(MyNavigatorObserver());
   }
 }

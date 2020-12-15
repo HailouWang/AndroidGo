@@ -1,4 +1,4 @@
-package com.github.hailouwang.flutter_boost_demo;
+package com.github.hailouwang.flutter_boost_demo.widget;
 
 import android.annotation.TargetApi;
 import android.content.Context;

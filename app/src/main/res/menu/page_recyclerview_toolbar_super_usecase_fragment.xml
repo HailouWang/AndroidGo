@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/menu_add"
+        android:orderInCategory="80"
+        android:title="Add"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_del"
+        android:orderInCategory="80"
+        android:title="Del"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menu_addmore"
+        android:orderInCategory="80"
+        android:title="AddMore"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menu_move"
+        android:orderInCategory="80"
+        android:title="Move"
+        app:showAsAction="always" />
+</menu>

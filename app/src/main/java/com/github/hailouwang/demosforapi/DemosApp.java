@@ -6,7 +6,7 @@ import android.util.Log;
 
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.dueeeke.dkplayer.app.MyApplication;
-import com.github.hailouwang.flutter_boost_demo.ApplicationFlutterModel;
+import com.github.hailouwang.flutter_boost_demo.model.ApplicationFlutterModel;
 import com.tencent.mmkv.MMKV;
 
 import java.io.IOException;

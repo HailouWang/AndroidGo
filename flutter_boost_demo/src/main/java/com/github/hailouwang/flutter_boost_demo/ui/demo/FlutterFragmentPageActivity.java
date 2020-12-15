@@ -1,4 +1,4 @@
-package com.github.hailouwang.flutter_boost_demo;
+package com.github.hailouwang.flutter_boost_demo.ui.demo;
 
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
@@ -15,6 +15,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.github.hailouwang.flutter_boost_demo.R;
 import com.idlefish.flutterboost.containers.FlutterFragment;
 
 import io.flutter.embedding.android.DrawableSplashScreen;

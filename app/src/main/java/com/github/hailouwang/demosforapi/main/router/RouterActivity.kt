@@ -26,6 +26,8 @@ import com.github.hailouwang.demosforapi.shortvideo.extend.ShortVideoFullscreenD
 import com.github.hailouwang.demosforapi.shortvideo.list.*
 import com.github.hailouwang.demosforapi.statemachine.StateMachineHelloWorldFragment
 import com.github.hailouwang.demosforapi.statemachine.StateMachineMoreStateFragment
+import com.github.hailouwang.demosforapi.template.java.PageTemplateJavaRouterFragment
+import com.github.hailouwang.demosforapi.template.kotlin.PageTemplateKotlinRouterFragment
 import com.github.hailouwang.demosforapi.thread.SafeStopThreadFragment
 import com.github.hailouwang.demosforapi.view.demo1.GlobalVisibleForViewFragment
 import com.github.hailouwang.demosforapi.view.demo1.LocalVisibleForViewFragment
@@ -41,6 +43,7 @@ import com.github.hailouwang.demosforapi.widget.autowrapline.AutoWrapLineDemoFra
 import com.github.hailouwang.demosforapi.widget.da.ui.DataAnalysisRecyclerViewFragment
 import com.github.hailouwang.demosforapi.widget.lifecycle.VisibleToUserChangeFragment
 import com.github.hailouwang.demosforapi.widget.lifecycle.lifecycler.demo.LifeCyclerDemoFragment
+import com.github.hailouwang.demosforapi.widget.recyclerview.test9.RecyclerViewSuperUseCaseJavaRouterFragment
 import com.hailouwang.fragmentbackhandler.BackHandlerHelper
 import com.hailouwang.fragmentrouter.BMRouterFragmentActivity
 
@@ -99,10 +102,9 @@ open class RouterActivity : BMRouterFragmentActivity() {
             ENTRY_FRAGMENTS.add(ObservableErrorDemoFragment::class.java.name)
             ENTRY_FRAGMENTS.add(RxJavaCertTestCommonFragment::class.java.name)
             ENTRY_FRAGMENTS.add(RxJavaCertTestShanDongFragment::class.java.name)
-
-//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
-//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
-//            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
+            ENTRY_FRAGMENTS.add(PageTemplateJavaRouterFragment::class.java.name)
+            ENTRY_FRAGMENTS.add(PageTemplateKotlinRouterFragment::class.java.name)
+            ENTRY_FRAGMENTS.add(RecyclerViewSuperUseCaseJavaRouterFragment::class.java.name)
 //            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
 //            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)
 //            ENTRY_FRAGMENTS.add(LiveDataDemoObserverFragment::class.java.name)

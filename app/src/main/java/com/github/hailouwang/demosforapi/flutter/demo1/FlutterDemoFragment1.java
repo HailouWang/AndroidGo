@@ -16,6 +16,7 @@ import com.github.hailouwang.demosforapi.R;
 import com.github.hailouwang.demosforapi.flutter.activity.FlutterCustomActivity;
 import com.github.hailouwang.demosforapi.flutter.battery.FlutterBatteryPluginActivity;
 import com.github.hailouwang.demosforapi.flutter.channels.SimpleChannelsActivity;
+import com.github.hailouwang.flutter_boost_demo.model.FlutterPageRouter;
 
 import io.flutter.embedding.android.FlutterActivity;
 
@@ -44,6 +45,14 @@ public class FlutterDemoFragment1 extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        view.findViewById(R.id.demo1).setOnClickListener(v -> {
+            FlutterPageRouter.INSTANCE.openPageByUrl(getContext(), FlutterPageRouter.FLUTTER_DEMO_LIST_MAIN);
+        });
+
+        view.findViewById(R.id.demo2).setOnClickListener(v -> {
+            FlutterPageRouter.INSTANCE.openPageByUrl(getContext(), FlutterPageRouter.FLUTTER_DEMO_LIST_MAIN);
+        });
 
         addFlutterBtn = view.findViewById(R.id.addFlutter);
         addFlutterBtn.setOnClickListener(new View.OnClickListener() {
