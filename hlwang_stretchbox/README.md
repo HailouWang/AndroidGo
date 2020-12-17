@@ -2,9 +2,22 @@
 
 # stretchbox
 
-An [`stretchbox`](https://pub.dartlang.org/packages/stretchbox) widget for expand sub widgets.
+An [`stretchbox`](https://pub.dartlang.org/packages/stretchbox) widget provides two modes of collapse and expand, using provider components to support widget state change when click.
 
 ## Usage
+
+pubspec.yaml
+
+```
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  ...
+    
+  stretchbox: ^1.1.0
+```
 
 stretchbox Basic usage:
 

@@ -6,6 +6,19 @@
 
 ## 使用方法
 
+pubspec.yaml
+
+```
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  ...
+    
+  stretchbox: ^1.1.0
+```
+
 stretchbox 基础用法:
 
 ```dart
@@ -75,8 +88,6 @@ Widget _buildCustomBottomWidget(
 ![](./screenshot/stretchbox_demo_zh.png)
 
 查阅 [案例](https://github.com/HailouWang/AndroidGo/tree/master/flutter_demo/lib/widget/stretchbox).
-
-![](./screenshot/stretchbox_demo_en.jpg)
 
 ## 实现思路
 

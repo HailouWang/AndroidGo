@@ -1,7 +1,11 @@
-## [1.1.0] - 2020年12月17日
+## [1.1.1] - 2020-12-17日
 
-初始版本：针对展开和折叠状态的状态管理，使用 ``provider`` 进行精细化刷新，将界面刷新的区域控制到最小
+support example project
 
-## [1.0.0] - 2020年12月16日
+## [1.1.0] - 2020-12-17日
 
-初始版本：针对展开和折叠状态的状态管理，使用 ``provider`` 进行精细化刷新，将界面刷新的区域控制到最小
+support readme.md,refactor ``StretchedBoxWidget`` implements
+
+## [1.0.0] - 2020-12-16日
+
+First commit ：support collapse and normal mode

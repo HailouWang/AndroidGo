@@ -1,5 +1,5 @@
 name: stretchbox
-description: Flutter Widget ，Support normal and expand two mode
+description: An stretchbox widget provides two modes of collapse and expand, using provider components to support widget state change when click.
 version: 1.1.0
 homepage: https://github.com/HailouWang/AndroidGo
 
