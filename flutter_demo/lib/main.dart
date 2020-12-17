@@ -11,7 +11,7 @@ import 'package:flutterdemo/app/Application.dart';
 import 'package:flutterdemo/provider/common/AppSettingsModel.dart';
 import 'package:flutterdemo/provider/common/UserInfoModel.dart';
 import 'package:flutterdemo/router/routes.dart';
-import 'package:flutterdemo/widget/stretchbox/StretchboxWidgetPageDemo.dart';
+import 'package:flutterdemo/widget/collapsebox/CollapseBoxWidgetPageDemo.dart';
 import 'package:oktoast/oktoast.dart';
 import 'package:provider/provider.dart';
 
@@ -355,13 +355,13 @@ class MyApp extends StatelessWidget {
                   title: '31 借助原生视图能力，android 绘制',
                   // used by the OS task switcher
                   home: NativeViewDemo()),
-      "32 StretchedBoxWidget 案例": (String pageName, Map<String, dynamic> params,
+      "32 CollapseBoxWidgetPageDemo 案例": (String pageName, Map<String, dynamic> params,
               String _) =>
           new MaterialApp(
               title: pageName,
               // used by the OS task switcher
               home:
-                  StretchboxWidgetPageDemo(title: "32 StretchedBoxWidget 案例")),
+              CollapseBoxWidgetPageDemo(title: "32 CollapseBoxWidgetPageDemo 案例")),
     });
   }
 }

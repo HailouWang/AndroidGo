@@ -1,16 +1,14 @@
+import 'package:collapsebox/collapsebox.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutterdemo/ui/common/base_page.dart';
-import 'package:stretchbox/model/stretched_box_state.dart';
-import 'package:stretchbox/view/column_stretched_box.dart';
-import 'package:stretchbox/view/custom_stretched_box.dart';
-import 'package:stretchbox/vm/stretched_box_viewmodel.dart';
 
-class StretchboxWidgetPageDemo extends StatelessWidget
+// ignore: must_be_immutable
+class CollapseBoxWidgetPageDemo extends StatelessWidget
     with CommonFlutterPageMixIn {
   var title = "";
 
-  StretchboxWidgetPageDemo({this.title});
+  CollapseBoxWidgetPageDemo({this.title});
 
   List<Widget> normalList = [
     RowTitleSummaryWidget(
@@ -34,7 +32,7 @@ class StretchboxWidgetPageDemo extends StatelessWidget
     ),
     RowTitleSummaryWidget(
       title: "付款金额",
-      summary: "666666",
+      summary: "888",
     ),
     RowTitleSummaryWidget(
       title: "物流",
@@ -71,51 +69,48 @@ class StretchboxWidgetPageDemo extends StatelessWidget
   }
 
   Widget buildColumnStretchedBoxWidget() {
-    return ColumnStretchedBoxWidget(
-      arrowImageRes: 'images/image_down_expand.png',// 箭头图片资源
-      arrowContainerColor: Colors.white,// 箭头图片所在空间背景颜色
-//      stretchState: StretchedBoxState.normal,// normal 默认模式
-      normalChild: Container(// 总是显示区域
+    return ColumnCollapseBoxWidget(
+      bottomArrowImageRes: 'images/image_down_expand.png',// 箭头图片资源
+      bottomBarColor: Colors.white,// 箭头图片所在空间背景颜色
+//      collapseboxState: CollapseBoxState.normal,// normal 默认模式
+      alwaysShowChild: Container(// 总是显示的区域
         color: Colors.white,
         child: Column(
           children: normalList,
         ),
       ),
-      expandChild: Container(// 展开展示区域
+      collapsedChild: Container(// 展开时才会展示的区域
         color: Colors.black12,
         child: Column(
-          children: [...normalList, ...expandList],
+          children: [...expandList],
         ),
       ),
     );
   }
 
   Widget buildColumnStretchedBoxExpandWidget() {
-    ColumnStretchedBoxWidget columnStretchedBoxWidget =
-        ColumnStretchedBoxWidget(
-      arrowImageRes: 'images/image_down_expand.png',
-      arrowContainerColor: Colors.white,
-      stretchState: StretchedBoxState.expand,
-      normalChild: Container(
+    return ColumnCollapseBoxWidget(
+      bottomArrowImageRes: 'images/image_down_expand.png',
+      bottomBarColor: Colors.white,
+      collapseboxState: CollapseBoxState.expand,
+      alwaysShowChild: Container(
         color: Colors.white,
         child: Column(
           children: normalList,
         ),
       ),
-      expandChild: Container(
+      collapsedChild: Container(
         color: Colors.black12,
         child: Column(
-          children: [...normalList, ...expandList],
+          children: [...expandList],
         ),
       ),
     );
-
-    return columnStretchedBoxWidget;
   }
 
   Widget buildCustomStretchedBoxWidget() {
-    return StretchedBoxWidget(
-      normalChild: Container(
+    return CollapseBoxWidget(
+      alwaysShowChild: Container(
         color: Colors.white,
         child: Column(
           children: [
@@ -123,11 +118,10 @@ class StretchboxWidgetPageDemo extends StatelessWidget
           ],
         ),
       ),
-      expandChild: Container(
+      collapsedChild: Container(
         color: Colors.black12,
         child: Column(
           children: [
-            ...normalList,
             ...expandList,
           ],
         ),
@@ -137,9 +131,9 @@ class StretchboxWidgetPageDemo extends StatelessWidget
   }
 
   Widget _buildCustomStretchedBottomWidget(
-      BuildContext context, StretchedBoxViewModel stretchedBoxViewModel) {
+      BuildContext context, CollapseboxBoxViewModel collapseboxViewModel) {
     Widget text;
-    if (stretchedBoxViewModel?.isExpand() ?? false) {
+    if (collapseboxViewModel?.isExpand() ?? false) {
       text = Text("点击折叠");
     } else {
       text = Text("点击展开");
@@ -148,7 +142,7 @@ class StretchboxWidgetPageDemo extends StatelessWidget
     return GestureDetector(
       behavior: HitTestBehavior.opaque,
       onTap: () {
-        stretchedBoxViewModel?.switchStretchMode();
+        collapseboxViewModel?.switchCollapseBoxMode();
       },
       child: Container(
         height: 32,

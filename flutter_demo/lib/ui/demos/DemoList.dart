@@ -97,7 +97,7 @@ class DemoList extends StatelessWidget with WidgetsBindingObserver {
     _ListDatas.add("29 Sliver 吸顶效果");
     _ListDatas.add("30 Sliver 过度效果");
     _ListDatas.add("31 借助原生视图能力，android 绘制");
-    _ListDatas.add("32 StretchedBoxWidget 案例");
+    _ListDatas.add("32 CollapseBoxWidgetPageDemo 案例");
   }
 
   void _onClick(BuildContext context, int index) {

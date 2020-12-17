@@ -19,11 +19,9 @@
 //SOFTWARE.
 
 /// An [Widget] provides two modes of collapse and expand, using provider components to support widget state change when click.
-library stretchbox;
+library collapsebox;
 
-import 'package:flutter/cupertino.dart';
-
-export 'model/stretched_box_state.dart';
-export 'view/column_stretched_box.dart';
-export 'view/custom_stretched_box.dart';
-export 'vm/stretched_box_viewmodel.dart';
+export 'model/collapsebox_state.dart';
+export 'view/column_collapsebox.dart';
+export 'view/custom_collapsebox.dart';
+export 'vm/collapsebox_viewmodel.dart';

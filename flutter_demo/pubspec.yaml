@@ -38,9 +38,9 @@ dependencies:
   flutterbatteryplugin:
     path: ../flutter_battery_plugin
 
-#  stretchbox:
-#    path: ../hlwang_stretchbox
-  stretchbox: ^1.1.0
+  collapsebox:
+    path: ../hlwang_collapsebox
+#  collapsebox: ^1.1.0
 
   fluro: 1.6.3
   provider: ^4.3.2
@@ -73,7 +73,7 @@ flutter:
 
   assets:
     - images/
-    - ../hlwang_stretchbox/images/
+    - ../hlwang_collapsebox/images/
 
   # To add Flutter specific assets to your application, add an assets section, 
   # like this:
