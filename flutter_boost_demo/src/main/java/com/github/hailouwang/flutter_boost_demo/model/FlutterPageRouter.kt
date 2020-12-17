@@ -8,6 +8,7 @@ import com.github.hailouwang.flutter_boost_demo.ui.container.AndroidGoFlutterCon
 import com.github.hailouwang.flutter_boost_demo.ui.demo.FlutterFragmentPageActivity
 import com.github.hailouwang.flutter_boost_demo.ui.demo.NativePageActivity
 import com.github.hailouwang.flutter_boost_demo.ui.notfound.AndroidGoPageNotFound
+import com.github.hailouwang.flutter_boost_demo.utils.LogUtil
 import com.idlefish.flutterboost.containers.BoostFlutterActivity
 import java.util.*
 
@@ -37,18 +38,7 @@ object FlutterPageRouter {
         val path = url.split("\\?".toRegex()).toTypedArray()[0]
         Log.i("openPageByUrl", path)
         return try {
-            if (pageName.containsKey(path)) {
-                val intent = BoostFlutterActivity.NewEngineIntentBuilder(
-                    AndroidGoFlutterContainerActivity::class.java
-                ).url(pageName.get(path)!!).params(params)
-                    .backgroundMode(BoostFlutterActivity.BackgroundMode.opaque).build(context)
-                if (context is Activity) {
-                    context.startActivityForResult(intent, requestCode)
-                } else {
-                    context.startActivity(intent)
-                }
-                return true
-            } else if (url.startsWith(FLUTTER_FRAGMENT_PAGE_URL)) {
+            if (url.startsWith(FLUTTER_FRAGMENT_PAGE_URL)) {
                 context.startActivity(
                     Intent(
                         context,
@@ -64,16 +54,31 @@ object FlutterPageRouter {
                     )
                 )
                 return true
+            } else{
+
+                var flutterRouterPath = pageName.get(path) ?: path
+                Log.d("hlwang", "FlutterPageRouter openPageByUrl path : $flutterRouterPath !")
+
+                val intent = BoostFlutterActivity.NewEngineIntentBuilder(
+                    AndroidGoFlutterContainerActivity::class.java
+                ).url(flutterRouterPath).params(params)
+                    .backgroundMode(BoostFlutterActivity.BackgroundMode.opaque).build(context)
+                if (context is Activity) {
+                    context.startActivityForResult(intent, requestCode)
+                } else {
+                    context.startActivity(intent)
+                }
+                return true
+
+//                context.startActivity(
+//                    Intent(
+//                        context,
+//                        AndroidGoPageNotFound::class.java
+//                    )
+//                )
+//
+//                true
             }
-
-            context.startActivity(
-                Intent(
-                    context,
-                    AndroidGoPageNotFound::class.java
-                )
-            )
-
-            true
         } catch (t: Throwable) {
             t.printStackTrace()
             false

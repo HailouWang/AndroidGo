@@ -13,7 +13,7 @@ class _NativeViewDemoState extends State<NativeViewDemo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: new AppBar(
-        title: new Text('15 Intents --> 处理来自外部应用程序传入的Intents'),
+        title: new Text('31 借助原生视图能力，android 绘制'),
       ),
       body: new Center(child: AndroidView(viewType: "CustomAndroidView")),
     );
