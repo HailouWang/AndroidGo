@@ -74,7 +74,7 @@ Widget _buildCustomBottomWidget(
 
 ![](./screenshot/stretchbox_demo_en.png)
 
-see the [example](example/http_auth_example.dart)).
+see the [example](https://github.com/HailouWang/AndroidGo/tree/master/flutter_demo/lib/widget/stretchbox).
 
 ![](./screenshot/stretchbox_demo_en.jpg)
 

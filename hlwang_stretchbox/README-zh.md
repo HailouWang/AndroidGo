@@ -2,25 +2,25 @@
 
 # stretchbox
 
-An [`stretchbox`](https://pub.dartlang.org/packages/stretchbox) widget for expand sub widgets.
+[`stretchbox`](https://pub.dartlang.org/packages/stretchbox) 用来管理展开子组件的``widget``.
 
-## Usage
+## 使用方法
 
-stretchbox Basic usage:
+stretchbox 基础用法:
 
 ```dart
 Widget buildColumnStretchedBoxWidget() {
   return ColumnStretchedBoxWidget(
-    arrowImageRes: 'images/image_down_expand.png',// arrow image resource
-    arrowContainerColor: Colors.white,// arrow image area bg color
-//      stretchState: StretchedBoxState.normal,// normal default
-    normalChild: Container(// area show always
+    arrowImageRes: 'images/image_down_expand.png',// 箭头图片资源
+    arrowContainerColor: Colors.white,// 箭头图片控件背景颜色
+//      stretchState: StretchedBoxState.normal,// 默认 normal 状态，即：折叠
+    normalChild: Container(// 总是展示的区域
       color: Colors.white,
       child: Column(
         children: normalList,
       ),
     ),
-    expandChild: Container(// area show by expand
+    expandChild: Container(// 展开才展示的区域
       color: Colors.black12,
       child: Column(
         children: [...normalList, ...expandList],
@@ -30,18 +30,18 @@ Widget buildColumnStretchedBoxWidget() {
 }
 ```
 
-stretchbox Custom usage:
+stretchbox 自定义底部控件的用法:
 
 ```dart
 Widget buildColumnStretchedBoxWidget() {
   return ColumnStretchedBoxWidget(
     ...
-    bottomBarWidget: _buildCustomBottomWidget,// bottom widget custom set
+    bottomBarWidget: _buildCustomBottomWidget,// 底部控件自定义配置
   );
 }
 ```
 
-allow bottom widget custom set.
+允许自定义设置底部控件.
 
 ```dart
 Widget _buildCustomBottomWidget(
@@ -70,14 +70,14 @@ Widget _buildCustomBottomWidget(
 }
 ```
 
-## screenshot:
+## 运行截图:
 
-![](./screenshot/stretchbox_demo_en.png)
+![](./screenshot/stretchbox_demo_zh.png)
 
-see the [example](example/http_auth_example.dart)).
+查阅 [案例](https://github.com/HailouWang/AndroidGo/tree/master/flutter_demo/lib/widget/stretchbox).
 
 ![](./screenshot/stretchbox_demo_en.jpg)
 
-## idea
+## 实现思路
 
 ![](./screenshot/stretchbox_idea_small.png)
