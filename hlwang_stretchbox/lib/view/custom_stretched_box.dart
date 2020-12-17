@@ -11,10 +11,13 @@ import 'package:stretchbox/vm/stretched_box_viewmodel.dart';
 class StretchedBoxWidget extends StatelessWidget {
   /// 折叠控件 ViewModel
   StretchedBoxViewModel stretchboxViewModel;
+
   /// 总是展示的控件
   final Widget normalChild;
+
   /// 折叠控件，展开时才会看到
   final Widget expandChild;
+
   /// 自定义方法，对外提供底部配置的方法
   Widget Function(BuildContext, StretchedBoxViewModel) bottomBarWidget;
 

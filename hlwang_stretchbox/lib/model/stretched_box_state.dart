@@ -1,4 +1,3 @@
-
 /// StretchedBoxState 枚举，定义 Normal 和 Expand 两种状态
 enum StretchedBoxState {
   /// 正常

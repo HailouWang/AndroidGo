@@ -12,10 +12,13 @@ import 'custom_stretched_box.dart';
 class ColumnStretchedBoxWidget extends StretchedBoxWidget {
   /// 总是展示的控件
   final Widget normalChild;
+
   /// 折叠控件，展开时才会看到
   final Widget expandChild;
+
   /// 底部组件 箭头图片资源
   final String arrowImageRes;
+
   /// 底部组件 背景颜色
   Color arrowContainerColor;
 
