@@ -1,3 +1,7 @@
+## [1.1.2] - 2020-12-17日
+
+refactor pub dev score,from 100 to 110
+
 ## [1.1.1] - 2020-12-17日
 
 support example project
